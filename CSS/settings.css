@@ -1,0 +1,17 @@
+#profilePic {
+	width: 100px;
+	height: 100px;
+	border: 1px solid black;
+	margin-left: 10%;
+	margin-top:5%;
+	float: left;
+}
+
+#settings {
+	width:65%;
+	height: 600px;
+	border: 1px solid black;
+	text-align:center;	
+	margin-top:5%;
+	margin-left: 25%;
+}
