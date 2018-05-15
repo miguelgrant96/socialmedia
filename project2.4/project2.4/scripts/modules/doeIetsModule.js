@@ -1,4 +1,4 @@
-var app = angular.module('doeIets', ['ngRoute', 'Login', 'Register', 'Feed', 'Profile']);
+var app = angular.module('doeIets', ['ngRoute', 'Login', 'Register', 'Feed', 'Profile']); //Dut niet als ik hier Options en Privacy bij gooi..
 
 
 app.config(['$routeProvider', function ($routeProvider) {
@@ -9,7 +9,7 @@ app.config(['$routeProvider', function ($routeProvider) {
             controller: 'LoginController',
         })
         .when('/Register', {
-            //'Register
+            //Register
             templateUrl: 'views/Login/Register.html',
             controller: 'RegisterController',
         })
@@ -20,8 +20,18 @@ app.config(['$routeProvider', function ($routeProvider) {
         })
         .when('/Profile', {
             //Profile
-            templateUrl: 'views/Profile/Profile.html',
+            templateUrl: 'views/Application/Profile.html',
             controller: 'ProfileController',
+        })
+        .when('/Options', {
+            //Options
+            templateUrl: 'views/Application/Options.html',
+            controller: 'OptionsController',
+        })
+        .when('/Privacy', {
+            //Privacy
+            templateUrl: 'views/Application/Privacy.html',
+            controller: 'PrivacyController',
         })
         .otherwise({
             //Login
