@@ -1,4 +1,4 @@
-var app = angular.module('doeIets', ['ngRoute', 'Login', 'Register', 'Feed', 'Profile']); //Dut niet als ik hier Options en Privacy bij gooi..
+var app = angular.module('doeIets', ['ngRoute', 'Login', 'Register', 'Feed', 'Profile', 'Options', 'Privacy']); //Dut niet als ik hier Options en Privacy bij gooi..
 
 
 app.config(['$routeProvider', function ($routeProvider) {
