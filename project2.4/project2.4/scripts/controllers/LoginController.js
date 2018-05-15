@@ -16,5 +16,4 @@ angular.module('Login')
             $location.path("/Register");
             $location.replace();
         };
-
     });
