@@ -5,5 +5,4 @@
             $location.path("/");
             $location.replace();
         };
-
     });
