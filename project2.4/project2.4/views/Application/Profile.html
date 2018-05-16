@@ -10,22 +10,30 @@
 </div>
 
 <div id="userInfo">
-    Werk: <br>
-    School: <br>
-    Woonplaats: <br>
-    Relatiestatus: <br>
-    Geslacht: <br>
-    Lid sinds: <br>
+    <ul id="userInfoItem">
+        <li>Werk: </li>
+        <li>School: </li>
+        <li>Woonplaats: </li>
+        <li>Relatiestatus: </li>
+        <li>Geslacht: </li>
+        <li>Lid sinds: </li>
+    </ul>
 </div>
 
 <div id="postBar">
     <div id="photo">Foto</div>
-    <div class="postItem">Posts</div>
-    <div class="postItem">Media</div>
-    <div class="postItem">Notities</div>
-    <div class="postItem">Over Mij</div>
+    <div class="postItem" ng-click="changeView('posts')">Posts</div>
+    <div class="postItem" ng-click="changeView('media')">Media</div>
+    <div class="postItem" ng-click="changeView('notities')">Notities</div>
+    <div class="postItem" ng-click="changeView('over mij')">Over Mij</div>
 </div>
 
 <div id="posts">
-    Posts
+    <div ng-show="showPosts">{{content}}</div>
+    <div ng-show="showMedia">{{content}}</div>
+    <div ng-show="showNotities">{{content}}</div>
+    <div ng-show="showOverMij">{{content}}</div>
 </div>
+<!--<div id="posts">
+    Posts
+</div>-->
