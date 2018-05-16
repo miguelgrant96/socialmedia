@@ -26,6 +26,10 @@
 	float: left;
 }
 
+#userInfoItem {
+    list-style: none;
+}
+
 #postBar {
 	margin-left: 40%;
 	margin-top: 5%;
