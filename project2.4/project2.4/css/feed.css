@@ -1,6 +1,6 @@
 .div {
     font-family: " Segoe-UI";
-    font-size: 50px;
+    font-size: 23px;
 }
 
 .underlay-photo {
@@ -21,7 +21,7 @@
     height: 100px;
     border: 1px solid black;
     float: left;
-    margin-top: 0%;
+    margin-top: 2%;
     background-color: #919191;
     margin-left: 0%;
 }
@@ -32,7 +32,7 @@
 
 #buttons {
     position: absolute;
-    margin-left: 1%;
+    margin-left: 100%;
 }
 
 #postText{
@@ -42,7 +42,7 @@
 }
 
 #buttons {
-	margin-left: 75%;
+	margin-left: 1%;
 }
 
 #logotopbar {
@@ -52,113 +52,179 @@
 
 #gotPosts {
     position: absolute;
-    width: 65%;
-    height: 600px;
+    width: 55%;
+    height: 70%;
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: #e3e9ed;
-    border: 1px solid black;
-    border-radius: 30px;
+    border-radius: 10px;
     margin-top: 1%;
-    margin-left: 25%;
+    margin-left: 35%;
     padding-bottom: 300px;
 }
 
 .postedphoto {
-    height: 30%;
-    width:30%;
+    position: relative;
+    height: 200px;
+
     border: 1px solid black;
 }
 
 .postcontainer {
-    display: block;
     position: relative;
-    margin-top:1%;
+    margin-bottom: 5%;
+    padding-bottom: 10px;
+    left: 0px;
+}
+
+.placecomment-containter {
+    z-index: 1;
+    position: relative;
+    font-size: 22px;
+    width: 50%;
+    border: 1px solid black;
+    background-color: #e3eaf7;
+    border-color: #2a3da8;
+    min-height: 55px;
+    margin-left: 7%;
+    margin-top: -1%;
+}
+
+.commentArea {
+    position: absolute;
+    width: 80%;
+    left: 12%;
+}
+
+.comment-Container {
+    z-index: 1;
+    position: relative;
+    font-size: 22px;
+    width: 50%;
+    border: 1px solid black;
+    background-color: #e3eaf7;
+    padding-right: 60px;
+    border-color: #2a3da8;
+    min-height: 85px;
+    margin-left: 7%;
+    margin-top: -1%;
 }
 
 .post {
+    z-index: 3;
     position: relative;
-    padding-left: 5%;
-    padding-bottom: 2%;
+    padding-bottom: 4%;
     border: 1px solid black;
     background-color: #eff5ff;
     border-radius: 10px;
     border-color: #2a3da8;
     color: black;
-    margin-left: 5%;
-    margin-top: 4%;
+    min-height: 10%;
+    left: 50px;
+    margin-top: 50px;
     height: auto;
-    width: 85%;
+    width: 90%;
 }
 
-    .post:hover {
-        background-color: #fFFFFF;
-    }
+.post:hover {
+     background-color: #fFFFFF;
+}
 
 .user {
-    z-index:5;
+    z-index: 5;
+    display: block;
     position: absolute;
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    float: left;
-    margin-left: 5.5%;
+    left: 0px;
     top: 1%;
+    float: left;
+    margin-left: 2%;
     border: 2px solid white;
     border-color: #2a3da8;
     background-color: white;
 }
 
-.postContextMenu {
-    z-index: 500;
-    position: relative;
-    font-size: 20px;
-    margin-left: 88%;
-    top: 13%;
+.commentuser {
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    left: 0%;
+    top: 15%;
+    float: left;
+    color: white;
+    margin-left: 1%;
+    border: 2px solid white;
+    border-color: #2a3da8;
+    background-color: #2a3da8;
 }
 
-.time {
+.commentText {
     position: absolute;
-    margin-top: 0.1%;
-    border-radius: 10px;
-    padding: 1%;
-    padding-left: 30px;
-    margin-left: 22%;
+    left: 65px;
+    top: 45%;
+    font-size: 13px;
+}
+
+.profileName {
+    position: absolute;
+    left: 45px;
+    top: 23%;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
     color: white;
-    font-size: 22px;
     background-color: #2a3da8;
 }
 
 .username {
     position: absolute;
-    margin-top: 0.1%;
+    width: auto;
+    margin-top: 4px;
     border-radius: 10px;
     padding: 1%;
-    padding-left: 30px;
-    margin-left: 12%;
+    padding-left: 3%;
+    left: 100px;
     color: white;
     font-size: 22px;
     background-color: #2a3da8;
 }
 
+/*.posttext {
+    position: relative;
+    word-wrap: break-word;
+    top: 10px;
+    left: 2px;
+}*/
+
 .posttext {
-    margin-top:1%;
-    padding-left: 50px;
+    position: relative;
+    margin-left: 80px;
+    margin-top: 1%;
 }
 
 .postFooter {
+    z-index: 2;
     position: absolute;
-    height: 25px;
+    height: 30px;
     width: 100%;
     margin-top: 1%;
     margin-left: 5%;
+    visibility: visible;
+}
+
+post.hover ~.postFooter {
+    visibility: visible;
+}
+.postFooter.hover {
+     visibility: visible;
 }
 
 .postFooterImages {
     height: 25px;
-    border: 2px solid white;
-   ## border-color: #2a3da8;  
-   ## width: 25px;
 }
 
 .underlay-photo {
