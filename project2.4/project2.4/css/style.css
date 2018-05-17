@@ -2,13 +2,15 @@ body {
     margin: 0 0 0 0;
     background-image: url("../images/bg-login.jpg");
     background-size: cover;
+    z-index: -1;
+    animation: fadein 2s;
 }
 
 #menu {
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    height: 100px;
+    height: 30px;
 }
 
 #logo {
@@ -19,7 +21,7 @@ body {
 }
 .menuitem {
     float: left;
-    height: 100px;
+    height: 30px;
     width: 12.5%;
     display: inline-block;
     box-sizing: border-box;
@@ -32,7 +34,7 @@ body {
 
 .selectedItem {
     float: left;
-    height: 100px;
+    height: 30px;
     width: 12.5%;
     display: inline-block;
     box-sizing: border-box;
