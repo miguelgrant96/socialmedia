@@ -20,4 +20,9 @@
             $location.path("/Privacy");
             $location.replace();
         };
+
+        $scope.redirectFriends = function (e) {
+            $location.path("/Friends");
+            $location.replace();
+        };
     });

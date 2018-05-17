@@ -21,6 +21,11 @@
             $location.replace();
         };
 
+        $scope.redirectFriends = function (e) {
+            $location.path("/Friends");
+            $location.replace();
+        };
+
         $scope.changeView = function (val) {
             if (val == 'posts') {
                 $scope.content = "Show all the posts";
