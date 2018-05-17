@@ -20,4 +20,42 @@
             $location.path("/Privacy");
             $location.replace();
         };
+
+        $scope.redirectFriends = function (e) {
+            $location.path("/Friends");
+            $location.replace();
+        };
+
+        $scope.changeView = function (val) {
+            if (val == 'posts') {
+                $scope.content = "Show all the posts";
+
+                $scope.showPosts = true;
+                $scope.showMedia = false;
+                $scope.showNotities = false;
+                $scope.showOverMij = false;
+            } else if (val == 'media') {
+                $scope.content = "Show all the media";
+
+                $scope.showPosts = false;
+                $scope.showMedia = true;
+                $scope.showNotities = false;
+                $scope.showOverMij = false;
+            } else if (val == 'notities') {
+                $scope.content = "Show all the notes";
+
+                $scope.showPosts = false;
+                $scope.showMedia = false;
+                $scope.showNotities = true;
+                $scope.showOverMij = false;
+            } else if (val == 'over mij') {
+                $scope.content = "Show the over mij page";
+
+                $scope.showPosts = false;
+                $scope.showMedia = false;
+                $scope.showNotities = false;
+                $scope.showOverMij = true;
+            }
+
+        }
     });

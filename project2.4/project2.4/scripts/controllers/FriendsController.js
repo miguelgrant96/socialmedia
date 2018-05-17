@@ -1,5 +1,5 @@
-﻿angular.module('Privacy')
-    .controller('PrivacyController', function ($scope, $route, $location) {
+﻿angular.module('Friends')
+    .controller('FriendsController', function ($scope, $route, $location) {
 
         $scope.redirectFeed = function (e) {
             $location.path("/Feed");
