@@ -13,8 +13,28 @@
 <!--Map-->
 <div id="mapContainer">
     <div id="mapTitle"><b>Friends based on location</b></div>
-    <div id="map">Map here</div>
+    <div id="map"></div>
 </div>
+
+
+<script>
+    function myMap() {
+        var mapOptions = {
+            center: new google.maps.LatLng(53.2193835, 6.5665018),
+            zoom: 10,
+            mapTypeId: google.maps.MapTypeId.HYBRID
+        }
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRlghVp9bBa6bdkJxncFWhQP8-21WCI58&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+</body>
+</html>
 <!--Friend Requests-->
 <div id="friendRequest">
     <div id="requestTitle"><b>Friend Requests</b></div>

@@ -17,12 +17,14 @@
 	margin-left: 75%;
 }
 
-#gotPosts{
-	width:65%;
-	height: auto;
-	border: 1px solid black;
-	margin-top:12%;
-	margin-left:25%;
+
+#gotPosts {
+    width: 65%;
+    height: 50%;
+    border: 1px solid black;
+    margin-top: 12%;
+    margin-left: 25%;
+    overflow: scroll;
 }
 
 .post {
