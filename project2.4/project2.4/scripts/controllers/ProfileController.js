@@ -58,4 +58,10 @@
             }
 
         }
+
+        $scope.redirectLogin = function () {
+            $location.path("/");
+            $location.replace();
+        };
+
     });

@@ -25,4 +25,9 @@
             $location.path("/Friends");
             $location.replace();
         };
+
+        $scope.redirectLogin = function () {
+            $location.path("/");
+            $location.replace();
+        };
     });

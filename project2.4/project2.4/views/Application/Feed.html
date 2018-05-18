@@ -1,12 +1,12 @@
 ﻿<div id="menu">
-    <div ng-click="redirectFeed()" class="menuitem">Logo</div>
+    <div ng-click="redirectFeed()" class="menuLogo"></div>
     <div ng-click="redirectFeed()" class="selectedItem">Feed</div>
     <div ng-click="redirectProfile()" class="menuitem">Profile</div>
     <div ng-click="redirectOptions()" class="menuitem">Options</div>
     <div ng-click="redirectPrivacy()" class="menuitem">Privacy</div>
     <div class="menuitem">Notifications</div>
     <div ng-click="redirectFriends()" class="menuitem">Friends</div>
-    <div ng-click="redirectLogout()" class="menuitem">Logout</div>
+    <div ng-click="redirectLogin()" class="menuitem">Logout</div>
 </div>
 
 <div class="blackFilter"></div>
@@ -16,7 +16,7 @@
 <div id="gotPosts">
     <div id="createPost">
         <b class="createposttext"> Create Post</b><br>
-        <textarea id="postText"></textarea><br>
+        <textarea id="postText" placeholder="Please enter your post here"></textarea><br>
         <div id="buttons">
             <button>add foto/video</button>
             <button>add etc.</button>
@@ -29,7 +29,7 @@
         <img src="Images\profile.png" class="user"><br /><p class="username">NIEV - 50 minutes ago </p>
         <div class="post">
             <p class="posttext">
-                Ha-di-ho! Vandaag weer les geven aan die verotte! Vandaag gaat weer een ontzettend leuke dag worden. Wiehoe, met plezier naar het Hanze! #Sarcasme! #GeenHastagSupport #IkWilVakantie?
+                Ha-di-ho! Vandaag weer les geven aan die verotte! Vandaag gaat weer een ontzettend leuke dag worden. Wiehoe, met plezier naar de Hanze! #Sarcasme! #GeenHastagSupport #IkWilVakantie?
             </p>
             <div class="postFooter">
                 <button><img src="Images\respect.png" class="postFooterImages"></button>
@@ -47,11 +47,11 @@
         <div class="comment-Container">
             <!-- COMMENT -->
             <div class="profileName"> Jan de Woert </div>
-            <div class="commentText"> Mijn ketting is lek en mijn band lag er uit. Denk niet dat ik op tijd kan komen. Morgen ben ik weer van de partij</div>
+            <div class="commentText"> Mijn ketting is lek en mijn band lag er af. Denk niet dat ik op tijd kan komen. Morgen ben ik weer van de partij!</div>
             <img src="Images\profile2.png" class="commentuser">
         </div>
         <div class="placecomment-containter ">
-            <textarea class="commentArea"></textarea><br>
+            <textarea class="commentArea" placeholder="Enter your comment here"></textarea><br>
         </div>
     </div>
     <div class="postcontainer">
