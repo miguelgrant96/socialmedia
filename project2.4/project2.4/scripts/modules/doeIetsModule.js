@@ -1,4 +1,4 @@
-var app = angular.module('doeIets', ['ngRoute', 'Login', 'Register', 'Feed', 'Profile', 'Options', 'Privacy', 'Friends']);
+var app = angular.module('doeIets', ['ngRoute', 'Login', 'Register', 'Feed', 'Profile', 'Options', 'Privacy', 'Friends', 'mapApp']);
 
 
 app.config(['$routeProvider', function ($routeProvider) {
