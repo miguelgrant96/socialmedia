@@ -39,12 +39,13 @@
     margin-left: 25.2%;
 }
 
-#friends a {
-    margin-left: 92%;
-}
+    #friends a {
+        margin-left: 92%;
+    }
+
 #topTenTitle {
     height: 12%;
-    width:100%;
+    width: 100%;
     display: inline-block;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -103,9 +104,10 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border-bottom: 1px solid black;
-    padding-top:5%;
+    padding-top: 5%;
     text-align: center;
 }
+
 .request {
     width: 100%;
     height: 18%;
@@ -118,13 +120,13 @@
 .requestPicture {
     width: 30%;
     height: 75%;
-    margin-left:5%;
-    margin-top:5%;
+    margin-left: 5%;
+    margin-top: 5%;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border: 1px solid black;
-    float:left;
+    float: left;
 }
 
 .requestName {
@@ -135,16 +137,16 @@
 .requestAccept {
     width: 20px;
     height: 20px;
-    background-image:url(../images/accept.png);
+    background-image: url(../images/accept.png);
     margin-left: 40%;
     margin-top: 5%;
-    float:left;
+    float: left;
 }
 
 .requestDecline {
     width: 20px;
     height: 20px;
-    background-image:url(../images/decline.png);
-    margin-top:5%;
-    margin-left:45%;
+    background-image: url(../images/decline.png);
+    margin-top: 5%;
+    margin-left: 45%;
 }
