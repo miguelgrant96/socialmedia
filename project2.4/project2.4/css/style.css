@@ -23,7 +23,7 @@ body {
 }
 .menuitem {
     float: left;
-    height: 30px;
+    height: 100px;
     width: 12.5%;
     display: inline-block;
     box-sizing: border-box;
@@ -34,9 +34,18 @@ body {
     color: aliceblue;
 }
 
+.menuLogo {
+    width: 12.5%;
+    height: 100px;
+    background-color: #222;
+    background-image: url(../images/Speech.png);
+    background-size: 100% 100%;
+    float: left;
+}
+
 .selectedItem {
     float: left;
-    height: 30px;
+    height: 100px;
     width: 12.5%;
     display: inline-block;
     box-sizing: border-box;

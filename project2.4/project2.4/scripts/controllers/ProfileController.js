@@ -26,6 +26,11 @@
             $location.replace();
         };
 
+        $scope.redirectLogin = function () {
+            $location.path("/");
+            $location.replace();
+        };
+
         $scope.changeView = function (val) {
             if (val == 'posts') {
                 $scope.content = "Show all the posts";
