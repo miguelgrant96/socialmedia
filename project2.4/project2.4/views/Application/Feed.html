@@ -9,11 +9,38 @@
     <div ng-click="redirectLogin()" class="menuitem">Logout</div>
 </div>
 
+<div class="UserPanelContainer">
+
+    <div id="Header"> <center>USER PANEL </center></div>
+    <img src="Images\wesley.jpg" id="panelNamePic">
+    <div id="panelName"> <center>Wesley de Waart</center></div>
+    <div id="friendCount">You have <br /><b>98 Friends</b></div>
+    <div id="onlineStatus"> Shown as: <br />
+                          <img src="Images\userOnline.png" id="onlineStatusIcon"><b> Online</b></div>
+    <div id="panelInformation">
+        <div class="Weather">
+            <center>
+                <img src="Images\weatherSunny.png" id="weatherIcon">
+                <p>You are currently in: {LOCATIE}</p>
+                <p>It's going to be a sunny day today!</p>
+                <p id="Temperature"> 28ºC</p>
+            </center>
+        </div>
+        <div class="notifications">
+            <center>
+                <p>You have 5 new notifications</p>
+                <p>You have 2 unread Chat Messages</p>
+                <p>You have a friends request</p>
+            </center>
+        </div>
+    </div>
+</div>
+
 <div class="blackFilter"></div>
 <div id="profilePic">User Foto Hier</div>
 
-
 <div id="gotPosts">
+    <div id="Header"><center>FEED</center></div>
     <div id="createPost">
         <b class="createposttext"> Create Post</b><br>
         <textarea id="postText" placeholder="Please enter your post here"></textarea><br>
