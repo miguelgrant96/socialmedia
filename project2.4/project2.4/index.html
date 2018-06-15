@@ -3,20 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-
     <link href="css/feed.css" rel="stylesheet" />
     <link href="css/loginstyle.css" rel="stylesheet" />
     <link href="css/register.css" rel="stylesheet" />
     <link href="css/settings.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/friends.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/map.css">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
     <script src="scripts/angular/angular.min.js"></script>
     <script src="scripts/angular/angular-route.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRlghVp9bBa6bdkJxncFWhQP8-21WCI58"></script>
+    <script type="text/javascript" src="scripts/angular/map.js"></script>
     <!-- Modules-->
     <script src="scripts/modules/doeIetsModule.js"></script>
     <script src="scripts/modules/ControllerModules.js"></script>
@@ -27,6 +29,8 @@
     <script src="scripts/controllers/ProfileController.js"></script>
     <script src="scripts/controllers/OptionsController.js"></script>
     <script src="scripts/controllers/PrivacyController.js"></script>
+    <script src="scripts/controllers/FriendsController.js"></script>
+    <script src="scripts/controllers/MapController.js"></script>
 
     <div ng-controller="LoginController" style="width:100%; ">
         <div ng-view></div>

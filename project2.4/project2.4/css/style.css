@@ -2,13 +2,17 @@ body {
     margin: 0 0 0 0;
     background-image: url("../images/bg-login.jpg");
     background-size: cover;
+    z-index: -1;
+    font-family: 'Trebuchet MS';
+    font-size: 12px;
+    animation: fadein 2s;
 }
 
 #menu {
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    height: 100px;
+    height: 30px;
 }
 
 #logo {
@@ -28,6 +32,15 @@ body {
     border: 1px solid black;
     background-color: #222;
     color: aliceblue;
+}
+
+.menuLogo {
+    width: 12.5%;
+    height: 100px;
+    background-color: #222;
+    background-image: url(../images/Speech.png);
+    background-size: 100% 100%;
+    float: left;
 }
 
 .selectedItem {
