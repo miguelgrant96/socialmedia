@@ -277,6 +277,15 @@ post.hover ~.postFooter {
     width: 10%;
 }
 
+#dropdownIconOnline {
+    z-index: 10;
+    position: absolute;
+    top: 18px;
+    left: 120px;
+    height: 40%;
+    width: 10%;
+}
+
 .UserPanelContainer {
     position: absolute;
     background-color: #e3e9ed;
@@ -331,7 +340,7 @@ post.hover ~.postFooter {
     left: 0;
     right: 0;
     top: 155px;
-    width: 70%;
+    width: 90%;
     border-color: #354dd6;
     border-radius: 10px;
     border-style: solid;
@@ -340,6 +349,7 @@ post.hover ~.postFooter {
 }
 
 .notifications {
+    position: absolute;
     margin: 0px auto;
     left: 0;
     right: 0;
@@ -347,9 +357,15 @@ post.hover ~.postFooter {
     background-color: #e3eaf7;
     border-radius: 5px;
     border-color: #999aa3;
-    position: relative;
-    margin-top: 60px;
-    width: 80%;
+    margin-top: 75px;
+    width: 97%;
+}
+
+.Weather {
+    position: absolute
+    margin: 0px auto;
+    left: 0;
+    right: 0;
 }
 
 .Weather p {
@@ -358,6 +374,7 @@ post.hover ~.postFooter {
     margin-left: 110px;
     color: black;
 }
+
 
 #weatherIcon {
     position: absolute;
