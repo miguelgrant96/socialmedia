@@ -23,8 +23,10 @@ body {
 	border: 1px solid black;
 }
 .menuitem {
+    text-transform: uppercase;
+    transition: 0.2s;
     float: left;
-    height: 70px;
+    height: 40px;
     opacity: 0.9;
     width: 12.5%;
     background-color: #d7dde5;
@@ -34,11 +36,11 @@ body {
     -webkit-box-sizing: border-box;
     border: 1px solid black;
     border-bottom-style: solid;
-    border-bottom-width: 5px;
+    border-bottom-width: 2px;
     border-bottom-color: white;
     background-color: #edeff2;
     color: black;
-    padding: 20px;
+    padding: 5px;
     font-size: 25px;
 }
 
@@ -53,16 +55,44 @@ body {
 
 .menuLogo {
     height: 70px;
-    background-color: #222;
     background-size: 100% 100%;
     float: left;
 }
 
+.menuIcon {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    float: left;
+}
+
+.menufiller {
+    float: left;
+    height: 40px;
+    opacity: 0.9;
+    width: 37.5%;
+    background-color: #d7dde5;
+    display: inline-block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid black;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: white;
+    background-color: #edeff2;
+    color: black;
+    padding: 5px;
+    font-size: 25px;
+}
+
 .selectedItem {
+    text-transform: uppercase;
+    transition: 0.2s;
     cursor: pointer;
     transition: 0.2s;
     float: left;
-    height: 70px;
+    height: 40px;
     width: 12.5%;
     background-color: #d7dde5;
     display: inline-block;
@@ -71,11 +101,11 @@ body {
     -webkit-box-sizing: border-box;
     border: 1px solid black;
     border-bottom-style: solid;
-    border-bottom-width: 5px;
+    border-bottom-width: 3px;
     border-bottom-color: #3851d7;
     background-color: aliceblue;
     color: black;
-    padding: 20px;
+    padding: 5px;
     font-size: 25px;
 }
 
