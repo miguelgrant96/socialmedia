@@ -1,4 +1,32 @@
-﻿<div id="menu">
+﻿<div class="UserPanelContainer">
+
+    <div id="Header"> <center>USER PANEL </center></div>
+    <img src="Images\wesley.jpg" id="panelNamePic">
+    <div id="panelName"> <center>Wesley de Waart</center></div>
+    <div id="friendCount">You have <br /><b>98 Friends</b></div>
+    <div id="onlineStatus">
+        Shown as:<img src="Images\dropdownArrow.png" id="dropdownIconOnline">  <br />
+        <img src="Images\userOnline.png" id="onlineStatusIcon"><b> Online</b>
+    </div>
+    <div id="panelInformation">
+        <div class="Weather">
+            <center>
+                <img src="Images\weatherSunny.png" id="weatherIcon">
+                <p>You are currently in: {LOCATIE}</p>
+                <p>It's going to be a sunny day today!</p>
+                <p id="Temperature"> 28ºC</p>
+            </center>
+        </div>
+        <div class="notifications">
+            <center>
+                <p>You have 5 new notifications</p>
+                <p>You have 2 unread Chat Messages</p>
+                <p>You have a friends request</p>
+            </center>
+        </div>
+    </div>
+</div>
+<div id="menu">
     <div ng-click="redirectFeed()" class="menuitem">Logo</div>
     <div ng-click="redirectFeed()" class="menuitem">Feed</div>
     <div ng-click="redirectProfile()" class="menuitem">Profile</div>
@@ -9,13 +37,15 @@
     <div ng-click="redirectLogout()" class="menuitem">Logout</div>
 </div>
 
-<div id="profilePic"> foto hier</div>
 <div id="settings">
+    <div id="Header"><center>SETTINGS</center></div>
 	<div id="settingsLeft">
-		<ul class="menuItem">Persoonlijke instellingen</ul>
-		<ul class="menuItem">Beveiliging</ul>
-		<ul class="menuItem">Privacy</ul>
-		<ul class="menuItem">Meldingen</ul>
+        <center>
+		    <ul class="menuItem"><img src="Images\personal.png" class="settingIcon"> Persoonlijk</ul>
+		    <ul class="menuItem"><img src="Images\security.png" class="settingIcon"> <center>Beveiliging</ul>
+		    <ul class="menuItem"><img src="Images\privacy.png" class="settingIcon"> Privacy</ul>
+		    <ul class="menuItem"><img src="Images\notifications.png" class="settingIcon">Meldingen</ul>
+        </center>
 	</div>
 	<div id="settingsRight">
 		<ul>
@@ -42,4 +72,6 @@
 			<li>etc</li>
 		</ul>
 	</div>
+
 </div>
+

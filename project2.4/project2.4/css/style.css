@@ -3,7 +3,7 @@ body {
     background-image: url("../images/bg-login.jpg");
     background-size: cover;
     z-index: -1;
-    font-family: 'Trebuchet MS';
+    font-family: 'Helvetica';
     font-size: 12px;
     animation: fadein 2s;
 }
@@ -13,6 +13,7 @@ body {
     margin: 0 auto;
     text-align: center;
     height: 30px;
+    background-color: #d7dde5;
 }
 
 #logo {
@@ -23,37 +24,59 @@ body {
 }
 .menuitem {
     float: left;
-    height: 100px;
+    height: 70px;
+    opacity: 0.9;
     width: 12.5%;
+    background-color: #d7dde5;
     display: inline-block;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border: 1px solid black;
-    background-color: #222;
-    color: aliceblue;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: white;
+    background-color: #edeff2;
+    color: black;
+    padding: 20px;
+    font-size: 25px;
 }
 
+    .menuitem:hover {
+        cursor: pointer;
+        transition: 0.2s;
+        background-color: white;
+        transition: background-color 0.2s ease;
+        border-radius: 5px;
+        border-bottom-color: grey;
+    }
+
 .menuLogo {
-    width: 12.5%;
-    height: 100px;
+    height: 70px;
     background-color: #222;
-    background-image: url(../images/Speech.png);
     background-size: 100% 100%;
     float: left;
 }
 
 .selectedItem {
+    cursor: pointer;
+    transition: 0.2s;
     float: left;
-    height: 100px;
+    height: 70px;
     width: 12.5%;
+    background-color: #d7dde5;
     display: inline-block;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border: 1px solid black;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-bottom-color: #3851d7;
     background-color: aliceblue;
-    color: #222;
+    color: black;
+    padding: 20px;
+    font-size: 25px;
 }
 
 #userInfo {
