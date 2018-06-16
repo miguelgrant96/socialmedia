@@ -70,11 +70,31 @@ body {
     float: left;
 }
 
+.searchBar {
+    float: left;
+    height: 40px;
+    opacity: 0.9;
+    width: 30%;
+    background-color: #d7dde5;
+    display: inline-block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid black;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: white;
+    background-color: #edeff2;
+    color: black;
+    padding: 5px;
+    font-size: 25px;
+}
+
 .menufiller {
     float: left;
     height: 40px;
     opacity: 0.9;
-    width: 37.5%;
+    width: 3.75%;
     background-color: #d7dde5;
     display: inline-block;
     box-sizing: border-box;

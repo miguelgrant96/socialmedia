@@ -28,11 +28,13 @@
 </div>
 <div id="menu">
     <div ng-click="redirectFeed()" class="menuitem"> <img src="Images\speech.png" class="menuLogo"></div>
-    <div ng-click="redirectFeed()" class="menuitem"> <img src="Images\feedicon.png" class="menuIcon">FEED</div>
-    <div ng-click="redirectProfile()" class="menuitem"><img src="Images\profileicon.png" class="menuIcon" />PROFILE</div>
-    <div ng-click="redirectOptions()" class="selectedItem"><img src="Images\settingsicon.png" class="menuIcon" /> OPTIONS</div>
+    <div ng-click="redirectFeed()" class="menuitem"> <img src="Images\feedicon.png" class="menuIcon">Feed</div>
     <div ng-click="redirectOptions()" class="menufiller"></div>
-    <div ng-click="redirectLogin()" class="menuitem">Logout</div>
+    <textarea class="searchBar" placeholder="Wat zoek u"></textarea>
+    <div ng-click="redirectOptions()" class="menufiller"></div>
+    <div ng-click="redirectProfile()" class="menuitem"><img src="Images\profileicon.png" class="menuIcon" />Profile</div>
+    <div ng-click="redirectOptions()" class="selectedItem"><img src="Images\settingsicon.png" class="menuIcon" /> Options</div>
+    <div ng-click="redirectLogin()" class="menuitem">Logout</div>>
 </div>
 
 <div id="settings" ng-app="MyApp" ng-controller="MyController">
