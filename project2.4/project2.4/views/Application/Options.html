@@ -35,41 +35,40 @@
     <div ng-click="redirectLogin()" class="menuitem">Logout</div>
 </div>
 
-<div id="settings">
+<div id="settings" ng-app="MyApp" ng-controller="MyController">
     <div id="Header"><center>SETTINGS</center></div>
-	<div id="settingsLeft">
+    <div id="settingsLeft">
         <center>
-		    <ul class="menuItem"><img src="Images\personal.png" class="settingIcon"> Persoonlijk</ul>
-		    <ul class="menuItem"><img src="Images\security.png" class="settingIcon"> <center>Beveiliging</ul>
-		    <ul class="menuItem"><img src="Images\privacy.png" class="settingIcon"> Privacy</ul>
-		    <ul class="menuItem"><img src="Images\notifications.png" class="settingIcon">Meldingen</ul>
+            <div class="menuItem" id="persoonlijk" ng-click="ShowHide()"><img src="Images\personal.png" class="settingIcon"> Persoonlijk</div>
+            <ul class="menuItem"><img src="Images\security.png" id="beveiliging" class="settingIcon"> <center>Beveiliging</ul>
+            <ul class="menuItem"><img src="Images\privacy.png" id="privacy" class="settingIcon"> Privacy</ul>
+            <ul class="menuItem"><img src="Images\notifications.png" id="Meldingen" class="settingIcon">Meldingen</ul>
         </center>
-	</div>
-	<div id="settingsRight">
-		<ul>
-			<b>Persoonlijke instellingen</b>
-			<li>Naam</li>
-			<li>Woonplaats</li>
-			<li>etc</li>
-		</ul>
-		<ul>
-			<b>Beveiliging</b>
-			<li>Password change</li>
-			<li>etc</li>
-		</ul>
-		<ul>
-			<b>Privacy</b>
-			<li>Wie kan het zien</li>
-			<li>Wat kunnen ze zien</li>
-			<li>etc</li>
-		</ul>
-		<ul>
-			<b>Meldingen</b>
-			<li>Wil ik meldingen ontvangen</li>
-			<li>Waarvan wil ik meldingen ontvangen?</li>
-			<li>etc</li>
-		</ul>
-	</div>
-
+    </div>
+    <div id="settingsRight" ng-show="IsVisible">
+        <ul>
+            <b>Persoonlijke instellingen</b>
+            <li>Naam</li>
+            <li>Woonplaats</li>
+            <li>etc</li>
+        </ul>
+        <ul>
+            <b>Beveiliging</b>
+            <li>Password change</li>
+            <li>etc</li>
+        </ul>
+        <ul>
+            <b>Privacy</b>
+            <li>Wie kan het zien</li>
+            <li>Wat kunnen ze zien</li>
+            <li>etc</li>
+        </ul>
+        <ul>
+            <b>Meldingen</b>
+            <li>Wil ik meldingen ontvangen</li>
+            <li>Waarvan wil ik meldingen ontvangen?</li>
+            <li>etc</li>
+        </ul>
+    </div>
 </div>
 

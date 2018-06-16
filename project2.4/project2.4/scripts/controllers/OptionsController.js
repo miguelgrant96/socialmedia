@@ -1,4 +1,12 @@
-﻿angular.module('Options')
+﻿var app = angular.module('MyApp', [])
+app.controller('MyController', function ($scope) {
+    $scope.IsVisible = false;
+    $scope.ShowHide = function () {
+        $scope.IsVisible = $scope.IsVisible ? false : true;
+    }
+});
+
+angular.module('Options')
     .controller('OptionsController', function ($scope, $route, $location) {
 
         $scope.redirectFeed = function (e) {
@@ -29,5 +37,8 @@
         $scope.redirectLogin = function () {
             $location.path("/");
             $location.replace();
-        };
+        };  
+
+        
     });
+};
