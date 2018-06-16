@@ -1,4 +1,5 @@
-﻿angular.module('Options')
+﻿
+angular.module('Options')
     .controller('OptionsController', function ($scope, $route, $location) {
 
         $scope.redirectFeed = function (e) {
@@ -29,8 +30,5 @@
         $scope.redirectLogin = function () {
             $location.path("/");
             $location.replace();
-        };  
-
-        
+        };
     });
-};
