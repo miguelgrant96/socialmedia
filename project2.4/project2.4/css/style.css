@@ -8,6 +8,10 @@ body {
     animation: fadein 2s;
 }
 
+.div {
+    border-color: #999aa3;
+}
+
 #menu {
     width: 100%;
     margin: 0 auto;
