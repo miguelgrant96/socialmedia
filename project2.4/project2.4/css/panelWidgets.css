@@ -1,0 +1,119 @@
+#panelInformation {
+    position: absolute;
+    margin: 0px auto;
+    left: 0;
+    right: 0;
+    top: 125px;
+    width: 94%;
+    border-color: #a8b9c1;
+    border-radius: 10px;
+    border-style: solid;
+    height: 70%;
+    background-color: #c0c2c4;
+}
+
+.WeatherWidget {
+    position: absolute;
+    height: 120px;
+    width: 200px;
+    background-color: #d7dde5;
+    background-image: url("../images/sunny.jpg");
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #999aa3;
+    margin-top: 1%;
+    margin-left: 1%;
+}
+
+.WeatherWidget p {
+    position: relative;
+    text-shadow: #000 0px 0px 1px;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    top: 0px;
+    margin-left: 10px;
+    color: white;
+}
+
+
+#weatherIcon {
+    position: absolute;
+    left: 10px;
+    top: 40px;
+    height: 80px;
+    widht: 80px;
+}
+
+#Temperature {
+    position: absolute;
+    top: 2px;
+    left: 80px;
+    color: white;
+    text-align: left;
+    font-size: 50px;
+}
+
+
+.notificationsWidget {
+    overflow-y: scroll;
+    position: absolute;
+    height: 120px;
+    background-image: url("../images/notificationsbackground.jpg");
+    width: 200px;
+    background-color: #d7dde5;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #999aa3;
+    margin-top: 1%;
+    margin-left: 50%;
+}
+
+    .notificationsWidget p {
+        color: white;
+        width: 90%;
+        border-bottom-style: solid;
+        border-color: #b1b7bf;
+        border-width: 1px;
+        border-radius: 1px;
+    }
+
+.feedWidget {
+    overflow-y: scroll;
+    position: absolute;
+    height: 180px;
+    background-image: url("../images/feedBackground.jpg");
+    background-repeat: repeat-x;
+    width: 95%;
+    background-color: #d7dde5;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #999aa3;
+    margin-top: 32%;
+    margin-left: 1%;
+}
+
+    .feedWidget p {
+        color: white;
+        text-align: left;
+        margin-right: 15%;
+        width: 70%;
+        border-bottom-style: solid;
+        border-color: #b1b7bf;
+        border-width: 1px;
+        border-radius: 1px;
+    }
+
+.feedHeader {
+    width: 100%;
+    background-color: #3851d7;
+    color: white;
+    border-radius: 6px;
+    border-bottom-style: none;
+    border-width: 0px;
+    border-color: #999aa3;
+    text-align: center;
+    font-size: 30px;
+}

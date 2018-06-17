@@ -113,7 +113,6 @@
     left: 0px;
 }
 
-
 .placecomment-containter {
     z-index: 1;
     position: relative;
@@ -366,70 +365,5 @@ post.hover ~.postFooter {
     border: 2px solid white;
     border-color: #a8b9c1;
     background-color: white;
-}
-
-#panelInformation {
-    position: absolute;
-    margin: 0px auto;
-    left: 0;
-    right: 0;
-    top: 155px;
-    width: 90%;
-    border-color: #a8b9c1;
-    border-radius: 10px;
-    border-style: solid;
-    height: 50%;
-    background-color: #c0c2c4;
-}
-
-.notifications {
-    position: absolute;
-    margin: 0px auto;
-    left: 0;
-    right: 0;
-    padding: 5px;
-    background-color: #e3eaf7;
-    border-radius: 5px;
-    border-color: #999aa3;
-    margin-top: 75px;
-    width: 97%;
-}
-
-.Weather {
-    position: absolute
-    margin: 0px auto;
-    left: 0;
-    right: 0;
-}
-
-.Weather p {
-    position: relative;
-    text-align: left;
-    margin-left: 110px;
-    color: black;
-}
-
-
-#weatherIcon {
-    position: absolute;
-    left: 5%;
-    height: 35%;
-    widht: 35%;
-}
-
-#Temperature {
-    position: absolute;
-    top: 0px;
-    color: black;
-    text-align: left;
-    font-size: 50px;
-}
-
-.notifications p {
-    color: red;
-    width: 90%;
-    border-bottom-style: solid;
-    border-color: #b1b7bf;
-    border-radius: 1px;
 }
 
