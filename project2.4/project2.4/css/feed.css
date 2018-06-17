@@ -97,19 +97,22 @@
 }
 
 .postcontainer {
+    transition: 0.2s;
     position: relative;
     margin-bottom: 1%;
     background-color: #d7dde5;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     border-radius: 6px;
     border-width: 2px;
     border-color: #999aa3;
     border-left: solid;
+    border-left-width: 10px;
     border-left-color: #354fd7;
     border-style: solid;
     width: 1000px;
     left: 0px;
 }
+
 
 .placecomment-containter {
     z-index: 1;
@@ -242,12 +245,13 @@
     position: absolute;
     width: 100%;
     margin-left: 2%;
+    margin-top: 0.8%;
     visibility: visible;
 }
 
 .postFooterRespectCount {
     position: absolute;
-    top: 1px;
+    top: 3px;
     left: 120px;
     color: #4f4f4f;
 }
