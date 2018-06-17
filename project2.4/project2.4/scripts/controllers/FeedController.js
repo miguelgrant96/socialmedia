@@ -13,7 +13,7 @@
         $scope.PostFeed = function ()
         {
             var feedtext = $scope.NewPostText;
-            var url = UriBuilder.BuildUrl("Feed");
+            var url = UriBuilder.BuildUrl("Feed", { 'text': feedtext , 'imageurl': "", 'videourl': ""});
             httpRequestService.PostRequest(url, null, function success(response) {
                 console.log("gelukt");
             }, function fail(response)
