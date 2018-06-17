@@ -62,28 +62,58 @@
     </div>
     <div id="settingsRight">
         <ul ng-show="Persoonlijk">
-            <b>Persoonlijke instellingen</b>
-            <li>Naam</li>
-            <li>Woonplaats</li>
-            <li>etc</li>
-        </ul>
+            <b>PERSONAL SETTINGS:</b>
+            <br />
+            <div class="optionName">First name <textarea class="optionValue" placeholder="Wesley"></textarea></div>
+            <div class="optionName">Last name <textarea class="optionValue" placeholder="de Waart"></textarea></div>
+            <div class="optionName">Nickname <textarea class="optionValue" placeholder="Schoonheid"></textarea></div>
+            <div class="optionInfo">Warning: You can only change your name once a month. Upon changing your name, your friends will be notified about the namechange.</div>
+            <br />
+            <div class="dividerLine"></div>
+            <br />
+            <div class="optionName">Life Motto <textarea class="optionValueLong" placeholder="A goal without a plan is just a wish"></textarea></div>
+            <div class="optionName">
+                Temperature <select class="optionValue">
+                    <option value="Celcius">Celcius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                </select>
+            </div>
+            <div class="applybutton">
+                <button>Revert</button>
+                <button>Apply</button>
+            </div>
+            </ul>
+
         <ul ng-show="Beveiliging">
-            <b>Beveiliging</b>
-            <li>Password change</li>
-            <li>etc</li>
-        </ul>
-        <ul ng-show="Privacy">
-            <b>Privacy</b>
-            <li>Wie kan het zien</li>
-            <li>Wat kunnen ze zien</li>
-            <li>etc</li>
-        </ul>
-        <ul ng-show="Meldingen">
-            <b>Meldingen</b>
-            <li>Wil ik meldingen ontvangen</li>
-            <li>Waarvan wil ik meldingen ontvangen?</li>
-            <li>etc</li>
-        </ul>
+            <div class="optionName">Change Password <textarea class="optionValue" input type="password" placeholder="Current password"></textarea></div></bbr>
+            <div class="optionName"><textarea class="optionValue" input type="password" placeholder="New password"></textarea></div><br /><br /><br />
+            <div class="optionName">Secret Question 
+                <select class="optionValueLong">
+                    <option value="Celcius">What was the name of my teacher in kindergarden</option>
+                    <option value="Celcius">What was the name of my first pet?</option>
+                    <option value="Celcius">What was my place of residence after I was my born?</option>
+                </select></div>
+            <div class="optionName">    <textarea class="optionValueLong" placeholder="Juff Mafkees"></textarea>
+                <br /><br />
+    <div class="optionName">
+        Receive email after logins
+        <select class="optionValue">
+            <option value="Celcius">Yes</option>
+            <option value="Fahrenheit">No</option>
+        </select>
     </div>
+</ul>
+            <ul ng-show="Privacy">
+                <b>Privacy</b>
+                <li>Wie kan het zien</li>
+                <li>Wat kunnen ze zien</li>
+                <li>etc</li>
+            </ul>
+            <ul ng-show="Meldingen">
+                <b>Meldingen</b>
+                <li>Wil ik meldingen ontvangen</li>
+                <li>Waarvan wil ik meldingen ontvangen?</li>
+                <li>etc</li>
+            </ul>
 </div>
 
