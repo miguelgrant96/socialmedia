@@ -6,9 +6,6 @@ angular.module('Login')
             var username = $scope.username;
             var password = $scope.password;
 
-            $location.path("/Feed");
-            $location.replace();
-
             //TODO server bende.
             AuthorizationService.Authorize(username, password).then((Response) => {
                 $location.path("/Feed");

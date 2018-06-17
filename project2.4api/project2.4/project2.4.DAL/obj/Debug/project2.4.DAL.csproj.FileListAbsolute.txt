@@ -33,4 +33,3 @@ C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\p
 C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\obj\Debug\project2.4.DAL.csproj.CopyComplete
 C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\obj\Debug\project2.4.DAL.dll
 C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\obj\Debug\project2.4.DAL.pdb
-C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\obj\Debug\project2._4.DAL.Migrations.feedupdate.resources

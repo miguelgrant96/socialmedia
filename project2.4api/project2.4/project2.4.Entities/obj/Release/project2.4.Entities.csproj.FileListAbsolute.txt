@@ -4,3 +4,9 @@ D:\Source\Project2.4\project2.4\project2.4.Entities\obj\Release\project2.4.Entit
 D:\Source\Project2.4\project2.4\project2.4.Entities\obj\Release\project2.4.Entities.csproj.CoreCompileInputs.cache
 D:\Source\Project2.4\project2.4\project2.4.Entities\obj\Release\project2.4.Entities.dll
 D:\Source\Project2.4\project2.4\project2.4.Entities\obj\Release\project2.4.Entities.pdb
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.Entities\bin\Release\project2.4.Entities.dll
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.Entities\bin\Release\project2.4.Entities.pdb
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.Entities\obj\Release\project2.4.Entities.csprojAssemblyReference.cache
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.Entities\obj\Release\project2.4.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.Entities\obj\Release\project2.4.Entities.dll
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.Entities\obj\Release\project2.4.Entities.pdb

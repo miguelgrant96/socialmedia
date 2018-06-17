@@ -12,7 +12,7 @@ namespace project2._4.Entities.Models
 
         public string Title { get; set; }
 
-        public virtual Guid CreatorId { get; set; }
+        public User Creator { get; set; }
 
         public DateTime CreatedAt { get; set; }
     }
