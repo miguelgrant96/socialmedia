@@ -37,35 +37,35 @@
     <div ng-click="redirectLogin()" class="menuitem">Logout</div>>
 </div>
 
-<div id="settings" ng-app="MyApp" ng-controller="MyController">
+<div id="settings">
     <div id="Header"><center>SETTINGS</center></div>
     <div id="settingsLeft">
         <center>
-            <div class="menuItem" id="persoonlijk" ng-click="ShowHide()"><img src="Images\personal.png" class="settingIcon"> Persoonlijk</div>
-            <ul class="menuItem"><img src="Images\security.png" id="beveiliging" class="settingIcon"> <center>Beveiliging</ul>
-            <ul class="menuItem"><img src="Images\privacy.png" id="privacy" class="settingIcon"> Privacy</ul>
-            <ul class="menuItem"><img src="Images\notifications.png" id="Meldingen" class="settingIcon">Meldingen</ul>
+            <div class="menuItem" id="persoonlijk" ng-click="showPersoonlijk()"><img src="Images\personal.png" class="settingIcon"> Persoonlijk</div>
+            <ul class="menuItem" ng-click="showBeveiliging()"><img src="Images\security.png" id="beveiliging" class="settingIcon"> <center>Beveiliging</ul>
+            <ul class="menuItem" ng-click="showPrivacy()"><img src="Images\privacy.png" id="privacy" class="settingIcon"> Privacy</ul>
+            <ul class="menuItem" ng-click="showMeldingen()"><img src="Images\notifications.png" id="Meldingen" class="settingIcon">Meldingen</ul>
         </center>
     </div>
-    <div id="settingsRight" ng-show="IsVisible">
-        <ul>
+    <div id="settingsRight">
+        <ul ng-show="Persoonlijk">
             <b>Persoonlijke instellingen</b>
             <li>Naam</li>
             <li>Woonplaats</li>
             <li>etc</li>
         </ul>
-        <ul>
+        <ul ng-show="Beveiliging">
             <b>Beveiliging</b>
             <li>Password change</li>
             <li>etc</li>
         </ul>
-        <ul>
+        <ul ng-show="Privacy">
             <b>Privacy</b>
             <li>Wie kan het zien</li>
             <li>Wat kunnen ze zien</li>
             <li>etc</li>
         </ul>
-        <ul>
+        <ul ng-show="Meldingen">
             <b>Meldingen</b>
             <li>Wil ik meldingen ontvangen</li>
             <li>Waarvan wil ik meldingen ontvangen?</li>

@@ -43,11 +43,11 @@
 <div id="gotPosts">
     <div id="createPost">
         <b class="createposttext"> Create Post</b><br>
-        <textarea id="postText" placeholder="Please enter your post here"></textarea><br>
+        <textarea id="postText" placeholder="Please enter your post here" ng-model="NewPostText"></textarea><br>
         <div id="buttons">
             <button class="CreatePostButton"><img src="Images\imageicon.png" class="postIcon"> &nbsp; Add picture</button>
             <button class="CreatePostButton"><img src="Images\videoicon.png" class="postIcon"> &nbsp;Add video</button>
-            <button class="CreatePostButton"><img src="Images\sendicon.png" class="postIcon">&nbsp; Publish</button>
+            <button class="CreatePostButton" ng-click="PostFeed()"><img src="Images\sendicon.png" class="postIcon">&nbsp; Publish</button>
         </div>
 
     </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />

@@ -1,6 +1,11 @@
 ﻿
 angular.module('Options')
     .controller('OptionsController', function ($scope, $route, $location) {
+        $scope.Persoonlijk = true;
+        $scope.Beveiliging = false;
+        $scope.Privacy = false;
+        $scope.Meldingen = false;
+
 
         $scope.redirectFeed = function (e) {
             $location.path("/Feed");
@@ -31,4 +36,35 @@ angular.module('Options')
             $location.path("/");
             $location.replace();
         };
+
+
+        $scope.showPersoonlijk = function ()
+        {
+            $scope.Persoonlijk = true;
+            $scope.Beveiliging = false;
+            $scope.Privacy = false;
+            $scope.Meldingen = false;
+        }
+
+        $scope.showBeveiliging = function () {
+            $scope.Persoonlijk = false;
+            $scope.Beveiliging = true;
+            $scope.Privacy = false;
+            $scope.Meldingen = false;
+        }
+
+        $scope.showPrivacy = function () {
+            $scope.Persoonlijk = false;
+            $scope.Beveiliging = false;
+            $scope.Privacy = true;
+            $scope.Meldingen = false;
+        }
+
+        $scope.showMeldingen = function () {
+            $scope.Persoonlijk = false;
+            $scope.Beveiliging = false;
+            $scope.Privacy = false;
+            $scope.Meldingen = true;
+        }
+
     });
