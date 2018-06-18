@@ -1,0 +1,6 @@
+D:\Source\Project2.4\project2.4\project2.4.Entities\bin\Release\project2.4.Entities.dll
+D:\Source\Project2.4\project2.4\project2.4.Entities\bin\Release\project2.4.Entities.pdb
+D:\Source\Project2.4\project2.4\project2.4.Entities\obj\Release\project2.4.Entities.csprojResolveAssemblyReference.cache
+D:\Source\Project2.4\project2.4\project2.4.Entities\obj\Release\project2.4.Entities.csproj.CoreCompileInputs.cache
+D:\Source\Project2.4\project2.4\project2.4.Entities\obj\Release\project2.4.Entities.dll
+D:\Source\Project2.4\project2.4\project2.4.Entities\obj\Release\project2.4.Entities.pdb

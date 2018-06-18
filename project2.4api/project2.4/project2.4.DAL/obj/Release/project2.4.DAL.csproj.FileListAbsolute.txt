@@ -1,0 +1,17 @@
+D:\Source\Project2.4\project2.4\project2.4.DAL\bin\Release\project2.4.DAL.dll.config
+D:\Source\Project2.4\project2.4\project2.4.DAL\bin\Release\project2.4.DAL.dll
+D:\Source\Project2.4\project2.4\project2.4.DAL\bin\Release\project2.4.DAL.pdb
+D:\Source\Project2.4\project2.4\project2.4.DAL\bin\Release\EntityFramework.dll
+D:\Source\Project2.4\project2.4\project2.4.DAL\bin\Release\EntityFramework.SqlServer.dll
+D:\Source\Project2.4\project2.4\project2.4.DAL\bin\Release\project2.4.Entities.dll
+D:\Source\Project2.4\project2.4\project2.4.DAL\bin\Release\project2.4.Entities.pdb
+D:\Source\Project2.4\project2.4\project2.4.DAL\bin\Release\EntityFramework.xml
+D:\Source\Project2.4\project2.4\project2.4.DAL\bin\Release\EntityFramework.SqlServer.xml
+D:\Source\Project2.4\project2.4\project2.4.DAL\obj\Release\project2.4.DAL.csprojResolveAssemblyReference.cache
+D:\Source\Project2.4\project2.4\project2.4.DAL\obj\Release\project2._4.DAL.Migrations.IdentityFramwork.resources
+D:\Source\Project2.4\project2.4\project2.4.DAL\obj\Release\project2._4.DAL.Migrations.ProfileInfo.resources
+D:\Source\Project2.4\project2.4\project2.4.DAL\obj\Release\project2._4.DAL.Migrations.Feed.resources
+D:\Source\Project2.4\project2.4\project2.4.DAL\obj\Release\project2.4.DAL.csproj.GenerateResource.Cache
+D:\Source\Project2.4\project2.4\project2.4.DAL\obj\Release\project2.4.DAL.csproj.CoreCompileInputs.cache
+D:\Source\Project2.4\project2.4\project2.4.DAL\obj\Release\project2.4.DAL.dll
+D:\Source\Project2.4\project2.4\project2.4.DAL\obj\Release\project2.4.DAL.pdb

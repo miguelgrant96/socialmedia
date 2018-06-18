@@ -1,0 +1,6 @@
+D:\Source\Project2.4\project2.4\project2.4.Shared\bin\Release\project2.4.Shared.dll
+D:\Source\Project2.4\project2.4\project2.4.Shared\bin\Release\project2.4.Shared.pdb
+D:\Source\Project2.4\project2.4\project2.4.Shared\obj\Release\project2.4.Shared.csprojResolveAssemblyReference.cache
+D:\Source\Project2.4\project2.4\project2.4.Shared\obj\Release\project2.4.Shared.csproj.CoreCompileInputs.cache
+D:\Source\Project2.4\project2.4\project2.4.Shared\obj\Release\project2.4.Shared.dll
+D:\Source\Project2.4\project2.4\project2.4.Shared\obj\Release\project2.4.Shared.pdb

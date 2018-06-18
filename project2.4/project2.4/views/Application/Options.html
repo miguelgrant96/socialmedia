@@ -1,45 +1,119 @@
-﻿<div id="menu">
-    <div ng-click="redirectFeed()" class="menuitem">Logo</div>
-    <div ng-click="redirectFeed()" class="menuitem">Feed</div>
-    <div ng-click="redirectProfile()" class="menuitem">Profile</div>
-    <div ng-click="redirectOptions()" class="selectedItem">Options</div>
-    <div ng-click="redirectPrivacy()" class="menuitem">Privacy</div>
-    <div class="menuitem">Notifications</div>
-    <div ng-click="redirectFriends()" class="menuitem">Friends</div>
-    <div ng-click="redirectLogout()" class="menuitem">Logout</div>
+﻿<div class="UserPanelContainer">
+
+    <div id="Header"> <center>UPDATES </center></div>
+    <img src="Images\wesley.jpg" id="panelNamePic">
+    <div id="friendCount">You have <br /><b>98 Friends</b></div>
+    <div id="onlineStatus">
+        Shown as:<img src="Images\dropdownArrow.png" id="dropdownIconOnline">  <br />
+        <img src="Images\userOnline.png" id="onlineStatusIcon"><b> Online</b>
+    </div>
+    <div id="panelInformation">
+        <div class="WeatherWidget">
+            <center>
+                <img src="Images\weatherSunny.png" id="weatherIcon">
+                <p>You are currently in <br> <b>Groningen</b></p>
+                <p id="Temperature"> 28ºC</p>
+            </center>
+        </div>
+        <div class="notificationsWidget">
+            <center>
+                <p><b>You have 5 new notifications</b></p>
+                <p>3 friends replied to your 'Holiday in Spain' album</p>
+                <p>Jan de Woert wants to be your friend</p>
+                <p>You have been invited to the event: ''Wedding Party''</p>
+            </center>
+        </div>
+        <div class="feedWidget">
+            <center>
+                <div class="feedHeader">FEED UPDATES</div>
+                <div class="feedupdate"><div class="timestamp">4 minutes ago </div> Arjen Bovee made a new post!<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
+                <div class="feedupdate"><div class="timestamp">8 minutes ago </div>Miguel Grant posted a picture of the White House<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
+                <div class="feedupdate"><div class="timestamp">15 minutes ago </div>Marnick Scholten posted an album called: ''2-weeks at Ibaza''<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
+                <div class="feedupdate"><div class="timestamp">23 minutes ago </div>Wesley de Waart made a new post!<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
+                <div class="feedupdate"><div class="timestamp">45 minutes ago </div>Jan de Woert added a video called: "I created a robot that scratches the dog for you!"<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
+                <div class="feedupdate"><div class="timestamp">51 minutes ago </div>Arjen Bovee added a picture called: "My favourite Hanze teacher"<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
+                <div class="feedupdate"><div class="timestamp">1 hour ago </div>Wesley just made a post!<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
+            </center>
+        </div>
+    </div>
+</div>
+<div id="menu">
+    <div ng-click="redirectFeed()" class="menuitem"> <img src="Images\speech.png" class="menuLogo"></div>
+    <div ng-click="redirectFeed()" class="menuitem"> <img src="Images\feedicon.png" class="menuIcon">Feed</div>
+    <div ng-click="redirectOptions()" class="menufiller"></div>
+    <textarea class="searchBar" placeholder="Wat zoek u"></textarea>
+    <div ng-click="redirectOptions()" class="menufiller"></div>
+    <div ng-click="redirectProfile()" class="menuitem"><img src="Images\profileicon.png" class="menuIcon" />Profile</div>
+    <div ng-click="redirectOptions()" class="selectedItem"><img src="Images\settingsicon.png" class="menuIcon" /> Options</div>
+    <div ng-click="redirectLogin()" class="menuitem">Logout</div>>
 </div>
 
-<div id="profilePic"> foto hier</div>
+
+
 <div id="settings">
-	<div id="settingsLeft">
-		<ul class="menuItem">Persoonlijke instellingen</ul>
-		<ul class="menuItem">Beveiliging</ul>
-		<ul class="menuItem">Privacy</ul>
-		<ul class="menuItem">Meldingen</ul>
-	</div>
-	<div id="settingsRight">
-		<ul>
-			<b>Persoonlijke instellingen</b>
-			<li>Naam</li>
-			<li>Woonplaats</li>
-			<li>etc</li>
-		</ul>
-		<ul>
-			<b>Beveiliging</b>
-			<li>Password change</li>
-			<li>etc</li>
-		</ul>
-		<ul>
-			<b>Privacy</b>
-			<li>Wie kan het zien</li>
-			<li>Wat kunnen ze zien</li>
-			<li>etc</li>
-		</ul>
-		<ul>
-			<b>Meldingen</b>
-			<li>Wil ik meldingen ontvangen</li>
-			<li>Waarvan wil ik meldingen ontvangen?</li>
-			<li>etc</li>
-		</ul>
-	</div>
+    <div id="Header"><center>SETTINGS</center></div>
+    <div id="settingsLeft">
+        <center>
+            <div class="menuItem" id="persoonlijk" ng-click="showPersoonlijk()"><img src="Images\personal.png" class="settingIcon"> Persoonlijk</div>
+            <ul class="menuItem" ng-click="showBeveiliging()"><img src="Images\security.png" id="beveiliging" class="settingIcon"> <center>Beveiliging</ul>
+            <ul class="menuItem" ng-click="showPrivacy()"><img src="Images\privacy.png" id="privacy" class="settingIcon"> Privacy</ul>
+            <ul class="menuItem" ng-click="showMeldingen()"><img src="Images\notifications.png" id="Meldingen" class="settingIcon">Meldingen</ul>
+        </center>
+    </div>
+    <div id="settingsRight">
+        <ul ng-show="Persoonlijk">
+            <b>PERSONAL SETTINGS:</b>
+            <br />
+            <div class="optionName">First name <textarea class="optionValue" placeholder="Wesley"></textarea></div>
+            <div class="optionName">Last name <textarea class="optionValue" placeholder="de Waart"></textarea></div>
+            <div class="optionName">Nickname <textarea class="optionValue" placeholder="Schoonheid"></textarea></div>
+            <div class="optionInfo">Warning: You can only change your name once a month. Upon changing your name, your friends will be notified about the namechange.</div>
+            <br />
+            <div class="dividerLine"></div>
+            <br />
+            <div class="optionName">Life Motto <textarea class="optionValueLong" placeholder="A goal without a plan is just a wish"></textarea></div>
+            <div class="optionName">
+                Temperature <select class="optionValue">
+                    <option value="Celcius">Celcius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                </select>
+            </div>
+            <div class="applybutton">
+                <button>Revert</button>
+                <button>Apply</button>
+            </div>
+            </ul>
+
+        <ul ng-show="Beveiliging">
+            <div class="optionName">Change Password <textarea class="optionValue" input type="password" placeholder="Current password"></textarea></div></bbr>
+            <div class="optionName"><textarea class="optionValue" input type="password" placeholder="New password"></textarea></div><br /><br /><br />
+            <div class="optionName">Secret Question 
+                <select class="optionValueLong">
+                    <option value="Celcius">What was the name of my teacher in kindergarden</option>
+                    <option value="Celcius">What was the name of my first pet?</option>
+                    <option value="Celcius">What was my place of residence after I was my born?</option>
+                </select></div>
+            <div class="optionName">    <textarea class="optionValueLong" placeholder="Juff Mafkees"></textarea>
+                <br /><br />
+    <div class="optionName">
+        Receive email after logins
+        <select class="optionValue">
+            <option value="Celcius">Yes</option>
+            <option value="Fahrenheit">No</option>
+        </select>
+    </div>
+</ul>
+            <ul ng-show="Privacy">
+                <b>Privacy</b>
+                <li>Wie kan het zien</li>
+                <li>Wat kunnen ze zien</li>
+                <li>etc</li>
+            </ul>
+            <ul ng-show="Meldingen">
+                <b>Meldingen</b>
+                <li>Wil ik meldingen ontvangen</li>
+                <li>Waarvan wil ik meldingen ontvangen?</li>
+                <li>etc</li>
+            </ul>
 </div>
+

@@ -17,23 +17,38 @@
 
 #createPost {
     position: absolute;
-    width: 100%;
-    height: 100px;
+    width: 1000px;
+    padding-top: 20px;
+    height: 120px;
     border: 1px solid black;
     float: left;
     margin-top: 2%;
-    background-color: #919191;
+    border-color: #999aa3;
+    border-width: 2px;
+    background-color: #d7dde5;
     margin-left: 0%;
+    border-radius: 3px;
+}
+
+.CreatePostButton {
+    border-radius: 25px;
+    background-color: #edeff2;
+    border-color: #edeff2;
+    margin-left: 10px;
+}
+
+.postIcon {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    float: left;
+    border-color: #edeff2
 }
 
 .createposttext {
     padding-left: 20px;
 }
 
-#buttons {
-    position: absolute;
-    margin-left: 100%;
-}
 
 #postText{
 	width: 95%;
@@ -42,7 +57,9 @@
 }
 
 #buttons {
-	margin-left: 1%;
+    margin-left: 1%;
+    border-radius: 25px;
+    color: white;
 }
 
 #logotopbar {
@@ -51,38 +68,50 @@
 }
 
 #Header {
-    background-color: #354dd6;
+    background-color: #3851d7;
     font-size: 25px;
     color: white
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 #gotPosts {
     position: absolute;
-    width: 55%;
+    width: 65%;
     height: 70%;
     overflow-y: scroll;
+    -ms-overflow-style: none;
     overflow-x: hidden;
-    background-color: #e3e9ed;
-    border-radius: 5px;
-    border-style: solid;
-    border-color:  #999aa3;
-    margin-top: 6%;
-
-    margin-left: 35%;
+    top: 110px;
+    left: 600px;
     padding-bottom: 300px;
 }
 
-.postedphoto {
-    position: relative;
-    height: 200px;
 
+.postedphoto {
+    float: right;
+    margin-top: 2%;
+    margin-right: 37%;
+    height: 300px;
     border: 1px solid black;
 }
 
 .postcontainer {
+    transition: 0.2s;
     position: relative;
     margin-bottom: 1%;
+    background-color: #d7dde5;
     padding-bottom: 10px;
+    border-radius: 6px;
+    border-width: 2px;
+    border-color: #999aa3;
+    border-left: solid;
+    border-left-width: 10px;
+    border-left-color: #354fd7;
+    border-style: solid;
+    width: 1000px;
     left: 0px;
 }
 
@@ -91,11 +120,7 @@
     position: relative;
     font-size: 22px;
     width: 50%;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    background-color: #e3eaf7;
-    border-color: #354dd6;
+    border-color: #a8b9c1;
     min-height: 55px;
     margin-left: 7%;
     //margin-top: -1%;
@@ -104,41 +129,67 @@
 .commentArea {
     position: absolute;
     width: 80%;
-    left: 9%;
+    left: 0px;
 }
 
 .comment-Container {
+    transition: 0.2s;
     z-index: 1;
     position: relative;
     font-size: 22px;
     width: 50%;
     border: 1px solid black;
-    background-color: #e3eaf7;
-    padding-right: 60px;
-    border-color: #354dd6;
-    min-height: 85px;
-    margin-left: 7%;
-    margin-top: -1%;
+    background-color: #e5e7ea;
+    padding-right: 20px;
+    border: 1px solid black;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border-color: #999aa3;
+    border-left-style: solid;
+    border-left-color: #a8b9c1;
+    border-left-width: 10px;
+    min-height: 65px;
+    margin-left: 6%;
+    margin-top: 0.6%;
 }
+
+    .comment-Container:hover {
+        transition: 0.2s;
+        border-left-style: solid;
+        border-left-color: #354fd7;
+        border-left-width: 10px;
+    }
 
 .post {
     z-index: 3;
     position: relative;
     padding-bottom: 4%;
     border: 1px solid black;
-    background-color: #eff5ff;
+    background-color: #edeff2;
     border-radius: 10px;
-    border-color: #354dd6;
+    border-color: #999aa3;;
     color: black;
     min-height: 10%;
     left: 50px;
     margin-top: 50px;
-    height: auto;
+    min-height: 50px;
     width: 90%;
 }
 
-.post:hover {
-     background-color: #fFFFFF;
+.postphoto {
+    z-index: 3;
+    position: relative;
+    padding-bottom: 4%;
+    border: 1px solid black;
+    background-color: #edeff2;
+    border-radius: 10px;
+    border-color: #999aa3;;
+    color: black;
+    min-height: 10%;
+    left: 50px;
+    margin-top: 50px;
+    min-height: 350px;
+    width: 70%;
 }
 
 .user {
@@ -152,8 +203,8 @@
     top: 1%;
     float: left;
     margin-left: 2%;
-    border: 2px solid white;
-    border-color: #354dd6;
+    border: 3px solid white;
+    border-color: #3851d7;
     background-color: white;
 }
 
@@ -163,32 +214,32 @@
     width: 50px;
     height: 50px;
     left: 0%;
-    top: 15%;
+    top: 4%;
     float: left;
     color: white;
     margin-left: 1%;
     border: 2px solid white;
-    border-color: #354dd6;
-    background-color: #354dd6;
+    border-color: #a8b9c1;
+    background-color: #a8b9c1;
 }
 
 .commentText {
     position: absolute;
     left: 65px;
-    top: 45%;
+    top: 40%;
     font-size: 13px;
 }
 
 .profileName {
     position: absolute;
     left: 45px;
-    top: 23%;
+    top: 13%;
     font-size: 15px;
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 20px;
     color: white;
-    background-color: #354dd6;
+    background-color: #253691;
 }
 
 .username {
@@ -201,7 +252,7 @@
     left: 100px;
     color: white;
     font-size: 22px;
-    background-color: #354dd6;
+    background-color: #3851d7;
 }
 
 /*.posttext {
@@ -220,11 +271,17 @@
 .postFooter {
     z-index: 2;
     position: absolute;
-    height: 30px;
     width: 100%;
-    margin-top: 1%;
-    margin-left: 5%;
+    margin-left: 2%;
+    bottom: 10px;
     visibility: visible;
+}
+
+.postFooterRespectCount {
+    position: absolute;
+    top: 3px;
+    left: 120px;
+    color: #4f4f4f;
 }
 
 post.hover ~.postFooter {
@@ -235,11 +292,16 @@ post.hover ~.postFooter {
 }
 
 .postFooterImages {
-    height: 25px;
+    height: 20px;
+    width: 20px;
+}
+
+.postFooterButton {
+    height: 30px;
 }
 
 .underlay-photo {
-    background-image: url("../images/bg-login.jpg");
+    background-image: url("../images/bg-loginf.jpg");
     background-size: cover;
 }
 
@@ -255,13 +317,13 @@ post.hover ~.postFooter {
     padding-right: 50px;
     border-radius: 20px;
     color: white;
-    background-color: #354dd6;
+    background-color: #3851d7;
 }
 
 #onlineStatus {
     position: absolute;
     text-align: left;
-    left:230px;
+    left: 230px;
     top: 90px;
     width: 90px;
     font-size: 15px;
@@ -269,7 +331,7 @@ post.hover ~.postFooter {
     padding-right: 20px;
     border-radius: 20px;
     color: white;
-    background-color: #354dd6;
+    background-color: #3851d7;
 }
 
 #onlineStatusIcon {
@@ -288,12 +350,12 @@ post.hover ~.postFooter {
 
 .UserPanelContainer {
     position: absolute;
-    background-color: #e3e9ed;
+    background-color: #d7dde5;
     border-radius: 5px;
     border-style: solid;
-    border-color:  #999aa3;
+    border-color: #999aa3;
     left: 90px;
-    margin-top: 6%;
+    top: 130px;
     width: 450px;
     height: 500px;
 }
@@ -314,7 +376,7 @@ post.hover ~.postFooter {
     top: 129px;
     color: white;
     font-size: 20px;
-    background-color: #354dd6;
+    background-color: #3851d7;
 }
 
 #panelNamePic {
@@ -330,72 +392,7 @@ post.hover ~.postFooter {
     top: 35px;
     float: left;
     border: 2px solid white;
-    border-color: #354dd6;
+    border-color: #a8b9c1;
     background-color: white;
-}
-
-#panelInformation {
-    position: absolute;
-    margin: 0px auto;
-    left: 0;
-    right: 0;
-    top: 155px;
-    width: 90%;
-    border-color: #354dd6;
-    border-radius: 10px;
-    border-style: solid;
-    height: 50%;
-    background-color: #eff5ff;
-}
-
-.notifications {
-    position: absolute;
-    margin: 0px auto;
-    left: 0;
-    right: 0;
-    padding: 5px;
-    background-color: #e3eaf7;
-    border-radius: 5px;
-    border-color: #999aa3;
-    margin-top: 75px;
-    width: 97%;
-}
-
-.Weather {
-    position: absolute
-    margin: 0px auto;
-    left: 0;
-    right: 0;
-}
-
-.Weather p {
-    position: relative;
-    text-align: left;
-    margin-left: 110px;
-    color: black;
-}
-
-
-#weatherIcon {
-    position: absolute;
-    left: 5%;
-    height: 35%;
-    widht: 35%;
-}
-
-#Temperature {
-    position: absolute;
-    top: 0px;
-    color: black;
-    text-align: left;
-    font-size: 50px;
-}
-
-.notifications p {
-    color: red;
-    width: 90%;
-    border-bottom-style: solid;
-    border-color: #b1b7bf;
-    border-radius: 1px;
 }
 

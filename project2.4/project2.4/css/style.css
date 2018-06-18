@@ -3,9 +3,13 @@ body {
     background-image: url("../images/bg-login.jpg");
     background-size: cover;
     z-index: -1;
-    font-family: 'Trebuchet MS';
+    font-family: 'Helvetica';
     font-size: 12px;
     animation: fadein 2s;
+}
+
+.div {
+    border-color: #999aa3;
 }
 
 #menu {
@@ -13,6 +17,7 @@ body {
     margin: 0 auto;
     text-align: center;
     height: 30px;
+    background-color: #d7dde5;
 }
 
 #logo {
@@ -22,38 +27,110 @@ body {
 	border: 1px solid black;
 }
 .menuitem {
+    text-transform: uppercase;
+    transition: 0.2s;
     float: left;
-    height: 100px;
+    height: 40px;
+    opacity: 0.9;
     width: 12.5%;
+    background-color: #d7dde5;
     display: inline-block;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border: 1px solid black;
-    background-color: #222;
-    color: aliceblue;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: white;
+    background-color: #edeff2;
+    color: black;
+    padding: 5px;
+    font-size: 25px;
 }
 
+    .menuitem:hover {
+        cursor: pointer;
+        transition: 0.2s;
+        background-color: white;
+        transition: background-color 0.2s ease;
+        border-radius: 5px;
+        border-bottom-color: grey;
+    }
+
 .menuLogo {
-    width: 12.5%;
-    height: 100px;
-    background-color: #222;
-    background-image: url(../images/Speech.png);
+    height: 70px;
     background-size: 100% 100%;
     float: left;
 }
 
-.selectedItem {
+.menuIcon {
+    position: relative;
+    height: 30px;
+    width: 30px;
     float: left;
-    height: 100px;
-    width: 12.5%;
+}
+
+.searchBar {
+    float: left;
+    height: 40px;
+    opacity: 0.9;
+    width: 30%;
+    background-color: #d7dde5;
     display: inline-block;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     border: 1px solid black;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: white;
+    background-color: #edeff2;
+    color: black;
+    padding: 5px;
+    font-size: 25px;
+}
+
+.menufiller {
+    float: left;
+    height: 40px;
+    opacity: 0.9;
+    width: 3.75%;
+    background-color: #d7dde5;
+    display: inline-block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid black;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color: white;
+    background-color: #edeff2;
+    color: black;
+    padding: 5px;
+    font-size: 25px;
+}
+
+.selectedItem {
+    text-transform: uppercase;
+    transition: 0.2s;
+    cursor: pointer;
+    transition: 0.2s;
+    float: left;
+    height: 40px;
+    width: 12.5%;
+    background-color: #d7dde5;
+    display: inline-block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid black;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #3851d7;
     background-color: aliceblue;
-    color: #222;
+    color: black;
+    padding: 5px;
+    font-size: 25px;
 }
 
 #userInfo {
