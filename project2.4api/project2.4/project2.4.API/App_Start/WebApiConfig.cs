@@ -17,7 +17,7 @@ namespace project2._4.API
             GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
-
+            config.EnableCors();
             // Web API routes
             config.MapHttpAttributeRoutes();
 

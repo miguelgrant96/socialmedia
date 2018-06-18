@@ -39,7 +39,7 @@
                 <div class="feedHeader">FEED UPDATES</div>
                 <div class="feedupdate"><div class="timestamp">4 minutes ago </div> Arjen Bovee made a new post!<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
                 <div class="feedupdate"><div class="timestamp">8 minutes ago </div>Miguel Grant posted a picture of the White House<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
-                <div class="feedupdate"><div class="timestamp">15 minutes ago </div>Marnick Scholten posted an album called: ''2-weeks at Ibaza''<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
+                <div class="feedupdate"><div class="timestamp">15 minutes ago </div>Marnick Scholten posted an album called: ''2-weeks at Ibiza''<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
                 <div class="feedupdate"><div class="timestamp">23 minutes ago </div>Wesley de Waart made a new post!<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
                 <div class="feedupdate"><div class="timestamp">45 minutes ago </div>Jan de Woert added a video called: "I created a robot that scratches the dog for you!"<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
                 <div class="feedupdate"><div class="timestamp">51 minutes ago </div>Arjen Bovee added a picture called: "My favourite Hanze teacher"<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
@@ -63,7 +63,10 @@
 
     </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <div class="postcontainer">
-        <img src="Images\profile.png" class="user"><br /><p class="username">NIEV - 50 minutes ago </p>
+
+        <div class="user" ng-click="redirectProfile()" ><br /></div>
+        <br /><p class="username">NIEV - 50 minutes ago </p>
+
         <div class="post">
             <p class="posttext">
                 Jaaaaa!!! Vandaag eindelijk de nieuwe single van de Gories gevonden!! Na jaren speuren eindelijk gevonden!! Collectie compleet!!
@@ -79,6 +82,7 @@
         <div class="comment-Container">
             <!-- COMMENT -->
             <div class="profileName"> Mick Collins</div>
+
             <div class="commentText"> Finally!! Our biggest fan ever!! We love you Evert!!</div>
             <img src="Images\profile4.png" class="commentuser">
         </div>
@@ -140,41 +144,37 @@
         <div class="comment-Container">
             <!-- COMMENT -->
             <div class="profileName"> Wesley de Waart </div>
-            <div class="commentText"> Is dit bij de Cocora Vally!? Daar ben ik ook. Laten we even wat gaan drinken dan!? </div>
+            <div class="commentText"> Is dit bij de Cocora Vally!? Daar ben ik ook. Zullen we even wat gaan drinken!? </div>
             <img src="Images\wesley.jpg" class="commentuser">
         </div>
         <div class="placecomment-containter ">
             <textarea class="commentArea" placeholder="Enter your comment here"></textarea><br>
         </div>
+    </div>
 
-        <div class="postcontainer" ng-repeat="item in Feed">
-            <img src="Images\profile.png" class="user"><br /><p class="username">NIEV - 50 minutes ago </p>
-            <div class="post">
-                <p class="posttext">
-                    {{item.Feed.Text}}
-                </p>
-                <div class="postFooter">
-                    <button class=" postFooterButton"><img src="Images\respect.png" class="postFooterImages"></button>
-                    <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
-                    <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
-                    <p class=" postFooterRespectCount">| 5 mensen gaven Respect!</p>
+    <div class="postcontainer" ng-repeat="item in Feed">
+        <img src="Images\profile.png" class="user"><br /><p class="username">NIEV - just now </p>
+        <div class="post">
+            <p class="posttext">
+                {{item.Feed.Text}}
+            </p>
+            <div class="postFooter">
+                <button class=" postFooterButton"><img src="Images\respect.png" class="postFooterImages"></button>
+                <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
+                <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
+                <p class=" postFooterRespectCount">| 5 mensen gaven Respect!</p>
 
-                </div>
-            </div>
-            <div class="comment-Container">
-                <!-- COMMENT -->
-                <div class="profileName"> Belinda van Wouten</div>
-                <div class="commentText"> Tot snel! Kan niet wachten om weer een intens leerzame les van u te krijgen. Altijd feest! </div>
-                <img src="Images\profile3.png" class="commentuser">
-            </div>
-            <div class="comment-Container">
-                <!-- COMMENT -->
-                <div class="profileName"> Test Account</div>
-                <div class="commentText"> Alles aan deze feed is kut fix het</div>
-                <img src="Images\profile3.png" class="commentuser">
-            </div>
-            <div class="placecomment-containter ">
-                <textarea class="commentArea" placeholder="Enter your comment here"></textarea><br>
             </div>
         </div>
+        <div class="comment-Container">
+            <!-- COMMENT -->
+            <div class="profileName"> Belinda van Wouten</div>
+            <div class="commentText"> Ik kan niet wachten op uw les van straks!! </div>
+            <img src="Images\profile3.png" class="commentuser">
+        </div>
+        
+        <div class="placecomment-containter ">
+            <textarea class="commentArea" placeholder="Enter your comment here"></textarea><br>
+        </div>
     </div>
+</div>

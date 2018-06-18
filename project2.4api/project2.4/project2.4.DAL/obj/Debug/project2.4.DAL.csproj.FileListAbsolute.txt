@@ -15,3 +15,22 @@ D:\Source\Project2.4\project2.4\project2.4.DAL\obj\Debug\project2._4.DAL.Migrati
 D:\Source\Project2.4\project2.4\project2.4.DAL\obj\Debug\project2.4.DAL.csproj.GenerateResource.Cache
 D:\Source\Project2.4\project2.4\project2.4.DAL\obj\Debug\project2._4.DAL.Migrations.ProfileInfo.resources
 D:\Source\Project2.4\project2.4\project2.4.DAL\obj\Debug\project2._4.DAL.Migrations.Feed.resources
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\bin\Debug\project2.4.DAL.dll.config
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\bin\Debug\project2.4.DAL.dll
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\bin\Debug\project2.4.DAL.pdb
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\bin\Debug\project2.4.Entities.dll
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\bin\Debug\project2.4.Entities.pdb
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\obj\Debug\project2.4.DAL.csprojAssemblyReference.cache
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\obj\Debug\project2._4.DAL.Migrations.IdentityFramwork.resources
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\obj\Debug\project2._4.DAL.Migrations.ProfileInfo.resources
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\obj\Debug\project2._4.DAL.Migrations.Feed.resources
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\obj\Debug\project2.4.DAL.csproj.GenerateResource.cache
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\obj\Debug\project2.4.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\obj\Debug\project2.4.DAL.csproj.CopyComplete
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\obj\Debug\project2.4.DAL.dll
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\obj\Debug\project2.4.DAL.pdb
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.DAL\obj\Debug\project2._4.DAL.Migrations.Feedupdate.resources

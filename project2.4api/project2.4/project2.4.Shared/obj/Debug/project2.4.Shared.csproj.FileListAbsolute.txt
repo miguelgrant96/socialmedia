@@ -4,3 +4,8 @@ D:\Source\Project2.4\project2.4\project2.4.Shared\obj\Debug\project2.4.Shared.cs
 D:\Source\Project2.4\project2.4\project2.4.Shared\obj\Debug\project2.4.Shared.csproj.CoreCompileInputs.cache
 D:\Source\Project2.4\project2.4\project2.4.Shared\obj\Debug\project2.4.Shared.dll
 D:\Source\Project2.4\project2.4\project2.4.Shared\obj\Debug\project2.4.Shared.pdb
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.Shared\bin\Debug\project2.4.Shared.dll
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.Shared\bin\Debug\project2.4.Shared.pdb
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.Shared\obj\Debug\project2.4.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.Shared\obj\Debug\project2.4.Shared.dll
+C:\Users\Marnick Scholten\Dropbox\Hanze\Hanze\Project\project2.4api\project2.4\project2.4.Shared\obj\Debug\project2.4.Shared.pdb

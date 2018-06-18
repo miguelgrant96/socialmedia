@@ -60,6 +60,10 @@
     <Compile Include="Migrations\201805311538127_Feed.Designer.cs">
       <DependentUpon>201805311538127_Feed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806181244475_Feed-update.cs" />
+    <Compile Include="Migrations\201806181244475_Feed-update.Designer.cs">
+      <DependentUpon>201806181244475_Feed-update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\Seeds\IdentityFrameworkSeed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805311538127_Feed.resx">
       <DependentUpon>201805311538127_Feed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806181244475_Feed-update.resx">
+      <DependentUpon>201806181244475_Feed-update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
