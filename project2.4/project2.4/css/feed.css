@@ -16,19 +16,15 @@
 }
 
 #createPost {
-    transition: 0.2s;
-    position: absolute;
-    width: 1000px;
+    position: relative;
+    width: 80%;
     padding-top: 20px;
     height: 120px;
+    border: 1px solid black;
     float: left;
-    margin-top: 1%;
+    margin-top: 2%;
     border-color: #999aa3;
     border-width: 2px;
-    border-left: solid;
-    border-left-width: 10px;
-    border-left-color: #354fd7;
-    border-style: solid;
     background-color: #d7dde5;
     margin-left: 0%;
     border-radius: 3px;
@@ -41,13 +37,6 @@
     margin-left: 10px;
 }
 
-#CreatePublishButton {
-    border-radius: 25px;
-    background-color: #edeff2;
-    border-color: #edeff2;
-    margin-left:645px;
-}
-
 .postIcon {
     position: relative;
     height: 20px;
@@ -57,24 +46,14 @@
 }
 
 .createposttext {
-    margin-left: 2%;
-    color: white;
-    font-size: 22px;
-    background-color: #3851d7;
-    width: auto;
-    margin-top: 4px;
-    border-radius: 10px;
-    padding: 1%;
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 20px;
 }
+
 
 #postText{
 	width: 95%;
 	margin-left:2%;
 	height: 50px;
-    border-radius:5px;
-    resize:none;
 }
 
 #buttons {
@@ -103,7 +82,6 @@
     width: 65%;
     height: 70%;
     overflow-y: scroll;
-    -ms-overflow-style: none;
     overflow-x: hidden;
     top: 110px;
     left: 600px;
@@ -132,7 +110,7 @@
     border-left-width: 10px;
     border-left-color: #354fd7;
     border-style: solid;
-    width: 1000px;
+    width: 80%;
     left: 0px;
 }
 
@@ -226,13 +204,12 @@
     margin-left: 2%;
     border: 3px solid white;
     border-color: #3851d7;
-    /*background-image:url(../images/profile.png);*/
+    background-image:url(../images/profile.png);
 }
 
-    .user:hover {
-        cursor: pointer;
-        background-image: url(../images/visit-profile.gif);
-    }
+.user:hover {
+    background-image:url(../images/visit-profile.gif);
+}
 
 #visitProfile {
     z-index: 5;
@@ -417,7 +394,6 @@ post.hover ~.postFooter {
     left: 0;
     right: 0;
     width: 50%;
-    float: center;
     margin: 0 auto;
     border-radius: 10px;
     padding: 1%;
@@ -445,4 +421,3 @@ post.hover ~.postFooter {
     border-color: #a8b9c1;
     background-color: white;
 }
-
