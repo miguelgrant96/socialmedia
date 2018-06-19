@@ -16,8 +16,8 @@
 }
 
 #createPost {
-    position: absolute;
-    width: 1000px;
+    position: relative;
+    width: 80%;
     padding-top: 20px;
     height: 120px;
     border: 1px solid black;
@@ -111,7 +111,7 @@
     border-left-width: 10px;
     border-left-color: #354fd7;
     border-style: solid;
-    width: 1000px;
+    width: 80%;
     left: 0px;
 }
 
@@ -395,7 +395,6 @@ post.hover ~.postFooter {
     left: 0;
     right: 0;
     width: 50%;
-    float: center;
     margin: 0 auto;
     border-radius: 10px;
     padding: 1%;
@@ -423,4 +422,3 @@ post.hover ~.postFooter {
     border-color: #a8b9c1;
     background-color: white;
 }
-
