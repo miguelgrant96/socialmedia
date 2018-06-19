@@ -1,3 +1,5 @@
+<div class="introContainer">gsdg</div>
+
 <form class="login-form">
     <center><img src="Images\lockicon.png"></center>
   <p class="login-text">
@@ -7,11 +9,10 @@
     </span>
       
   </p>
-  <input type="UserID" class="login-username" autofocus="true" required="true" placeholder="User ID"  name="username"/>
-  <input type="password" class="login-password" required="true" placeholder="Password" name="password" />
+  <input type="UserID" class="login-username" autofocus="true" required="true" placeholder="User ID"  name="username" ng-model="username"/>
+  <input type="password" class="login-password" required="true" placeholder="Password" name="password" ng-model="password"/>
   
-   
-  <div class="login-submit" ng-click="loginUser()">Login</div> 
+   <input type="submit" name="Login" value="Login" class="login-submit" ng-click="loginUser()"/>
   
   <a href="#" class="login-forgot-pass">forgot password?</a>
   <div ng-click="redirectRegister()" class="login-forgot-pass">Register</div>
@@ -19,4 +20,4 @@
 <div class="underlay-photo"></div>
 <div class="underlay-black"></div> 
 <img class="hanzelogo" src="Images/hanzelogo.png">
-<img class="speechLogo" src="Images/speech.png">
+<img class="speechLogo" src="Images/Speech.png">
