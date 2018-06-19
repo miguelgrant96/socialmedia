@@ -25,13 +25,14 @@ function UriBuilder() {
     };
 }
 
-function httpRequestService($http) {
+function httpRequestService($http, TokenService) {
 
 
     function getRequest(url, SuccessCallback, errorCallback) {
         var config = {
             method: 'GET',
             url: url,
+            headers: { 'Authorization': 'Bearer ' + TokenService.GetAccessToken() },
             timeout: 15000,
             async: false,
         };
@@ -44,7 +45,7 @@ function httpRequestService($http) {
             method: 'POST',
             url: url,
             data: data,
-            headers: { 'Access-Control-Allow-Origin': '*' },
+            headers: { 'Authorization': 'Bearer ' + TokenService.GetAccessToken()},
             timeout: 15000,
             async: false,
         };
@@ -57,6 +58,7 @@ function httpRequestService($http) {
             method: 'PUT',
             url: url,
             data: data,
+            headers: { 'Authorization': 'Bearer ' + TokenService.GetAccessToken() },
             timeout: 15000,
             async: false,
         };

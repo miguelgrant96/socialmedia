@@ -11,7 +11,7 @@
 
 <div class="UserPanelContainer">
 
-    <div id="Header"> <center>UPDATES </center></div>
+    <div id="Header"> <center>{{Account.FirstName}} {{Account.LastName}}</center></div>
     <img src="Images\wesley.jpg" id="panelNamePic">
     <div id="friendCount">You have <br /><b>98 Friends</b></div>
     <div id="onlineStatus">
@@ -56,15 +56,15 @@
         <b class="createposttext"> Create Post</b><br>
         <textarea id="postText" placeholder="Please enter your post here" ng-model="NewPostText"></textarea><br>
         <div id="buttons">
-            <button class="CreatePostButton"><img src="Images\imageicon.png" class="postIcon"> &nbsp; Add picture</button>
+            <button type="file" class="CreatePostButton"><img src="Images\imageicon.png" class="postIcon"> &nbsp; Add picture</button>
             <button class="CreatePostButton"><img src="Images\videoicon.png" class="postIcon"> &nbsp;Add video</button>
-            <button class="CreatePostButton" ng-click="PostFeed()"><img src="Images\sendicon.png" class="postIcon">&nbsp; Publish</button>
+            <button id="CreatePublishButton" ng-click="PostFeed()"><img src="Images\sendicon.png" class="postIcon">&nbsp; Publish</button>
         </div>
 
     </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <div class="postcontainer">
 
-        <div class="user" ng-click="redirectProfile()" ><br /></div>
+        <div class="user" ng-click="redirectProfile()" style="background-image:url(Images/profile.png);" ><br /></div>
         <br /><p class="username">NIEV - 50 minutes ago </p>
 
         <div class="post">
@@ -153,7 +153,7 @@
     </div>
 
     <div class="postcontainer" ng-repeat="item in Feed">
-        <img src="Images\profile.png" class="user"><br /><p class="username">NIEV - just now </p>
+        <img src="Images/profile.png" class="user"><br /><p class="username">{{item.Creator.FirstName}} {{item.Creator.LastName}} </p>
         <div class="post">
             <p class="posttext">
                 {{item.Feed.Text}}

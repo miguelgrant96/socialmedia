@@ -15,6 +15,7 @@ namespace project2._4.API.Controllers
     {
         [HttpGet]
         [EnableCors(origins: "*", headers: "*", methods: "*")]
+        [Authorize]
         public IHttpActionResult GetFeed()
         {
             List<Feed> Feed = new List<Feed>();
@@ -39,11 +40,12 @@ namespace project2._4.API.Controllers
         }
         [HttpPost]
         [EnableCors(origins: "*", headers: "*", methods: "*")]
+        [Authorize]
         public IHttpActionResult CreateFeed(string Text,string imageurl, string videourl)
         {
             FeedRepository db = new FeedRepository();
             UserRepository userRep = new UserRepository();
-            User user = userRep.GetAllUsers().First();
+            User user = userRep.GetUserByEmail(User.Identity.Name);
 
             if (Text == null || Text == "")
             {
