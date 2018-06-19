@@ -58,13 +58,13 @@
         <div id="buttons">
             <button type="file" class="CreatePostButton"><img src="Images\imageicon.png" class="postIcon"> &nbsp; Add picture</button>
             <button class="CreatePostButton"><img src="Images\videoicon.png" class="postIcon"> &nbsp;Add video</button>
-            <button class="CreatePostButton" ng-click="PostFeed()"><img src="Images\sendicon.png" class="postIcon">&nbsp; Publish</button>
+            <button id="CreatePublishButton" ng-click="PostFeed()"><img src="Images\sendicon.png" class="postIcon">&nbsp; Publish</button>
         </div>
 
     </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
     <div class="postcontainer">
 
-        <div class="user" ng-click="redirectProfile()"style="background-image:url('../../images/profile.png');" ><br /></div>
+        <div class="user" ng-click="redirectProfile()" style="background-image:url(Images/profile.png);" ><br /></div>
         <br /><p class="username">NIEV - 50 minutes ago </p>
 
         <div class="post">
@@ -153,7 +153,7 @@
     </div>
 
     <div class="postcontainer" ng-repeat="item in Feed">
-        <img src="Images\profile.png" class="user"><br /><p class="username">{{item.Creator.FirstName}} {{item.Creator.LastName}} </p>
+        <img src="Images/profile.png" class="user"><br /><p class="username">{{item.Creator.FirstName}} {{item.Creator.LastName}} </p>
         <div class="post">
             <p class="posttext">
                 {{item.Feed.Text}}

@@ -16,15 +16,19 @@
 }
 
 #createPost {
+    transition: 0.2s;
     position: absolute;
     width: 1000px;
     padding-top: 20px;
     height: 120px;
-    border: 1px solid black;
     float: left;
-    margin-top: 2%;
+    margin-top: 1%;
     border-color: #999aa3;
     border-width: 2px;
+    border-left: solid;
+    border-left-width: 10px;
+    border-left-color: #354fd7;
+    border-style: solid;
     background-color: #d7dde5;
     margin-left: 0%;
     border-radius: 3px;
@@ -37,6 +41,13 @@
     margin-left: 10px;
 }
 
+#CreatePublishButton {
+    border-radius: 25px;
+    background-color: #edeff2;
+    border-color: #edeff2;
+    margin-left:645px;
+}
+
 .postIcon {
     position: relative;
     height: 20px;
@@ -46,14 +57,24 @@
 }
 
 .createposttext {
-    padding-left: 20px;
+    margin-left: 2%;
+    color: white;
+    font-size: 22px;
+    background-color: #3851d7;
+    width: auto;
+    margin-top: 4px;
+    border-radius: 10px;
+    padding: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
-
 
 #postText{
 	width: 95%;
 	margin-left:2%;
 	height: 50px;
+    border-radius:5px;
+    resize:none;
 }
 
 #buttons {
