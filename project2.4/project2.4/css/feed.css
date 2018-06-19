@@ -82,7 +82,6 @@
     width: 65%;
     height: 70%;
     overflow-y: scroll;
-    -ms-overflow-style: none;
     overflow-x: hidden;
     top: 110px;
     left: 600px;
