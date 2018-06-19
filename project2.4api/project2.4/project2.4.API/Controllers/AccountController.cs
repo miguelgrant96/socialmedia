@@ -14,6 +14,21 @@ namespace project2._4.API.Controllers
 {
     public class AccountController : ApiController
     {
+
+        [HttpGet]
+        [Authorize]
+        [EnableCors(origins: "*", headers: "*", methods: "*")]
+        public IHttpActionResult GetAccount(Guid? id)
+        {
+            UserRepository db = new UserRepository();
+            if (!id.HasValue)
+            {
+                return Ok(db.GetUserByEmail(User.Identity.Name));
+            }
+
+            return Ok(db.GetUser(id.Value));
+        }
+
         [HttpPost]
         [EnableCors(origins: "*", headers: "*", methods: "*")]
         public IHttpActionResult PostAccount([FromBody] UserViewModel userViewModel)

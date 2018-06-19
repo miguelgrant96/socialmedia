@@ -1,6 +1,13 @@
 ﻿angular.module('Feed')
     .controller('FeedController', function ($scope, $route, $location, $timeout, UriBuilder, httpRequestService) {
-        
+
+        var url = UriBuilder.BuildUrl("Account", { 'id': null });
+        httpRequestService.getRequest(url, function success(response) {
+            $scope.Account = response.data;
+        }, function fail(response) {
+            console.log("Ging iets fout bij het ophalen van het account");
+        });
+
         $timeout(function () {
             var url = UriBuilder.BuildUrl("Feed");
             httpRequestService.getRequest(url,function success (response) {
