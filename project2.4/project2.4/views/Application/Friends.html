@@ -1,0 +1,113 @@
+﻿<div id="menu">
+    <div ng-click="redirectFeed()" class="menuitem"> <img src="Images\speech.png" class="menuLogo"></div>
+    <div ng-click="redirectFeed()" class="selectedItem">Feed</div>
+    <div ng-click="redirectOptions()" class="menufiller"></div>
+    <textarea class="searchBar" placeholder="Wat zoek u"></textarea>
+    <div ng-click="redirectOptions()" class="menufiller"></div>
+    <div ng-click="redirectProfile()" class="menuitem"><img src="Images\profileicon.png" class="menuIcon" />Profile</div>
+    <div ng-click="redirectOptions()" class="menuitem"><img src="Images\settingsicon.png" class="menuIcon" /> Options</div>
+    <div ng-click="redirectLogin()" class="menuitem">Logout</div>
+</div>
+<div id="profilePic"> foto hier</div>
+<!--Map-->
+<!--<div id="mapContainer">
+    <div id="mapTitle"><b>Friends based on location</b></div>
+    <div id="map"></div>
+</div>-->
+
+<div id="mapContainer" ng-controller="MapController">
+    <div id="mapTitle"><b>Friends based on location</b></div>
+    <div id="map"></div>
+    <!--<div id="repeat" ng-repeat="marker in markers | orderBy : 'title'">
+        <a id="country_container" href="#" ng-click="openInfoWindow($event, marker)">
+            <label id="names">{{marker.title}}</label>
+        </a>
+    </div>-->
+</div>
+
+<!--<script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>-->
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+<!--Friend Requests-->
+<div id="friendRequest">
+    <div id="requestTitle"><b>Friend Requests</b></div>
+    <div class="request">
+        <div class="requestPicture"></div>
+        <div class="requestName">Name 1</div>
+        <div class="requestAccept"></div>
+        <div class="requestDecline"></div>
+    </div>
+    <div class="request">
+        <div class="requestPicture"></div>
+        <div class="requestName">Name 2</div>
+        <div class="requestAccept"></div>
+        <div class="requestDecline"></div>
+    </div>
+    <div class="request">
+        <div class="requestPicture"></div>
+        <div class="requestName">Name 3</div>
+        <div class="requestAccept"></div>
+        <div class="requestDecline"></div>
+    </div>
+    <div class="request">
+        <div class="requestPicture"></div>
+        <div class="requestName">Name 4</div>
+        <div class="requestAccept"></div>
+        <div class="requestDecline"></div>
+    </div>
+    <div class="request">
+        <div class="requestPicture"></div>
+        <div class="requestName">Name 5</div>
+        <div class="requestAccept"></div>
+        <div class="requestDecline"></div>
+    </div>
+</div>
+<!-- Friends Bar-->
+<div id="friends">
+    <div id="topTenTitle"><b>Top Ten Friends</b></div>
+    <div id="topTen">
+        <div class="topTenFriend">
+            <div class="topTenPicture"></div>
+            <div class="topTenName">Name 1</div>
+        </div>
+        <div class="topTenFriend">
+            <div class="topTenPicture"></div>
+            <div class="topTenName">Name 2</div>
+        </div>
+        <div class="topTenFriend">
+            <div class="topTenPicture"></div>
+            <div class="topTenName">Name 3</div>
+        </div>
+        <div class="topTenFriend">
+            <div class="topTenPicture"></div>
+            <div class="topTenName">Name 4</div>
+        </div>
+        <div class="topTenFriend">
+            <div class="topTenPicture"></div>
+            <div class="topTenName">Name 5</div>
+        </div>
+        <div class="topTenFriend">
+            <div class="topTenPicture"></div>
+            <div class="topTenName">Name 6</div>
+        </div>
+        <div class="topTenFriend">
+            <div class="topTenPicture"></div>
+            <div class="topTenName">Name 7</div>
+        </div>
+        <div class="topTenFriend">
+            <div class="topTenPicture"></div>
+            <div class="topTenName">Name 8</div>
+        </div>
+        <div class="topTenFriend">
+            <div class="topTenPicture"></div>
+            <div class="topTenName">Name 9</div>
+        </div>
+        <div class="topTenFriend">
+            <div class="topTenPicture"></div>
+            <div class="topTenName">Name 10</div>
+        </div>
+    </div>
+    <a href="">All Friends</a>
+</div>

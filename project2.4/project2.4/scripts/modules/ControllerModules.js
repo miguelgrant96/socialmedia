@@ -1,7 +1,9 @@
-angular.module('Login', ['ngRoute']);
-angular.module('Register', ['ngRoute']);
-angular.module('Feed', ['ngRoute']);
-angular.module('Profile', ['ngRoute']);
-angular.module('Options', ['ngRoute']);
-angular.module('Privacy', ['ngRoute']);
-angular.module('Logout', ['ngRoute']);
+angular.module('Login', ['ngRoute', 'httpRequests']);
+angular.module('Register', ['ngRoute', 'httpRequests']);
+angular.module('Feed', ['ngRoute', 'httpRequests']);
+angular.module('Profile', ['ngRoute', 'httpRequests']);
+angular.module('Options', ['ngRoute', 'httpRequests']);
+angular.module('Privacy', ['ngRoute', 'httpRequests']);
+angular.module('Friends', ['ngRoute', 'httpRequests']);
+angular.module('Logout', ['ngRoute', 'httpRequests']);
+angular.module('mapApp', ['ngRoute', 'httpRequests']);

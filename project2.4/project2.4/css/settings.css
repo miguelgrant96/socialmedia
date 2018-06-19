@@ -1,17 +1,156 @@
 #profilePic {
-	width: 100px;
-	height: 100px;
-	border: 1px solid black;
-	margin-left: 10%;
-	margin-top:5%;
-	float: left;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid black;
+    margin-left: 10%;
+    margin-top: 5%;
+    float: left;
 }
 
 #settings {
-	width:65%;
-	height: 600px;
-	border: 1px solid black;
-	text-align:center;	
-	margin-top:5%;
-	margin-left: 25%;
+    position: absolute;
+    width: 55%;
+    height: 500px;
+    background-color: #d7dde5;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #999aa3;
+    top: 130px;
+    left: 600px;
+}
+
+.settingIcon {
+    position: absolute;
+    height: 50px;
+    left: 4%;
+    top: 10px;
+    width: 50px;
+}
+
+#settingsLeft {
+    position: A;
+    height: 80%;
+    width: 30%;
+    border-color: #eaf2ff; 
+    background-color: #d7dde5;
+    float: left;
+}
+
+.menuItem {
+    position: relative;
+    width: 100%;
+    height: 25%;
+    padding: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #999aa3;
+    background-color: #edeff2;
+    color: BLACK;
+    font-size: 28px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+    .menuItem:hover {
+        cursor: pointer;
+        transition: 0.2s;
+        transition: background-color 0.2s ease;
+        background-color: #b7bfcc;
+    }
+
+#settingsRight {
+    position: relative;
+    float: left;
+    height: 94%;
+    width: 66%;
+    background-color: #edeff2;
+    border-left: 1px solid black;
+    float: right;
+}
+
+
+.optionName {
+
+    position: relative;
+    list-style-type: none;
+    font-size: 24px;
+    padding-bottom: 15px;
+}
+
+.dividerLine {
+    border-width: 1px;
+    border-bottom-style: solid;
+    width: 30%;
+}
+
+.optionInfo {
+    color: grey;
+}
+
+.optionValue {
+    position: absolute;
+    float: left;
+    height: 40px;
+    right: 2%;
+    opacity: 0.9;
+    width: 30%;
+    background-color: #d7dde5;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: #edeff2;
+    color: black;
+    padding: 5px;
+    font-size: 25px;
+}
+
+.optionValue textarea[type="password"] {
+    -webkit-text-security: disc;
+}
+
+.applybutton {
+    position: absolute;
+    right: 3%;
+    padding-left: 5px;
+    bottom: 3%;
+}
+
+    .applybutton button {
+        font-size: 30px;
+        color: white;
+        margin-left: 20px;
+        background-color: #3851d7;
+        border-style: none;
+        border-radius: 5px;
+    }
+
+    .applybutton button:hover {
+        transition: 0.2s;
+        font-size: 30px;
+        color: white;
+        margin-left: 20px;
+        background-color: #808080;
+        border-style: none;
+        border-radius: 5px;
+    }
+
+.optionValueLong {
+    position: absolute;
+    float: left;
+    height: 40px;
+    right: 2%;
+    opacity: 0.9;
+    resize: none;
+    width: 30%;
+    background-color: #d7dde5;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: #edeff2;
+    color: black;
+    padding: 5px;
 }
