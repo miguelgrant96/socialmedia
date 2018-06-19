@@ -25,3 +25,23 @@
 a{
 	color: blue;
 }
+
+.login-gender {
+    background: transparent;
+    border: 0 solid;
+    background-color: #edeff2;
+    border-bottom: 12px solid rgba(white, .5);
+    color: black;
+    display: block;
+    margin: 1rem;
+    padding: .5rem;
+    transition: 250ms background ease-in;
+    width: calc(100% - 2.5rem);
+    &:focus
+
+{
+    background-color: #343434;
+    color: black;
+    transition: 150ms background ease-in;
+}
+}
