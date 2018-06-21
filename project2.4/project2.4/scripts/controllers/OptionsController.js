@@ -60,6 +60,7 @@ angular.module('Options')
             $scope.Persoonlijk = false;
             $scope.Beveiliging = false;
             $scope.Privacy = true;
+            angular.element(document.querySelector(".menuItem")).css("height", "100px");
             $scope.Meldingen = false;
             $scope.About = false;
         }

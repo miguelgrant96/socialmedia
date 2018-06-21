@@ -243,6 +243,11 @@
     right: 0;
 }
 
+#element {
+    background-color: red;
+    height: 500px;
+}
+
 .versionNumberAbout {
     position: absolute;
     margin-top: 3%;

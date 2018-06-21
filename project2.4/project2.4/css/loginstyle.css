@@ -93,19 +93,30 @@ input {
     margin-top: 15%;
 }
 
-.welcomeScreen {
+.welcomeScreen, .welcomeScreen-small, .welcomeScreen-extended {
     float: left;
     background: #222;
     box-shadow: 0 0 1rem rgba(10,0,0,0.3);
     background-image: url("../images/welcome-bg.jpg");
-    height: 350px;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-color: #efefef;
     border-left-style: solid;
     border-left-color: #3851d7;
     border-width: 5px;
     text-align: center;
     color: #646464;
     width: 400px;
-    animation: fadein 1s;
+}
+
+.welcomeScreen-small {
+    -webkit-animation: fadeinSmall 1s;
+    height: 350px;
+}
+
+.welcomeScreen-extended {
+    -webkit-animation: fadeinLarge 1s;
+    height: 450px;
 }
 
 img.speechLogo {
@@ -116,18 +127,28 @@ img.speechLogo {
 }
 
 
-.login-form {
-    float:left;
+.login-form, .login-form-small, .login-form-extended {
+    float: left;
     background: #222;
     box-shadow: 0 0 1rem rgba(10,0,0,0.3);
     background-color: #d7dde5;
-    height: 350px;
     border-right-style: solid;
     border-right-color: #3851d7;
     border-width: 5px;
+    transition: 0.3s;
     text-align: center;
     color: #646464;
     width: 250px;
+}
+
+.login-form-small {
+    -webkit-animation: fadeinSmall 1s;
+    height: 350px;
+}
+
+.login-form-extended {
+    -webkit-animation: fadeinLarge 1s;
+    height: 450px;
 }
 
 
@@ -228,7 +249,6 @@ img.speechLogo {
     padding: .5rem;
     transition: 250ms background ease-in;
     width: calc(100% - 3.3rem);
-    &:focus
 
 {
     background-color: #343434;
@@ -278,4 +298,28 @@ img.speechLogo {
     transition: 250ms background ease-in;
 }
 
+}
+
+@keyframes fadeinSmall {
+    from {
+        height: 0px;
+        opacity: 1;
+    }
+
+    to {
+        height: 350px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeinLarge {
+    from {
+        height: 350px;
+        opacity: 1;
+    }
+
+    to {
+        height: 450px;
+        opacity: 1;
+    }
 }
