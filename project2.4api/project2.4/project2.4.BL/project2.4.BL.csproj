@@ -51,6 +51,7 @@
     <Compile Include="Repositories\AuthRepository.cs" />
     <Compile Include="Repositories\FeedDiscussionRepository.cs" />
     <Compile Include="Repositories\FeedRepository.cs" />
+    <Compile Include="Repositories\UserInfoRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
