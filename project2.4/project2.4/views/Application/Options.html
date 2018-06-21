@@ -64,6 +64,12 @@
         <ul ng-show="Persoonlijk">
             <b>PERSONAL SETTINGS:</b>
             <br />
+            <br />
+            <div class="optionName">
+                Profile picture
+                <input type="file" name="newProfilePic" id="newProfilePic" accept="image/*" />
+                <label class="profileOption" for="newProfilePic">Select new Profile picture</label>
+            </div>
             <div class="optionName">First name <textarea class="optionValue" placeholder="Wesley"></textarea></div>
             <div class="optionName">Last name <textarea class="optionValue" placeholder="de Waart"></textarea></div>
             <div class="optionName">Nickname <textarea class="optionValue" placeholder="Schoonheid"></textarea></div>
@@ -71,10 +77,23 @@
             <br />
             <div class="dividerLine"></div>
             <br />
+            <b> ABOUT ME:</b>
+            <br />
+            <br />
+            <div class="optionName">Work <textarea class="optionValue" placeholder="Teringlijer"></textarea></div>
+            <div class="optionName">Study <textarea class="optionValue" placeholder="Klaploper"></textarea></div>
+            <div class="optionName">Place <textarea class="optionValue" placeholder="Tattjeland"></textarea></div>
+            <div class="optionName">Relation <textarea class="optionValue" placeholder="Complicated"></textarea></div>
+            <div class="optionName">Gender <textarea class="optionValue" placeholder="Complicated"></textarea></div>
+            <div class="dividerLine"></div>
+            <br />
+            <b> OTHER:</b>
+            <br />
+            <br />
             <div class="optionName">Life Motto <textarea class="optionValueLong" placeholder="A goal without a plan is just a wish"></textarea></div>
             <div class="optionName">
                 Temperature <select class="optionValue">
-                    <option value="Celcius">Celcius</option>
+                    <option value="Celcius">Celsius</option>
                     <option value="Fahrenheit">Fahrenheit</option>
                 </select>
             </div>
@@ -82,11 +101,12 @@
                 <button>Revert</button>
                 <button>Apply</button>
             </div>
-            </ul>
+        </ul>
 
         <ul ng-show="Beveiliging">
-            <div class="optionName">Change Password <textarea class="optionValue" input type="password" placeholder="Current password"></textarea></div></bbr>
-            <div class="optionName"><textarea class="optionValue" input type="password" placeholder="New password"></textarea></div><br /><br /><br />
+            <div class="optionName">Change Password <input type="password" class="optionValue" placeholder="Current password"></input></div>
+            <div class="optionName"><input typ="password" class="optionValue" placeholder="New password"></input></div><br /><br />
+            <div class="optionName"><input type="password" class="optionValue" inputmode="password" placeholder="New password again"></input></div><br /><br /><br />
             <div class="optionName">Secret Question 
                 <select class="optionValueLong">
                     <option value="Celcius">What was the name of my teacher in kindergarden</option>
