@@ -1,5 +1,5 @@
-angular.module('Login', ['ngRoute', 'httpRequests']);
-angular.module('Register', ['ngRoute', 'httpRequests']);
+angular.module('Login', ['ngRoute', 'httpRequests', 'Token']);
+angular.module('Register', ['ngRoute', 'httpRequests', 'Token']);
 angular.module('Feed', ['ngRoute', 'httpRequests']);
 angular.module('Profile', ['ngRoute', 'httpRequests']);
 angular.module('Options', ['ngRoute', 'httpRequests']);

@@ -5,6 +5,7 @@ angular.module('Options')
         $scope.Beveiliging = false;
         $scope.Privacy = false;
         $scope.Meldingen = false;
+        $scope.About = false;
 
 
         $scope.redirectFeed = function (e) {
@@ -44,6 +45,7 @@ angular.module('Options')
             $scope.Beveiliging = false;
             $scope.Privacy = false;
             $scope.Meldingen = false;
+            $scope.About = false;
         }
 
         $scope.showBeveiliging = function () {
@@ -51,6 +53,7 @@ angular.module('Options')
             $scope.Beveiliging = true;
             $scope.Privacy = false;
             $scope.Meldingen = false;
+            $scope.About = false;
         }
 
         $scope.showPrivacy = function () {
@@ -58,6 +61,7 @@ angular.module('Options')
             $scope.Beveiliging = false;
             $scope.Privacy = true;
             $scope.Meldingen = false;
+            $scope.About = false;
         }
 
         $scope.showMeldingen = function () {
@@ -65,6 +69,15 @@ angular.module('Options')
             $scope.Beveiliging = false;
             $scope.Privacy = false;
             $scope.Meldingen = true;
+            $scope.About = false;
         }
 
+
+        $scope.showAbout = function () {
+            $scope.Persoonlijk = false;
+            $scope.Beveiliging = false;
+            $scope.Privacy = false;
+            $scope.Meldingen = false;
+            $scope.About = true;
+        }
     });

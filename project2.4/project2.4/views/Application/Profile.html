@@ -1,4 +1,4 @@
-﻿<div id="menu">
+﻿<body class="profile" ><div id="menu">
     <div ng-click="redirectFeed()" class="menuitem"> <img src="Images\speech.png" class="menuLogo"></div>
     <div ng-click="redirectFeed()" class="menuitem"> <img src="Images\feedicon.png" class="menuIcon">Feed</div>
     <div ng-click="redirectOptions()" class="menufiller"></div>
@@ -9,31 +9,125 @@
     <div ng-click="redirectLogin()" class="menuitem">Logout</div>
 </div>
 
-<div id="userInfo">
+
+
+
+<div id="profileContent">
+    <div id="userInfo">
+    <div id="Header"><center>INTRO</center></div>
     <ul id="userInfoItem">
-        <li>Werk: </li>
-        <li>School: </li>
-        <li>Woonplaats: </li>
-        <li>Relatiestatus: </li>
-        <li>Geslacht: </li>
-        <li>Lid sinds: </li>
-    </ul>
+            <div class="description"><img src="Images\icons\jobicon.png" class="profileInfoIcon"></img>Eigenaar van <b>!Speech</b> </div>
+            <div class="description"><img src="Images\icons\schoolicon.png" class="profileInfoIcon"></img>Heeft gestudeerd aan <b>de Hanzehogeschool</b> </div>
+            <div class="description"><img src="Images\icons\homeicon.png" class="profileInfoIcon"></img>Woont in <b>Hoogeveen</b> </div>
+            <div class="description"><img src="Images\icons\relationshipIcon.png" class="profileInfoIcon"></img>Vrijgezel</b> </div>
+            <div class="description"><img src="Images\icons\genderIcon.png" class="profileInfoIcon"></img>Man</b> </div>
+            <div class="description"><img src="Images\icons\memberIcon.png" class="profileInfoIcon"></img>Member since <b>02/05/2018</b> </div>
 </div>
 
-<div id="postBar">
-    <div id="photo">Foto</div>
-    <div class="postItem" ng-click="changeView('posts')">Posts</div>
-    <div class="postItem" ng-click="changeView('media')">Media</div>
-    <div class="postItem" ng-click="changeView('notities')">Notities</div>
-    <div class="postItem" ng-click="changeView('over mij')">Over Mij</div>
-</div>
+    <div id="albumInfo">
+        <div id="Header"><center>FOTO'S</center></div>
+        <ul id="userInfoItem">
+            <div class="pictureThumbnail">Dit is een foto!</div>
+            <div class="pictureThumbnail">Dit is een foto!</div>
+            <div class="pictureThumbnail">Dit is een foto!</div>
+            <div class="pictureThumbnail">Dit is een foto!</div>
+            <div class="pictureThumbnail">Dit is een foto!</div>
+            <div class="pictureThumbnail">Dit is een foto!</div>
+            <div class="pictureThumbnail">Dit is een foto!</div>
+            <div class="pictureThumbnail">Dit is een foto!</div>
+            <div class="pictureThumbnail">Dit is een foto!</div>
+    </div>
+    <div id="profileContentContainer">
+    <div id="gotPosts">
+        <div class="profileSpot">
+            <img src="Images\wesley.jpg" class="SquareProfilePic">
+        </div>
+        <div class="userNameProfile">Wesley de Waart</div>
+        <div class="profileTabs">
+            <div class="profiletab">POSTS</div>
+            <div class="profiletab">PHOTO'S</div>
+            <div class="profiletab">NOTES</div>
+            <div class="profiletab">ABOUT ME</div>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <div class="postcontainer">
 
-<div id="posts">
-    <div ng-show="showPosts">{{content}}</div>
-    <div ng-show="showMedia">{{content}}</div>
-    <div ng-show="showNotities">{{content}}</div>
-    <div ng-show="showOverMij">{{content}}</div>
-</div>
-<!--<div id="posts">
-    Posts
-</div>-->
+            <div class="user" ng-click="redirectProfile()"><br /></div>
+            <br /><p class="username">Wesley de Waart - 2 days ago </p>
+                    <div class="reporterTool"><SPAN>...</span></div>
+
+            <div class="post">
+                <p class="posttext">
+                    Weet iemand waar ik de Solicitatie opdracht kan vinden??
+                </p>
+                <div class="postFooter">
+                    <button class=" postFooterButton"><img src="Images\respect.png" class="postFooterImages"></button>
+                    <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
+                    <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
+                    <p class=" postFooterRespectCount">| 5 mensen gaven Respect!</p>
+
+                </div>
+            </div>
+            <div class="comment-Container">
+                <!-- COMMENT -->
+                <div class="profileName"> Marnick Scholten</div>
+
+                <div class="commentText"> Nee.</div>
+                <img src="Images\marnick.jpg" class="commentuser">
+            </div>
+        </div>
+        <div class="postcontainer">
+
+            <div class="user" ng-click="redirectProfile()"><br /></div>
+            <br /><p class="username">Wesley de Waart - 2 days ago </p>
+                    <div class="reporterTool"><SPAN>...</span></div>
+
+            <div class="post">
+                <p class="posttext">
+                    Geef Respect als jullie Hanze ook zo fantastisch vinden.
+                </p>
+                <div class="postFooter">
+                    <button class=" postFooterButton"><img src="Images\respect.png" class="postFooterImages"></button>
+                    <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
+                    <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
+                    <p class=" postFooterRespectCount">| 50.2k mensen gaven Respect!</p>
+
+                </div>
+            </div>
+            <div class="comment-Container">
+                <!-- COMMENT -->
+                <div class="profileName"> Marnick Scholten</div>
+
+                <div class="commentText"> Nee.</div>
+                <img src="Images\marnick.jpg" class="commentuser">
+            </div>
+        </div>
+        <div class="postcontainer">
+
+            <div class="user" ng-click="redirectProfile()"><br /></div>
+            <br /><p class="username">Wesley de Waart - 3 days ago </p>
+                <div class="reporterTool"><SPAN>...</span></div>
+
+            <div class="post">
+                <p class="posttext">
+                    KFC!!!!!!!!
+                </p>
+                <div class="postFooter">
+                    <button class=" postFooterButton"><img src="Images\respect.png" class="postFooterImages"></button>
+                    <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
+                    <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
+                    <p class=" postFooterRespectCount">| 1 persoon gaf Respect!</p>
+
+                </div>
+            </div>
+            <div class="comment-Container">
+                <!-- COMMENT -->
+                <div class="profileName"> Marnick Scholten</div>
+
+                <div class="commentText"> Nee.</div>
+                <img src="Images\marnick.jpg" class="commentuser">
+            </div>
+        </div>
+    </div>
+        </div>
+        </div>

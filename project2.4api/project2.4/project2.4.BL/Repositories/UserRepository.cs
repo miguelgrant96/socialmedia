@@ -53,6 +53,7 @@ namespace project2._4.BL.Repositories
 
         public void RegisterUser(User newUser)
         {
+            newUser.LastLogin = DateTime.Now;
             Db.Users.Add(newUser);
             Db.SaveChanges();
         }

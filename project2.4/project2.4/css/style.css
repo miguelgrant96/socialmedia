@@ -1,9 +1,9 @@
 body {
     margin: 0 0 0 0;
-    background-image: url("../images/bg-login.jpg");
+    background-image: URL(/project2.4/images/background.png);
     background-size: cover;
     z-index: -1;
-    font-family: 'Helvetica';
+    font-family: 'Rubik', sans-serif;
     font-size: 12px;
     animation: fadein 2s;
 }
@@ -22,7 +22,6 @@ body {
 
 #logo {
 	width: 16%;
-	height: 100px;
 	float: left;
 	border: 1px solid black;
 }
@@ -45,7 +44,7 @@ body {
     background-color: #edeff2;
     color: black;
     padding: 5px;
-    font-size: 25px;
+    font-size: 1.4vw;
 }
 
     .menuitem:hover {
@@ -58,7 +57,7 @@ body {
     }
 
 .menuLogo {
-    height: 70px;
+    height: 100%;
     background-size: 100% 100%;
     float: left;
 }
@@ -130,7 +129,7 @@ body {
     background-color: aliceblue;
     color: black;
     padding: 5px;
-    font-size: 25px;
+    font-size: 1.4vw;
 }
 
 #userInfo {

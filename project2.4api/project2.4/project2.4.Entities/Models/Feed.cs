@@ -12,8 +12,10 @@ namespace project2._4.Entities.Models
 
         public string Title { get; set; }
 
-        public User Creator { get; set; }
+        public Guid CreatorId { get; set; }
 
         public DateTime CreatedAt { get; set; }
+
+        //public int respect { get; set; }
     }
 }

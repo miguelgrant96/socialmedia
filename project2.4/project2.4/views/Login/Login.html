@@ -1,21 +1,40 @@
-<form class="login-form">
-    <center><img src="Images\lockicon.png"></center>
-  <p class="login-text">
-    <span class="fa-stack fa-lg">
-      <i class="fa fa-circle fa-stack-2x"></i>
-      <i class="fa fa-lock fa-stack-1x"></i>
-    </span>
-      
-  </p>
-  <input type="UserID" class="login-username" autofocus="true" required="true" placeholder="User ID"  name="username" ng-model="username"/>
-  <input type="password" class="login-password" required="true" placeholder="Password" name="password" ng-model="password"/>
-  
-   <input type="submit" name="Login" value="Login" class="login-submit" ng-click="loginUser()"/>
-  
-  <a href="#" class="login-forgot-pass">forgot password?</a>
-  <div ng-click="redirectRegister()" class="login-forgot-pass">Register</div>
-</form>
-<div class="underlay-photo"></div>
-<div class="underlay-black"></div> 
-<img class="hanzelogo" src="Images/hanzelogo.png">
 <img class="speechLogo" src="Images/Speech.png">
+<div class="wrapper">
+
+    <div class="welcomeScreen">
+        <div class="WelcomeHeader">Welcome to <span>!Speech</span></div>
+        <div class="welcomeText">
+            Speech is a new Social Media platform created with the user in mind. Our goal is to bring Social Media back to its roots.
+            <ul>
+                <li>Top-notch Privacy</li>
+                <li>Profile Customization</li>
+                <li>Advanced Filter Controls</li>
+                <li>Real-time information at all times!</li>
+
+            </ul>
+        </div>
+    </div>
+    <form class="login-form">
+    <center><img src="Images\lockicon.png"></center>
+    <p class="login-text">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-lock fa-stack-1x"></i>
+        </span>
+
+    </p>
+
+    <div ng-repeat="loginError in loginErrors"> {{ loginError }} </div>
+
+    <input type="UserID" class="login-username" autofocus="true" required="true" placeholder="User ID" name="username" ng-model="username" />
+    <input type="password" class="login-password" required="true" placeholder="Password" name="password" ng-model="password" />
+
+    <input type="submit" name="Login" value="Login" class="login-submit" ng-click="loginUser()" />
+
+    <a href="#" class="login-forgot-pass">forgot password?</a>
+    <div ng-click="redirectRegister()" class="login-forgot-pass">Register</div>
+</form>
+</div>
+<div class="underlay-photo"></div>
+<div class="underlay-black"></div>
+<img class="hanzelogo" src="Images/hanzelogo.png">
