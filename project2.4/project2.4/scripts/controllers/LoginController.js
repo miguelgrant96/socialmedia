@@ -1,6 +1,9 @@
 angular.module('Login')
     .controller('LoginController', function ($scope, $route, $location, UriBuilder, AuthorizationService, TokenService) {
-       
+
+      
+            
+        
 
         $scope.loginUser = function (e) {
             var username = $scope.username;
@@ -17,10 +20,9 @@ angular.module('Login')
                 $location.path("/Feed");
                 $location.replace();
             }).catch((Response) => {
-                console.log("niet ingelogt");
+                $scope.loginErrors = ["Error logging in"];
+                console.log("Niet ingelogd");
             });
-           
-            
         };
 
         $scope.redirectRegister = function (e) {
