@@ -3,7 +3,7 @@ body {
     background-image: URL(/project2.4/images/background.png);
     background-size: cover;
     z-index: -1;
-    font-family: 'Helvetica';
+    font-family: 'Rubik', sans-serif;
     font-size: 12px;
     animation: fadein 2s;
 }
