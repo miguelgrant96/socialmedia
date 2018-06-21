@@ -12,14 +12,14 @@
 }
 
 #settings {
-    position: absolute;
+    position: relative;
     width: 55%;
     height: 500px;
     background-color: #d7dde5;
     border-radius: 15px;
     border-style: solid;
     border-color: #999aa3;
-    top: 130px;
+    top: 100px;
     left: 600px;
 }
 
@@ -31,16 +31,26 @@
     width: 50px;
 }
 
+
+.settingRightIcon {
+    position: relative;
+    height: 25px;
+    left: 0;
+    top: 0px;
+    width: 25px;
+}
+
 #settingsLeft {
-    position: A;
+    z-index: 0;
     height: 80%;
     width: 30%;
-    border-color: #eaf2ff; 
+    border-color: #999aa3;
     background-color: #d7dde5;
     float: left;
 }
 
 .menuItem {
+    z-index: 0;
     position: relative;
     width: 100%;
     height: 25%;
@@ -63,12 +73,15 @@
     }
 
 #settingsRight {
+    z-index: 1;
     overflow-y: scroll;
-    position: relative;
     float: left;
-    height: 94%;
+    height: 84.6%;
+    padding-bottom: 40px;
     width: 66%;
-    background-color: #edeff2;
+    margin: 0 auto;
+    background-color: #fcfcfc;
+    border-color: #999aa3;
     border-left: 1px solid black;
     float: right;
 }
@@ -98,6 +111,7 @@
 .dividerLine {
     border-width: 1px;
     border-bottom-style: solid;
+    border-color: #999aa3;
     width: 30%;
 }
 
@@ -112,28 +126,30 @@
     right: 2%;
     opacity: 0.9;
     width: 30%;
-    background-color: #d7dde5;
+    background-color: #fcfcfc;
+    padding-left: 50px;
+    margin-right: 20px;
     display: inline-block;
     box-sizing: border-box;
     border: 1px solid black;
-    background-color: #edeff2;
     color: black;
     padding: 5px;
     font-size: 25px;
 }
 
 .profileOption {
+    margin-right: 20px;
     position: absolute;
     float: left;
     height: 40px;
     right: 2%;
     opacity: 0.9;
     width: 30%;
-    background-color: #d7dde5;
+    background-color: #fcfcfc;
     display: inline-block;
     box-sizing: border-box;
     border: 1px solid black;
-    background-color: #edeff2;
+    background-color: #fcfcfc;
     color: black;
     padding: 5px;
     font-size: 15px;
@@ -148,44 +164,62 @@
 }
 
 .applybutton {
+    z-index: 1;
+    text-align: center;
+    background-color: #fcfcfc;
+    border-top: solid;
+    border-color: #999aa3;
+    border-width: 1px;
     position: absolute;
-    right: 3%;
-    padding-left: 5px;
-    bottom: 3%;
+    width: 66%;
+    height: 50px;
+    bottom: 0px;
+    right: 0px;
 }
 
-    .applybutton button {
-        font-size: 30px;
-        color: white;
-        margin-left: 20px;
-        background-color: #3851d7;
-        border-style: none;
-        border-radius: 5px;
-    }
+.optionApplyButton button {
+    width: 120px;
+    height: 40px;
+    font-size: 20px;
+    bottom: 70px;
+    color: white;
+    background-color: #3851d7;
+    border-style: none;
+    border-radius: 5px;
+}
 
-    .applybutton button:hover {
-        transition: 0.2s;
-        font-size: 30px;
-        color: white;
-        margin-left: 20px;
-        background-color: #808080;
-        border-style: none;
-        border-radius: 5px;
-    }
+.buttonWrapper {
+    border-style: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.optionRevertButton button {
+    width: 220px;
+    font-size: 20px;
+    position: fixed;
+    color: white;
+    margin-right: 30px;
+    background-color: #3851d7;
+    border-style: none;
+    border-radius: 5px;
+}
 
 .optionValueLong {
     position: absolute;
+    margin-right: 20px;
     float: left;
+    text-align: center;
     height: 40px;
     right: 2%;
     opacity: 0.9;
     resize: none;
     width: 30%;
-    background-color: #d7dde5;
+    background-color: #fcfcfc;
     display: inline-block;
     box-sizing: border-box;
     border: 1px solid black;
-    background-color: #edeff2;
     color: black;
     padding: 5px;
 }
