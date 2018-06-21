@@ -10,6 +10,8 @@ namespace project2._4.Entities.Models
     {
         public Guid Id { get; set; }
 
+        //public Image profilePic { get; set; } 
+
         public string FirstName { get; set; }
 
         public string LastName { get; set; }

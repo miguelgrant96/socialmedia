@@ -15,5 +15,7 @@ namespace project2._4.Entities.Models
         public Guid CreatorId { get; set; }
 
         public DateTime CreatedAt { get; set; }
+
+        //public int respect { get; set; }
     }
 }
