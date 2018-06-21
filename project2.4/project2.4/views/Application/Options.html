@@ -45,7 +45,7 @@
     <div ng-click="redirectOptions()" class="menufiller"></div>
     <div ng-click="redirectProfile()" class="menuitem"><img src="Images\profileicon.png" class="menuIcon" />Profile</div>
     <div ng-click="redirectOptions()" class="selectedItem"><img src="Images\settingsicon.png" class="menuIcon" /> Options</div>
-    <div ng-click="redirectLogin()" class="menuitem">Logout</div>>
+    <div ng-click="redirectLogin()" class="menuitem">Logout</div>
 </div>
 
 
@@ -54,10 +54,11 @@
     <div id="Header"><center>SETTINGS</center></div>
     <div id="settingsLeft">
         <center>
-            <div class="menuItem" id="persoonlijk" ng-click="showPersoonlijk()"><img src="Images\personal.png" class="settingIcon"> Persoonlijk</div>
-            <ul class="menuItem" ng-click="showBeveiliging()"><img src="Images\security.png" id="beveiliging" class="settingIcon"> <center>Beveiliging</ul>
+            <div class="menuItem" id="persoonlijk" ng-click="showPersoonlijk()"><img src="Images\personal.png" class="settingIcon"> Personal</div>
+            <ul class="menuItem" ng-click="showBeveiliging()"><img src="Images\security.png" id="beveiliging" class="settingIcon"> <center> Security</ul>
             <ul class="menuItem" ng-click="showPrivacy()"><img src="Images\privacy.png" id="privacy" class="settingIcon"> Privacy</ul>
-            <ul class="menuItem" ng-click="showMeldingen()"><img src="Images\notifications.png" id="Meldingen" class="settingIcon">Meldingen</ul>
+            <ul class="menuItem" ng-click="showMeldingen()"><img src="Images\notifications.png" id="Meldingen" class="settingIcon"> Notifications</ul>
+            <ul class="menuItem" ng-click="showAbout()"><img src="Images\aboutIcon.png" id="About" class="settingIcon"> About us</ul>
         </center>
     </div>
     <div id="settingsRight">
@@ -151,6 +152,15 @@
             <li>Wil ik meldingen ontvangen</li>
             <li>Waarvan wil ik meldingen ontvangen?</li>
             <li>etc</li>
+        </ul>
+        <ul ng-show="About">
+            <img src="Images\speech.png" class="aboutLogo">
+            <div class="versionNumberAbout">
+                VERSION 0.1
+                <div class="descriptionAbout">Developed by Wij Deugen<br />
+                2018</div>
+            </div>
+
         </ul>
     </div>
 
