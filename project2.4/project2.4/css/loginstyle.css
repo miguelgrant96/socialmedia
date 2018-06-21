@@ -43,7 +43,7 @@ body, a {
     font-family: 'Open Sans';
     font-weight: 10;
     display: flex;
-    overflow: hidden;
+
 }
 
 table, td, tr {
