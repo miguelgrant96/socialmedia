@@ -13,9 +13,10 @@
 }
 
 .WeatherWidget {
+    transition: 0.2s;
     position: absolute;
-    height: 120px;
-    width: 200px;
+    height: 35%;
+    width: 46%;
     background-color: #d7dde5;
     background-image: url("../images/sunny.jpg");
     border-radius: 6px;
@@ -41,33 +42,33 @@
     position: absolute;
     left: 10px;
     top: 40px;
-    height: 80px;
-    widht: 80px;
+    width: 40%;
 }
 
 #Temperature {
     position: absolute;
-    top: 2px;
-    left: 80px;
+    bottom: 1%;
+    left: 35%;
     color: white;
     text-align: left;
-    font-size: 50px;
+    font-size: 2.7vw;
 }
 
 
 .notificationsWidget {
     overflow-y: scroll;
     position: absolute;
-    height: 120px;
+    height: 35%;
     background-image: url("../images/notificationsbackground.jpg");
-    width: 200px;
+    width: 46%;
     background-color: #d7dde5;
     border-radius: 6px;
     border-style: solid;
     border-width: 2px;
     border-color: #999aa3;
     margin-top: 1%;
-    margin-left: 50%;
+    margin-left: 52%;
+    transition: 0.2s;
 }
 
     .notificationsWidget p {
@@ -78,11 +79,12 @@
         border-width: 1px;
         border-radius: 1px;
     }
+
 .feedWidget {
     transition: 0.2s;
     overflow-y: scroll;
-    position: relative;
-    height: 210px;
+    position: absolute;
+    height: 58%;
     background-image: url("../images/feedBackground.jpg");
     background-repeat: repeat-x;
     width: 97%;
@@ -91,7 +93,7 @@
     border-style: solid;
     border-width: 2px;
     border-color: #999aa3;
-    margin-top: 32%;
+    bottom: 0;
     margin-left: 1%;
 }
 .timestamp {
@@ -129,6 +131,7 @@
     transition: 0.2s;
     float: right;
     position: absolute;
+    top: 3px;
     top: 3px;
     left: 120%;
     width: 15px;
