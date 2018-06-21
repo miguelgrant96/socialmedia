@@ -1,7 +1,7 @@
 ﻿
 <div class="UserPanelContainer">
 
-    <div id="Header"> <center>UPDATES </center></div>
+    <div id="Header"> <center>{{Account.FirstName}} {{Account.LastName}}</center></div>
     <img src="Images\wesley.jpg" id="panelNamePic">
     <div id="friendCount">You have <br /><b>98 Friends</b></div>
     <div id="onlineStatus">
@@ -84,28 +84,35 @@
                 <input type="file" name="newProfilePic" id="newProfilePic" accept="image/*" />
                 <label class="profileOption" for="newProfilePic">Select new Profile picture</label>
             </div>
-            <div class="optionName"><img src="Images\icons\name.png" class="settingRightIcon"> First name <textarea class="optionValue" placeholder="Wesley"></textarea></div>
-            <div class="optionName"><img src="Images\icons\name.png" class="settingRightIcon"> Last name <textarea class="optionValue" placeholder="de Waart"></textarea></div>
-            <div class="optionName"><img src="Images\icons\download.png" class="settingRightIcon">  Nickname <textarea class="optionValue" placeholder="Schoonheid"></textarea></div>
-            <br />
-            <div class="optionInfo">Warning: You can only change your name once a month. After your name has been succesfully changed, your friends will be notified about this.</div>
+
+            <div class="optionName">First name <input class="optionValue" value="{{Account.FirstName}}"></div>
+            <div class="optionName">Last name <input class="optionValue" value="{{Account.LastName}}"></div>
+            <div class="optionName">Nickname <input class="optionValue" value="{{Account.NickName}}"></div>
+            <div class="optionName">Date of birth <input type="date"  id="optionDate" value="{{Account.BirthDate | date:'yyyy-MM-dd'}}"/></div>
+            <div class="optionInfo">Warning: You can only change your name once a month. Upon changing your name, your friends will be notified about the namechange.</div>
+
             <br />
             <div class="dividerLine"></div>
             <br />
             <b> ABOUT ME:</b>
             <br />
             <br />
-            <div class="optionName"> <img src="Images\icons\jobicon.png" class="settingRightIcon"> Work <textarea class="optionValue" placeholder="Teringlijer"></textarea></div>
-            <div class="optionName"><img src="Images\icons\schoolicon.png" class="settingRightIcon"> Study <textarea class="optionValue" placeholder="Klaploper"></textarea></div>
-            <div class="optionName"><img src="Images\icons\homeicon.png" class="settingRightIcon"> Place <textarea class="optionValue" placeholder="Tattjeland"></textarea></div>
-            <div class="optionName"><img src="Images\icons\relationshipicon.png" class="settingRightIcon"> Relation <textarea class="optionValue" placeholder="Complicated"></textarea></div>
-            <div class="optionName"><img src="Images\icons\gendericon.png" class="settingRightIcon"> Gender <textarea class="optionValue" placeholder="Complicated"></textarea></div>
+
+            <div class="optionName">Work <input class="optionValue" value="{{ProfileInfo.Work}}"></div>
+            <div class="optionName">Study <input class="optionValue" value="{{Account.Study}}"></div>
+            <div class="optionName">Place <input class="optionValue" value="{{Account.Place}}"></div>
+            <div class="optionName">Relation <input class="optionValue" value="{{Account.Relation}}"></div>
+            <div class="optionName">Gender <input class="optionValue" value="{{Account.Gender}}"></div>
+            <div class="optionName">Hobbies <input class="optionValue" value="{{Account.Hobbies}}" /></div>
+
             <div class="dividerLine"></div>
             <br />
             <b> OTHER:</b>
             <br />
             <br />
-            <div class="optionName"><img src="Images\icons\motto.png" class="settingRightIcon"> Life Motto <textarea class="optionValueLong" placeholder="A goal without a plan is just a wish"></textarea></div>
+
+            <div class="optionName">Life Motto <input class="optionValueLong" value="{{Account.Motto}}"></div>
+
             <div class="optionName">
                 <img src="Images\icons\metricicon.png" class="settingRightIcon"> Temperature <select class="optionValue">
                     <option value="Celcius">Celsius</option>

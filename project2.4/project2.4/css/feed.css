@@ -355,7 +355,7 @@ post.hover ~.postFooter {
 }
 
 .underlay-photo {
-    background-image: url("../images/bg-loginf.jpg");
+    /*background-image: url("../images/bg-login.jpg");*/
     background-size: cover;
 }
 
