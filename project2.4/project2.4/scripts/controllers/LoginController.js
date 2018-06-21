@@ -12,7 +12,8 @@ angular.module('Login')
             //Sloop deze eruit dan werkt login weer
             //$location.path("/Feed");
             //$location.replace();
-
+            $location.path("/Feed");
+            $location.replace();
             //TODO server bende.
             AuthorizationService.Authorize(username, password).then((Response) => {
                 TokenService.SetAccessToken(Response.data.access_token);

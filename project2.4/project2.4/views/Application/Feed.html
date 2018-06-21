@@ -22,7 +22,7 @@
         <div class="WeatherWidget">
             <center>
                 <img src="Images\weatherSunny.png" id="weatherIcon">
-                <p>You are currently in <br> <b>Groningen</b></p>
+                <p>You are currently in <br> <b>Groningen</b></p> 
                 <p id="Temperature"> 28ºC</p>
             </center>
         </div>
@@ -62,95 +62,6 @@
         </div>
 
     </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <div class="postcontainer">
-
-        <div class="user" ng-click="redirectProfile()" style="background-image:url(Images/profile.png);" ><br /></div>
-        <br /><p class="username">NIEV - 50 minutes ago </p>
-
-        <div class="post">
-            <p class="posttext">
-                Jaaaaa!!! Vandaag eindelijk de nieuwe single van de Gories gevonden!! Na jaren speuren eindelijk gevonden!! Collectie compleet!!
-            </p>
-            <div class="postFooter">
-                <button class=" postFooterButton"><img src="Images\respect.png" class="postFooterImages"></button>
-                <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
-                <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
-                <p class=" postFooterRespectCount">| 5 mensen gaven Respect!</p>
-
-            </div>
-        </div>
-        <div class="comment-Container">
-            <!-- COMMENT -->
-            <div class="profileName"> Mick Collins</div>
-
-            <div class="commentText"> Finally!! Our biggest fan ever!! We love you Evert!!</div>
-            <img src="Images\profile4.png" class="commentuser">
-        </div>
-        <div class="comment-Container">
-            <!-- COMMENT -->
-            <div class="profileName">Romana de Vries</div>
-            <div class="commentText"> Te gek! Ik kom snel een keer langs om deze te beluisteren!</div>
-            <img src="Images\profile3.png" class="commentuser">
-        </div>
-        <div class="placecomment-containter ">
-            <textarea class="commentArea" placeholder="Enter your comment here"></textarea><br>
-        </div>
-    </div>
-    <div class="postcontainer">
-        <img src="Images\profile4.png" class="user"><br /><p class="username">Mick Collins - 45 minutes ago </p>
-        <div class="post">
-            <p class="posttext">
-                Our biggest fan Evert just completed his The Gories collection!!
-            </p>
-            <div class="postFooter">
-                <button class=" postFooterButton"><img src="Images\respect.png" class="postFooterImages"></button>
-                <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
-                <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
-                <p class=" postFooterRespectCount">| 94 mensen gaven Respect!</p>
-
-            </div>
-        </div>
-        <div class="comment-Container">
-            <!-- COMMENT -->
-            <div class="profileName"> NIEV </div>
-            <div class="commentText"> Yesss!!! finally my life is complete! </div>
-            <img src="Images\profile.png" class="commentuser">
-        </div>
-        <div class="placecomment-containter ">
-            <textarea class="commentArea" placeholder="Enter your comment here"></textarea><br>
-        </div>
-    </div>
-
-    <div class="postcontainer">
-        <img src="Images\arjen.jpg" class="user"><br /><p class="username">Arjen Bovee - 45 minutes ago </p>
-        <div class="postphoto">
-            <p class="posttext">
-                Zojuist deze foto gemaakt in Colombia. Het leven is fantastisch :)  <img src="Images\landscape.jpg" class="postedphoto">
-            </p>
-            <div class="postFooter">
-                <button class=" postFooterButton"><img src="Images\respect.png" class="postFooterImages"></button>
-                <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
-                <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
-                <p class=" postFooterRespectCount">| 94 mensen gaven Respect!</p>
-
-            </div>
-        </div>
-        <div class="comment-Container">
-            <!-- COMMENT -->
-            <div class="profileName"> Jan de Woert </div>
-            <div class="commentText"> Zieke shot Arjen! Geniet van je vakantie. </div>
-            <img src="Images\profile2.png" class="commentuser">
-        </div>
-        <div class="comment-Container">
-            <!-- COMMENT -->
-            <div class="profileName"> Wesley de Waart </div>
-            <div class="commentText"> Is dit bij de Cocora Vally!? Daar ben ik ook. Zullen we even wat gaan drinken!? </div>
-            <img src="Images\wesley.jpg" class="commentuser">
-        </div>
-        <div class="placecomment-containter ">
-            <textarea class="commentArea" placeholder="Enter your comment here"></textarea><br>
-        </div>
-    </div>
 
     <div class="postcontainer" ng-repeat="item in Feed">
         <img src="Images/profile.png" class="user"><br /><p class="username">{{item.Creator.FirstName}} {{item.Creator.LastName}} </p>

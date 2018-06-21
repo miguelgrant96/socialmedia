@@ -89,6 +89,7 @@
 }
 
 #Header {
+    text-transform: uppercase;
     background-color: #3851d7;
     font-size: 25px;
     color: white
@@ -187,7 +188,7 @@
     border: 1px solid black;
     background-color: #edeff2;
     border-radius: 10px;
-    border-color: #999aa3;;
+    border-color: #999aa3;
     color: black;
     min-height: 10%;
     left: 50px;
@@ -213,7 +214,9 @@
 }
 
 .user {
+    text-transform: uppercase;
     z-index: 5;
+    transition: 0.2s;
     display: block;
     position: absolute;
     border-radius: 50%;
@@ -225,23 +228,26 @@
     margin-left: 2%;
     border: 3px solid white;
     border-color: #3851d7;
-    background-image:url(../images/profile.png);
+    background-image: url(../images/profile.png);
 }
 
 .user:hover {
-    background-image:url(../images/visit-profile.gif);
+    cursor: pointer;
+    transition: 0.2s;
+    background-image:url(../images/visit-profile.png);
 }
 
 #visitProfile {
+    transition: 0.2s;
     z-index: 5;
     display: block;
     position: absolute;
     border-radius: 50%;
-    margin-top:-12%;
-    margin-left:2%;
+    margin-top: -12%;
+    margin-left: 2%;
     width: 95%;
     height: 95%;
-    background-image:url(../images/)
+    background-image: url(../images/)
 }
 
 #visitProfile:hover{
@@ -442,3 +448,21 @@ post.hover ~.postFooter {
     border-color: #a8b9c1;
     background-color: white;
 }
+
+.reporterTool {
+    position: absolute;
+    text-align: center;
+    width: 50px;
+    height: 30px;
+    right: 10px;
+    color: BLACK;
+    border-radius: 50px;
+    font-size: 33px;
+}
+
+    .reporterTool span {
+        bottom: 8px;
+        right: 3px;
+        text-align: center;
+        position: absolute;
+    }
