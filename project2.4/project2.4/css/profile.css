@@ -2,29 +2,42 @@
 
 .profileTabs {
     position: absolute;
-    width: 800px;
+    width: 850px;
     padding-top: 20px;
     padding-left: 20px;
     height: 30px;
-    left: 150px;
+    left: 140px;
     border: 1px solid black;
     float: left;
     margin-top: 8%;
     border-color: #999aa3;
     border-width: 2px;
-    background-color: #d7dde5;
+    background-color: white;
     margin-left: 0%;
-    border-radius: 3px;
+    border-radius: 10px;
+
 }
 
 .profiletab {
+    text-align: center;
     float: Left;
-    padding-right: 30px;
-    font-size: 25px;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
     border-left: solid;
-    border-left-width: 3px;
-    border-left-color: #354fd7;
+    border-color: #253691;
+    color: white;
+    background-color: #253691;
 }
+
+    .profiletab:hover {
+        transition: 0.2s;
+        cursor: pointer;
+        padding-top: 8px;
+        background-color: #3851d7;
+        border-color: #3851d7;
+    }
 
 .SquareProfilePic {
     z-index: 5;
@@ -36,12 +49,13 @@
 }
 
 #userInfo {
+    z-index: 10;
     position: absolute;
-    background-color: #d7dde5;
-    border-radius: 5px;
+    background-color: white;
     border-style: solid;
-    border-color: #354fd7;
-    border-width: 1px;
+    border-color: #999aa3;
+    border-width: 3px;
+    border-radius: 5px;
     top: 190px;
     width: 350px;
     height: auto;
@@ -52,7 +66,7 @@
     text-transform: uppercase;
     position: absolute;
     width: auto;
-    margin-top: 4%;
+    margin-top: 4.5%;
     border-radius: 10px;
     padding: 1%;
     padding-left: 3%;
@@ -64,12 +78,12 @@
 
 #albumInfo {
     position: absolute;
-    background-color: #d7dde5;
-    border-radius: 5px;
+    background-color: white;
+    border-color: #999aa3;
     border-style: solid;
-    border-width: 1px;
-    border-color: #354fd7;
-    top: 580px;
+    border-width: 3px;
+    border-radius: 5px;
+    top: 540px;
     width: 350px;
     height: auto;
     left: 10%;
