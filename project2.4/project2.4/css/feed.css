@@ -17,7 +17,8 @@
 
 #createPost {
     position: relative;
-    width: 80%;
+    width: 70%;
+    min-width: 400px;
     padding-top: 20px;
     height: 120px;
     float: left;
@@ -41,10 +42,11 @@
 }
 
 #CreatePublishButton {
+    position: absolute;
     border-radius: 25px;
     background-color: #edeff2;
     border-color:#edeff2;
-    margin-left:645px;
+    right: 30px;
 }
 
 .postIcon {
@@ -95,20 +97,30 @@
     color: white
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
-#gotPosts {
-    position: absolute;
-    width: 65%;
-    height: 70%;
-    overflow-y: scroll;
+#gotPosts-feed, #gotPosts-profile {
+    position: relative;
+    min-width: 300px;
+    overflow-y: no-display;
     overflow-x: hidden;
-    top: 110px;
-    left: 600px;
     padding-bottom: 300px;
 }
+
+#gotPosts-feed {
+    width: 65%;
+    height: 70%;
+    top: 50px;
+    left: 400px;
+    margin-left: 10%;
+}
+
+#gotPosts-profile {
+    width: 70%;
+    height: 70%;
+    top: 50px;
+    left: 400px;
+    margin-left: 10%;
+}
+
 
 
 .postedphoto {
@@ -119,7 +131,7 @@
     border: 1px solid black;
 }
 
-.postcontainer {
+.postcontainer, .postcontainer-feed, .postcontainer-profile {
     transition: 0.2s;
     position: relative;
     margin-bottom: 1%;
@@ -132,8 +144,14 @@
     border-left-width: 10px;
     border-left-color: #354fd7;
     border-style: solid;
-    width: 80%;
-    left: 0px;
+}
+
+.postcontainer-feed {
+    width: 70%;
+}
+
+.postcontainer-profile {
+    width: 56%;
 }
 
 .placecomment-containter {
@@ -157,21 +175,23 @@
     transition: 0.2s;
     z-index: 1;
     position: relative;
-    font-size: 22px;
+    font-size: 1vw;
     width: 50%;
+    min-width: 200px;
     border: 1px solid black;
     background-color: #e5e7ea;
     padding-right: 20px;
     border: 1px solid black;
     background-color: #f9f9f9;
     border-radius: 6px;
+    left: 50px;
+    margin-top: 5px;
     border-color: #999aa3;
     border-left-style: solid;
     border-left-color: #a8b9c1;
     border-left-width: 10px;
     min-height: 65px;
-    margin-left: 6%;
-    margin-top: 0.6%;
+    overflow-y: scroll;
 }
 
     .comment-Container:hover {
@@ -189,8 +209,9 @@
     background-color: #edeff2;
     border-radius: 10px;
     border-color: #999aa3;
+    font-size: 12px;
     color: black;
-    min-height: 10%;
+    min-height: 30%;
     left: 50px;
     margin-top: 50px;
     min-height: 50px;
@@ -223,7 +244,7 @@
     width: 100px;
     height: 100px;
     left: 0px;
-    top: 1%;
+    top: 5px;
     float: left;
     margin-left: 2%;
     border: 3px solid white;
