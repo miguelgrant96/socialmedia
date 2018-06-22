@@ -43,9 +43,45 @@
 #CreatePublishButton {
     border-radius: 25px;
     background-color: #edeff2;
-    border-color:#edeff2;
-    margin-left:645px;
+    border-color: #edeff2;
+    margin-left: 64%;
+    font-size: 0.80vw;
 }
+
+.addMedia {
+    transition: 0.1s;
+    border-radius: 25px;
+    background-color: #edeff2;
+    border-color: #edeff2;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    border-style: 1px solid;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 0.80vw;
+    margin-left:1%;
+}
+
+
+    .addMedia:hover {
+        cursor: pointer;
+        transition: 0.1s;
+        border: 1px solid #3851d7;
+    }
+
+#addImage, #addVideo {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+    #addImage:hover, #addImage:hover {
+        cursor: pointer;
+    }
 
 .postIcon {
     position: relative;
@@ -204,7 +240,7 @@
     border: 1px solid black;
     background-color: #edeff2;
     border-radius: 10px;
-    border-color: #999aa3;;
+    border-color: #999aa3;
     color: black;
     min-height: 10%;
     left: 50px;
@@ -212,6 +248,7 @@
     min-height: 350px;
     width: 70%;
 }
+
 
 .user {
     text-transform: uppercase;

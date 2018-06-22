@@ -52,7 +52,7 @@
 
 
 <div id="settings">
-    <div id="Header"><center>SETTINGS</center></div>
+    <div id="Header"><center>OPTIONS</center></div>
     <div id="settingsLeft">
         <center>
             <div class="menuItem" id="persoonlijk" ng-click="showPersoonlijk()"><img src="Images\personal.png" class="settingIcon"> Personal</div>
@@ -88,7 +88,7 @@
             <div class="optionName">First name <input class="optionValue" value="{{Account.FirstName}}"></div>
             <div class="optionName">Last name <input class="optionValue" value="{{Account.LastName}}"></div>
             <div class="optionName">Nickname <input class="optionValue" value="{{Account.NickName}}"></div>
-            <div class="optionName">Date of birth <input type="date" id="optionDate" value="{{Account.BirthDate | date:'yyyy-MM-dd'}}" /></div>
+            <div class="optionName">Date of birth <input type="date" id="optionDate" value="{{Account.BirthDate | date:'yyyy-MM-dd'}}" /></div><br />
             <div class="optionInfo">Warning: You can only change your name once a month. Upon changing your name, your friends will be notified about the namechange.</div>
 
             <br />
