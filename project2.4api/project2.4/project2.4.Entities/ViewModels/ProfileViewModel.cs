@@ -29,5 +29,9 @@ namespace project2._4.Entities.ViewModels
         public string Relation { get; set; }
 
         public string Hobby { get; set;}
+
+        public string ProfilePictureUrl { get; set; }
+
+        public DateTime MemberSince { get; set; }
     }
 }

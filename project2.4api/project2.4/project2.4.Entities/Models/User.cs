@@ -10,7 +10,7 @@ namespace project2._4.Entities.Models
     {
         public Guid Id { get; set; }
 
-        //public Image profilePic { get; set; } 
+        public string ProfilePictureUrl { get; set; } 
 
         public string FirstName { get; set; }
 

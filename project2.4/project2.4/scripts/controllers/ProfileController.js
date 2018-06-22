@@ -1,5 +1,21 @@
 ﻿angular.module('Profile')
-    .controller('ProfileController', function ($scope, $route, $location) {
+    .controller('ProfileController', function ($scope, $route, $location, $timeout, UriBuilder, httpRequestService) {
+        
+        
+        //Getting ProfileInfo and Feed 
+        var url = UriBuilder.BuildUrl("ProfileInfo", { 'id': null });
+        httpRequestService.getRequest(url, function success(response) {
+            $scope.ProfileInfo = response.data;
+            var url = UriBuilder.BuildUrl("Feed", { 'id': $scope.ProfileInfo.Id });
+            httpRequestService.getRequest(url, function success(response) {
+                $scope.Feed = response.data;
+            }, function fail(response) {
+                console.log("Ging iets fout bij het ophalen van de Feed");
+            });
+        }, function fail(response) {
+            console.log("Ging iets fout bij het ophalen van het Profile");
+        });
+        
 
         $scope.redirectFeed = function (e) {
             $location.path("/Feed");

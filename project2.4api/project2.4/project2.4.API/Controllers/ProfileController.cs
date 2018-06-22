@@ -7,6 +7,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace project2._4.API.Controllers
 {
@@ -14,6 +15,8 @@ namespace project2._4.API.Controllers
     {
 
         [HttpGet]
+        [Authorize]
+        [EnableCors(origins: "*", headers: "*", methods: "*")]
         public IHttpActionResult GetProfile(Guid Id)
         {
             UserRepository db = new UserRepository();
@@ -25,14 +28,17 @@ namespace project2._4.API.Controllers
                 LastName = user.LastName,
                 Email = user.Email,
                 Gender = user.Gender,
-                BirthDate = user.BirthDate
+                BirthDate = user.BirthDate,
+                ProfilePictureUrl = user.ProfilePictureUrl
             };
 
             return Ok(viewmodel);
-               
+
         }
 
         [HttpPut]
+        [Authorize]
+        [EnableCors(origins: "*", headers: "*", methods: "*")]
         public IHttpActionResult UpdateProfile([FromBody] ProfileViewModel viewModel)
         {
             UserRepository db = new UserRepository();
@@ -42,6 +48,7 @@ namespace project2._4.API.Controllers
             user.Email = viewModel.Email;
             user.BirthDate = viewModel.BirthDate;
             user.Gender = viewModel.Gender;
+            user.ProfilePictureUrl = viewModel.ProfilePictureUrl;
 
             db.UpdateUser(user);
             return Ok();

@@ -16,6 +16,8 @@ namespace project2._4.Entities.Models
 
         public DateTime CreatedAt { get; set; }
 
-        //public int respect { get; set; }
+        public int Respect { get; set; }
+
+        public virtual List<FeedDiscussion> Comments { get; set; }
     }
 }
