@@ -3,7 +3,7 @@ body {
     background-image: URL(/project2.4/images/background.png);
     background-size: cover;
     z-index: -1;
-    font-family: 'Rubik', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
     font-size: 12px;
     animation: fadein 2s;
 }
@@ -174,3 +174,22 @@ body {
 	float: left;
 	margin-left: 10%;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #FFF;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #CBCBCB;
+    outline: 2px solid #FFF;
+    outline-offset: -2px;
+    border: .1px solid #B7B7B7;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #909090;
+    }
