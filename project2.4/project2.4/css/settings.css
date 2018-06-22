@@ -86,6 +86,14 @@
     float: right;
 }
 
+.settingRightIcon {
+    position: relative;
+    height: 25%;
+    left: 0;
+    top: 0px;
+    width: 25px;
+}
+
 #newProfilePic {
     width: 0.1px;
     height: 0.1px;
