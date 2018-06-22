@@ -23,6 +23,17 @@ namespace project2._4.BL.Repositories
             return Db.ProfileInfo.Find(id);
         }
 
+        public ProfileInfo GetUserProfileInfo(Guid userId)
+        {
+            return Db.ProfileInfo.Where(x => x.UserId.Equals(userId)).FirstOrDefault();
+        }
+
+        public void AddProfileInfo(ProfileInfo profileInfo)
+        {
+            Db.ProfileInfo.Add(profileInfo);
+            Db.SaveChanges();
+        }
+
         public void UpdateProfileInfo(ProfileInfo profileinfo)
         {
             Db.ProfileInfo.Attach(profileinfo);

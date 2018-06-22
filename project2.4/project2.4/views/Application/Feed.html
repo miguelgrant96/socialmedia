@@ -12,7 +12,7 @@
 <div class="UserPanelContainer">
 
     <div id="Header"> <center>{{Account.FirstName}} {{Account.LastName}}</center></div>
-    <img src="Images\wesley.jpg" id="panelNamePic">
+    <img src="{{Account.ProfilePictureUrl}}" id="panelNamePic">
     <div id="friendCount">You have <br /><b>98 Friends</b></div>
     <div id="onlineStatus">
         Shown as:<img src="Images\dropdownArrow.png" id="dropdownIconOnline">  <br />
@@ -67,8 +67,8 @@
 
     </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-    <div class="postcontainer" ng-repeat="item in Feed">
-        <img src="Images/profile.png" class="user"><br /><p class="username">{{item.Creator.FirstName}} {{item.Creator.LastName}} </p>
+    <div class="postcontainer" ng-repeat="item in Feed track by $index">
+        <img src="{{item.Creator.ProfilePictureUrl}}" class="user"><br /><p class="username">{{item.Creator.FirstName}} {{item.Creator.LastName}} </p>
         <div class="post">
             <p class="posttext">
                 {{item.Feed.Text}}
@@ -81,15 +81,18 @@
 
             </div>
         </div>
-        <div class="comment-Container">
+        <div class="comment-Container" ng-repeat="comment in item.Comments">
             <!-- COMMENT -->
-            <div class="profileName"> Belinda van Wouten</div>
-            <div class="commentText"> Ik kan niet wachten op uw les van straks!! </div>
-            <img src="Images\profile3.png" class="commentuser">
+            <div class="profileName"> {{comment.FirstName}} {{comment.LastName}}</div>
+            <div class="commentText"> {{comment.CommentText}} </div>
+            <img src="{{comment.ProfilePicUrl}}" class="commentuser">
         </div>
         
         <div class="placecomment-containter ">
-            <textarea class="commentArea" placeholder="Enter your comment here"></textarea><br>
+            <textarea class="commentArea" placeholder="Enter your comment here" ng-model="NewComment[$index]"></textarea>
+            <br />
+            <button  ng-click="PostComment(item.Feed.Id, $index)"><img src="Images\sendicon.png" class="postIcon">&nbsp; Post comment</button>
+            
         </div>
     </div>
 </div>

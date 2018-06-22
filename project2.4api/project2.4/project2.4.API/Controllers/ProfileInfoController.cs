@@ -7,18 +7,32 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace project2._4.API.Controllers
 {
     public class ProfileInfoController : ApiController
     {
         [HttpGet]
-        public IHttpActionResult GetProfileInfo(Guid Id)
+        [Authorize]
+        [EnableCors(origins: "*", headers: "*", methods: "*")]
+        public IHttpActionResult GetProfileInfo(Guid? Id)
         {
             UserRepository db = new UserRepository();
             UserInfoRepository db2 = new UserInfoRepository();
-            User user = db.GetUser(Id);
-            ProfileInfo profileinfo = db2.GetProfileInfo(Id);
+            User user;
+            ProfileInfo profileinfo;
+            if (Id.HasValue)
+            {
+                user = db.GetUser(Id.Value);
+                profileinfo = db2.GetUserProfileInfo(Id.Value);
+            }
+            else
+            {
+                user = db.GetUserByEmail(User.Identity.Name);
+                profileinfo = db2.GetUserProfileInfo(user.Id);
+            }
+
             ProfileViewModel viewmodel = new ProfileViewModel()
             {
                 Id = user.Id,
@@ -31,7 +45,9 @@ namespace project2._4.API.Controllers
                 School = profileinfo.School,
                 Hometown = profileinfo.Woonplaats,
                 Relation = profileinfo.RelatieStatus,
-                Hobby = profileinfo.Hobbies
+                Hobby = profileinfo.Hobbies,
+                MemberSince = user.CreatedDate,
+                ProfilePictureUrl = user.ProfilePictureUrl
             };
 
             return Ok(viewmodel);
@@ -39,6 +55,8 @@ namespace project2._4.API.Controllers
         }
 
         [HttpPut]
+        [Authorize]
+        [EnableCors(origins: "*", headers: "*", methods: "*")]
         public IHttpActionResult UpdateProfile([FromBody] ProfileViewModel viewModel)
         {
             UserRepository db = new UserRepository();
@@ -47,9 +65,9 @@ namespace project2._4.API.Controllers
             ProfileInfo profileinfo = db2.GetProfileInfo(viewModel.Id);
             user.FirstName = viewModel.FirstName;
             user.LastName = viewModel.LastName;
-            user.Email = viewModel.Email;
             user.BirthDate = viewModel.BirthDate;
             user.Gender = viewModel.Gender;
+            user.ProfilePictureUrl = viewModel.ProfilePictureUrl;
             profileinfo.Werk = viewModel.Work;
             profileinfo.School = viewModel.School;
             profileinfo.Woonplaats = viewModel.Hometown;

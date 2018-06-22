@@ -10,9 +10,9 @@ namespace project2._4.Entities.Models
     {
         public Guid Id { get; set; }
 
-        public Feed Feed { get; set; }
+        public Guid Feed_Id { get; set; }
 
-        public User User { get; set; }
+        public Guid User_Id { get; set; }
 
         public DateTime CreatedAt { get; set; }
 
