@@ -1,4 +1,5 @@
-﻿<div class="UserPanelContainer">
+﻿
+<div class="UserPanelContainer">
 
     <div id="Header"> <center>{{Account.FirstName}} {{Account.LastName}}</center></div>
     <img src="Images\wesley.jpg" id="panelNamePic">
@@ -54,27 +55,42 @@
     <div id="Header"><center>SETTINGS</center></div>
     <div id="settingsLeft">
         <center>
-            <div class="menuItem" id="persoonlijk" ng-click="showPersoonlijk()"><img src="Images\personal.png" class="settingIcon"> Persoonlijk</div>
-            <ul class="menuItem" ng-click="showBeveiliging()"><img src="Images\security.png" id="beveiliging" class="settingIcon"> <center>Beveiliging</ul>
+            <div class="menuItem" id="persoonlijk" ng-click="showPersoonlijk()"><img src="Images\personal.png" class="settingIcon"> Personal</div>
+            <ul class="menuItem" ng-click="showBeveiliging()"><img src="Images\security.png" id="beveiliging" class="settingIcon"> <center> Security</ul>
             <ul class="menuItem" ng-click="showPrivacy()"><img src="Images\privacy.png" id="privacy" class="settingIcon"> Privacy</ul>
-            <ul class="menuItem" ng-click="showMeldingen()"><img src="Images\notifications.png" id="Meldingen" class="settingIcon">Meldingen</ul>
+            <ul class="menuItem" ng-click="showMeldingen()"><img src="Images\notifications.png" id="Meldingen" class="settingIcon"> Notifications</ul>
+            <ul class="menuItem" ng-click="showAbout()"><img src="Images\aboutIcon.png" id="About" class="settingIcon"> About us</ul>
         </center>
     </div>
     <div id="settingsRight">
+        <div class="applybutton">
+            <table class="buttonWrapper" id="table1">
+                <tr class="none">
+                    <td class="none">
+                        <div class="optionApplyButton"><button>Apply</button></div>
+                    </td>
+                    <td class="none">
+                        <div class="optionApplyButton"><button>Revert</button></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
         <ul ng-show="Persoonlijk">
             <b>PERSONAL SETTINGS:</b>
             <br />
             <br />
             <div class="optionName">
-                Profile picture
+                <img src="Images\icons\profilepic.png" class="settingRightIcon"> Profile picture
                 <input type="file" name="newProfilePic" id="newProfilePic" accept="image/*" />
                 <label class="profileOption" for="newProfilePic">Select new Profile picture</label>
             </div>
+
             <div class="optionName">First name <input class="optionValue" value="{{Account.FirstName}}"></div>
             <div class="optionName">Last name <input class="optionValue" value="{{Account.LastName}}"></div>
             <div class="optionName">Nickname <input class="optionValue" value="{{Account.NickName}}"></div>
             <div class="optionName">Date of birth <input type="date" id="optionDate" value="{{Account.BirthDate | date:'yyyy-MM-dd'}}" /></div>
             <div class="optionInfo">Warning: You can only change your name once a month. Upon changing your name, your friends will be notified about the namechange.</div>
+
             <br />
             <div class="dividerLine"></div>
             <br />
@@ -93,49 +109,63 @@
             <br />
             <br />
             <div class="optionName">Life Motto <input class="optionValueLong" value="{{Account.Motto}}"></div>
+
             <div class="optionName">
-                Temperature <select class="optionValue">
+                <img src="Images\icons\metricicon.png" class="settingRightIcon"> Temperature <select class="optionValue">
                     <option value="Celcius">Celsius</option>
                     <option value="Fahrenheit">Fahrenheit</option>
                 </select>
-            </div>
-            <div class="applybutton">
-                <button>Revert</button>
-                <button>Apply</button>
             </div>
         </ul>
 
         <ul ng-show="Beveiliging">
             <div class="optionName">Change Password <input type="password" class="optionValue" placeholder="Current password"></input></div>
-            <div class="optionName"><input typ="password" class="optionValue" placeholder="New password"></input></div><br /><br />
-            <div class="optionName"><input type="password" class="optionValue" inputmode="password" placeholder="New password again"></input></div><br /><br /><br />
-            <div class="optionName">Secret Question 
+            <div class="optionName"><input typ="password" class="optionValue" placeholder="New password"></input></div>
+            <br />
+            <br />
+            <div class="optionName"><input type="password" class="optionValue" inputmode="password" placeholder="New password again"></input></div>
+            <br />
+            <br />
+            <br />
+            <div class="optionName">
+                Secret Question
                 <select class="optionValueLong">
                     <option value="Celcius">What was the name of my teacher in kindergarden</option>
                     <option value="Celcius">What was the name of my first pet?</option>
                     <option value="Celcius">What was my place of residence after I was my born?</option>
-                </select></div>
-            <div class="optionName">    <textarea class="optionValueLong" placeholder="Juff Mafkees"></textarea>
+                </select>
+            </div>
+            <div class="optionName">
+                <textarea class="optionValueLong" placeholder="Juff Mafkees"></textarea>
                 <br /><br />
-    <div class="optionName">
-        Receive email after logins
-        <select class="optionValue">
-            <option value="Celcius">Yes</option>
-            <option value="Fahrenheit">No</option>
-        </select>
+                <div class="optionName">
+                    Receive email after logins
+                    <select class="optionValue">
+                        <option value="Celcius">Yes</option>
+                        <option value="Fahrenheit">No</option>
+                    </select>
+                </div>
+        </ul>
+        <ul ng-show="Privacy">
+            <b>Privacy</b>
+            <li>Wie kan het zien</li>
+            <li>Wat kunnen ze zien</li>
+            <li>etc</li>
+        </ul>
+        <ul ng-show="Meldingen">
+            <b>Meldingen</b>
+            <li>Wil ik meldingen ontvangen</li>
+            <li>Waarvan wil ik meldingen ontvangen?</li>
+            <li>etc</li>
+        </ul>
+        <ul ng-show="About">
+            <img src="Images\speech.png" class="aboutLogo">
+            <div class="versionNumberAbout">
+                VERSION 0.1
+                <div class="descriptionAbout">Developed by Wij Deugen<br />
+                2018</div>
+            </div>
+
+        </ul>
     </div>
-</ul>
-            <ul ng-show="Privacy">
-                <b>Privacy</b>
-                <li>Wie kan het zien</li>
-                <li>Wat kunnen ze zien</li>
-                <li>etc</li>
-            </ul>
-            <ul ng-show="Meldingen">
-                <b>Meldingen</b>
-                <li>Wil ik meldingen ontvangen</li>
-                <li>Waarvan wil ik meldingen ontvangen?</li>
-                <li>etc</li>
-            </ul>
-</div>
 

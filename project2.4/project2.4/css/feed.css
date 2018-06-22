@@ -363,9 +363,12 @@ post.hover ~.postFooter {
 
 #friendCount {
     position: absolute;
-    left: 75px;
-    top: 90px;
-    font-size: 15px;
+    text-align: right;
+    float: left;
+    left: 19%;
+    top: 80px;
+    height: 40px;
+    font-size: 0.7vw;
     text-align: right;
     padding-left: 20px;
     padding-right: 50px;
@@ -376,21 +379,22 @@ post.hover ~.postFooter {
 
 #onlineStatus {
     position: absolute;
-    text-align: left;
-    left: 230px;
-    top: 90px;
-    width: 90px;
-    font-size: 15px;
-    padding-left: 50px;
-    padding-right: 20px;
+    text-align: right;
+    float: left;
+    left: 56%;
+    top: 80px;
+    height: 40px;
+    font-size: 0.7vw;
+    text-align: right;
+    padding-left: 40px;
+    padding-right: 6%;
     border-radius: 20px;
     color: white;
     background-color: #3851d7;
 }
 
 #onlineStatusIcon {
-    height: 10%;
-    width: 10%;
+    height: 30%;
 }
 
 #dropdownIconOnline {
@@ -408,15 +412,16 @@ post.hover ~.postFooter {
     border-radius: 5px;
     border-style: solid;
     border-color: #999aa3;
-    left: 90px;
+    left: 2%;
     top: 130px;
-    width: 450px;
-    height: 500px;
+    width: 25%;
+    min-height: 450px;
+    height: 55%;
 }
 
 #panelName {
     z-index: 1;
-    position: absolute;
+    position: relative;
     margin: 0px auto;
     left: 0;
     right: 0;
@@ -440,8 +445,7 @@ post.hover ~.postFooter {
     right: 0;
     position: absolute;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    height: 20%;
     top: 35px;
     float: left;
     border: 2px solid white;
