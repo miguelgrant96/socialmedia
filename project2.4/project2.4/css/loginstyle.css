@@ -261,7 +261,7 @@ img.speechLogo {
 
 }
 
-.login-username, .login-password {
+.login-username, .login-password, .login-gender {
     background: transparent;
     border: 0 solid;
     background-color: #edeff2;
@@ -278,8 +278,11 @@ img.speechLogo {
     color: black;
     transition: 150ms background ease-in;
 }
-
 }
+
+    .login-gender {
+        width: calc(100% - 2.2rem);
+    }
 
 .login-forgot-pass {
     font-weight: 10;
