@@ -1,6 +1,24 @@
 ﻿
 angular.module('Options')
-    .controller('OptionsController', function ($scope, $route, $location) {
+    .controller('OptionsController', function ($scope, $route, $location, UriBuilder, httpRequestService) {
+
+        
+
+        var url = UriBuilder.BuildUrl("Account", { 'id': null });
+        httpRequestService.getRequest(url, function success(response) {
+            $scope.Account = response.data;
+        }, function fail(response) {
+            console.log("Ging iets fout bij het ophalen van het options account");
+            });
+
+        var url = UriBuilder.BuildUrl("ProfileInfo");
+        httpRequestService.getRequest(url, function success(response) {
+            $scope.ProfileInfo = response.data;
+        }, function fail(response) {
+            console.log("Ging iets fout bij het ophalen van het profiel account");
+        });
+
+
         $scope.Persoonlijk = true;
         $scope.Beveiliging = false;
         $scope.Privacy = false;

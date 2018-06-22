@@ -20,10 +20,11 @@ namespace project2._4.API.Controllers
         {
             List<Feed> Feed = new List<Feed>();
             FeedRepository db = new FeedRepository();
+            Feed.OrderBy(x => x.CreatedAt);
             Feed.AddRange(db.GetTextFeed());
             Feed.AddRange(db.GetImageFeed());
             Feed.AddRange(db.GetVideoFeed());
-            Feed.OrderBy(x => x.CreatedAt);
+            
             List<FeedViewModel> viewmodels = new List<FeedViewModel>();
             UserRepository userRep = new UserRepository();
             foreach (Feed feed in Feed)
