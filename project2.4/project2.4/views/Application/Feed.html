@@ -51,7 +51,7 @@
 
 <div class="blackFilter"></div>
 
-<div id="gotPosts">
+<div id="gotPosts-feed">
     <div id="createPost">
         <b class="createposttext"> Create Post</b><br>
         <textarea id="postText" placeholder="Please enter your post here" ng-model="NewPostText"></textarea><br>
@@ -67,7 +67,7 @@
 
     </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-    <div class="postcontainer" ng-repeat="item in Feed">
+    <div class="postcontainer-feed" ng-repeat="item in Feed">
         <img src="Images/profile.png" class="user"><br /><p class="username">{{item.Creator.FirstName}} {{item.Creator.LastName}} </p>
         <div class="post">
             <p class="posttext">
@@ -87,9 +87,131 @@
             <div class="commentText"> Ik kan niet wachten op uw les van straks!! </div>
             <img src="Images\profile3.png" class="commentuser">
         </div>
-        
+
         <div class="placecomment-containter ">
             <textarea class="commentArea" placeholder="Enter your comment here"></textarea><br>
         </div>
     </div>
-</div>
+    <div class="postcontainer-feed">
+
+        <div class="user" ng-click="redirectProfile()"><br /></div>
+        <br /><p class="username">Wesley de Waart - 3 days ago </p>
+        <div class="reporterTool"><SPAN>...</SPAN></div>
+
+        <div class="post">
+            <p class="posttext">
+                Haha niks werkt jaaaa. Dat word een onvoldoende voor jullie nietsnutten!
+            </p>
+            <div class="postFooter">
+                <button class=" postFooterButton"><img src="Images\respect.png" class="postFooterImages"></button>
+                <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
+                <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
+                <p class=" postFooterRespectCount">| 102k personen gaven Respect!</p>
+
+            </div>
+        </div>
+        <div class="comment-Container">
+            <!-- COMMENT -->
+            <div class="profileName"> Marnick Scholten</div>
+
+            <div class="commentText"> Wacht maar tot dit project af is man :)</div>
+            <img src="Images\marnick.jpg" class="commentuser">
+        </div>
+        <div class="comment-Container">
+            <!-- COMMENT -->
+            <div class="profileName"> Wesley de Waart</div>
+
+            <div class="commentText"> Hadden we toch maar een muzieksite moeten gaan jongens</div>
+            <img src="Images\wesley.jpg" class="commentuser">
+        </div>
+        <div class="placecomment-containter ">
+            <textarea class="commentArea" placeholder="Enter your comment here"></textarea><br>
+        </div>
+    </div>
+    <div class="postcontainer-feed">
+
+        <div class="user" ng-click="redirectProfile()"><br /></div>
+        <br /><p class="username">Wesley de Waart - 3 days ago </p>
+        <div class="reporterTool"><SPAN>...</SPAN></div>
+
+        <div class="post">
+            <p class="posttext">
+                KFC!!!!!!!!
+            </p>
+            <div class="postFooter">
+                <button class=" postFooterButton"><img src="Images\respect.png" class="postFooterImages"></button>
+                <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
+                <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
+                <p class=" postFooterRespectCount">| 1 persoon gaf Respect!</p>
+
+            </div>
+        </div>
+        <div class="comment-Container">
+            <!-- COMMENT -->
+            <div class="profileName"> Marnick Scholten</div>
+
+            <div class="commentText"> Nee.</div>
+            <img src="Images\marnick.jpg" class="commentuser">
+        </div>
+        <div class="placecomment-containter ">
+            <textarea class="commentArea" placeholder="Enter your comment here"></textarea><br>
+        </div>
+    </div>
+    <div class="postcontainer-feed">
+
+        <div class="user" ng-click="redirectProfile()"><br /></div>
+        <br /><p class="username">Dick Steenge- 3 days ago </p>
+        <div class="reporterTool"><SPAN>...</SPAN></div>
+
+        <div class="post">
+            <p class="posttext">
+                Hallo?
+            </p>
+            <div class="postFooter">
+                <button class=" postFooterButton"><img src="Images\respect.png" class="postFooterImages"></button>
+                <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
+                <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
+                <p class=" postFooterRespectCount">| 1 persoon gaf Respect!</p>
+
+            </div>
+        </div>
+        <div class="comment-Container">
+            <!-- COMMENT -->
+            <div class="profileName"> Marnick Scholten</div>
+
+            <div class="commentText"> ROOKN?</div>
+            <img src="Images\marnick.jpg" class="commentuser">
+        </div>
+        <div class="placecomment-containter ">
+            <textarea class="commentArea" placeholder="Enter your comment here"></textarea><br>
+        </div>
+    </div>
+    <div class="postcontainer-feed">
+
+        <div class="user" ng-click="redirectProfile()"><br /></div>
+        <br /><p class="username">Jan Willemse- 3 days ago </p>
+        <div class="reporterTool"><SPAN>...</SPAN></div>
+
+        <div class="post">
+            <p class="posttext">
+                Ik ben nog nooit zo suicidaal geweest sinds ik mijn account op !Speech heb gemaakt... Het enige dat functioneel is is de About Me page :s
+            </p>
+            <div class="postFooter">
+                <button class=" postFooterButton"><img src="Images\respect.png" class="postFooterImages"></button>
+                <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
+                <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
+                <p class=" postFooterRespectCount">| 1mil personen gaven respect</p>
+
+            </div>
+        </div>
+        <div class="comment-Container">
+            <!-- COMMENT -->
+            <div class="profileName"> Marnick Scholten</div>
+
+            <div class="commentText"> Alsnog meer functioneel dan Hanze of Tatje.</div>
+            <img src="Images\marnick.jpg" class="commentuser">
+        </div>
+        <div class="placecomment-containter ">
+            <textarea class="commentArea" placeholder="Enter your comment here"></textarea><br>
+        </div>
+    </div>
