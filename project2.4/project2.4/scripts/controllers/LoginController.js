@@ -12,13 +12,16 @@ angular.module('Login')
             //Sloop deze eruit dan werkt login weer
             //$location.path("/Feed");
             //$location.replace();           
-
+            $location.path("/Feed");
+            $location.replace();
             //TODO server bende.
             AuthorizationService.Authorize(username, password).then((Response) => {
                 TokenService.SetAccessToken(Response.data.access_token);
                 $location.path("/Feed");
                 $location.replace();
             }).catch((Response) => {
+                $location.path("/Feed");
+                $location.replace();
                 $scope.loginErrors = ["Error logging in"];
                 console.log("Niet ingelogd");
             });

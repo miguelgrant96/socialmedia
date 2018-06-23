@@ -1,7 +1,21 @@
 #profileContent {
     position: absolute;
     width: 100%;
+    left: 35%;
     border-style: solid;
+}
+
+#profileContentContainer {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+
+}
+
+.profileWrapper {
+    margin: auto;
+    left: 0;
+    right: 0;
 }
 
 
@@ -22,6 +36,35 @@
     border-radius: 10px;
 }
 
+.background {
+    top: 50PX;
+    margin: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border-width: 1px;
+    width: 85%;
+    border-style: solid;
+    overflow: hidden;
+    background-size: cover;
+    height: 35%;
+}
+
+.customWallpaper {
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: -50%;
+    width: 100%;
+    height: 600px;
+    -moz-box-shadow: inset 0 0 10em #666;
+    -webkit-box-shadow: inset 0 0 10em #666;
+    box-shadow: inset 0 0 10em #666;
+}
+
 .profiletab {
     text-align: center;
     float: Left;
@@ -33,6 +76,7 @@
     border-color: #253691;
     color: white;
     background-color: #253691;
+
 }
 
     .profiletab:hover {
@@ -71,8 +115,8 @@
     position: absolute;
     top: 20%;
     height: 100%;
-    width: 20%;
-    min-width: 380px;
+    width: calc(20% - 1vw);
+    min-width: 310px;
 }
 
 .blogItem {
@@ -88,11 +132,11 @@
 }
 
 .infoBoxes-left {
-    left: 8%;
+    left: 6%;
 }
 
 .infoBoxes-right {
-    right: 8%;
+    right: 6%;
 }
 
     .motto {
@@ -108,21 +152,20 @@
         padding-bottom: 5px;
     }
 
-    #infoContainer {
-        z-index: 10;
-        position: relative;
-        float: left;
-        margin-bottom: 30px;
-        display: block;
-        background-color: white;
-        border-style: solid;
-        border-color: #999aa3;
-        border-width: 3px;
-        border-radius: 5px;
-        width: 100%;
-        height: auto;
-    }
-
+#infoContainer {
+    z-index: 10;
+    position: relative;
+    float: left;
+    margin-bottom: 30px;
+    display: block;
+    background-color: white;
+    border-style: solid;
+    border-color: #999aa3;
+    border-width: 3px;
+    border-radius: 5px;
+    width: calc(100% - 1vw);
+    height: auto;
+}
 
     #userInfo b {
         font-size: 30px;

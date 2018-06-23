@@ -17,8 +17,9 @@
 
 #createPost {
     position: relative;
-    width: 70%;
-    min-width: 400px;
+    left: 20%;
+    right: 0;
+    margin: auto;
     padding-top: 20px;
     height: 120px;
     float: left;
@@ -28,9 +29,10 @@
     border-left: solid;
     border-left-width: 10px;
     border-left-color: #354fd7;
-    border-style:solid;
+    border-style: solid;
     background-color: #d7dde5;
-    margin-left: 0%;
+    width: calc(60% + 9vw);
+    min-width: 600px;
     border-radius: 3px;
 }
 
@@ -128,13 +130,6 @@
     color: black;
 }
 
-#Header {
-    text-transform: uppercase;
-    background-color: #8e51ff;
-    font-size: 25px;
-    color: white
-}
-
 #gotPosts-feed, #gotPosts-profile {
     position: relative;
     min-width: 300px;
@@ -144,19 +139,21 @@
 }
 
 #gotPosts-feed {
-    width: 65%;
+    width: 80%;
     height: 70%;
     top: 50px;
-    left: 400px;
-    margin-left: 10%;
+    left: 100px;
+    right: 0;
+    margin: auto;
 }
 
 #gotPosts-profile {
     width: 70%;
     height: 70%;
     top: 50px;
-    left: 400px;
-    margin-left: 10%;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 
@@ -185,11 +182,22 @@
 }
 
 .postcontainer-feed {
-    width: 70%;
+    left: 6%;
+    right: 0;
+    margin: auto;
+    margin-bottom: 30px;
+    width: calc(60% + 9vw);
+    min-width: 600px;
 }
 
 .postcontainer-profile {
-    width: 56%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 30px;
+    width: 55%;
+    min-width: 600px;
+    margin-bottom: 30px;
 }
 
 .placecomment-containter {
@@ -247,13 +255,15 @@
     background-color: #edeff2;
     border-radius: 10px;
     border-color: #999aa3;
-    font-size: 12px;
+    font-size: 15PX;
     color: black;
-    min-height: 30%;
     left: 50px;
+    width: calc(90% - 5vw);
+    min-width: 500px;
     margin-top: 50px;
-    min-height: 50px;
-    width: 90%;
+    min-height: 60px;
+    height: calc(400px - 38vw);
+    height: auto;
 }
 
 .postphoto {
@@ -265,7 +275,7 @@
     border-radius: 10px;
     border-color: #999aa3;
     color: black;
-    min-height: 10%;
+    min-height: 200px;
     left: 50px;
     margin-top: 50px;
     min-height: 350px;
@@ -359,13 +369,14 @@
 .username {
     position: absolute;
     width: auto;
-    margin-top: 4px;
+    min-width: 200px;
+    margin-top: 10px;
     border-radius: 10px;
     padding: 1%;
     padding-left: 3%;
     left: 100px;
     color: white;
-    font-size: 22px;
+    font-size: calc(10px + 0.7vw);
     background-color: #3851d7;
 }
 
