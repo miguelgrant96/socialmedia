@@ -1,7 +1,7 @@
 ﻿
 <div class="UserPanelContainer">
 
-    <div id="Header"> <center>{{Account.FirstName}} {{Account.LastName}}</center></div>
+    <div id="Header"> <center>{{ProfileInfo.FirstName}} {{ProfileInfo.LastName}}</center></div>
     <img src="Images\wesley.jpg" id="panelNamePic">
     <div id="friendCount">You have <br /><b>98 Friends</b></div>
     <div id="onlineStatus">
@@ -118,13 +118,70 @@
             </div>
         </div>
 
-    </div>
 
-    <div ng-show="Privacy">
-        <b>Privacy</b>
 
+        <div ng-show="Privacy">
+            <b>Privacy</b><br /><br />
+            <div class="dividerLine"></div>
+            <b>My Activity</b><br />
+            <div class="optionName">
+                Who can see my messages?
+                <select class="optionValue">
+                    <option selected="selected" value="Everyone">Everyone</option>
+                    <option value="Friends">Only friends</option>
+                </select>
+            </div>
+            <div class="dividerLine"></div>
+            <b>Who can find me?</b><br />
+            <div class="optionName">
+                Who can send me friend requests?
+                <select class="optionValue">
+                    <option selected="selected" value="Everyone">Everyone</option>
+                    <option value="Friends of Friends">Only friends of friends</option>
+                </select>
+            </div>
+            <div class="optionName">
+                Who can see my friend list?
+                <select class="optionValue">
+                    <option selected="selected" value="Everyone">Everyone</option>
+                    <option value="Friends">Only friends</option>
+                    <option value="Friends of Friends">Friends of Friends</option>
+                </select>
+            </div>
+            <div class="optionName">
+                Who can tag me?
+                <select class="optionValue">
+                    <option selected="selected" value="Everyone">Everyone</option>
+                    <option value="Only Friends">Only Friends</option>
+                    <option value="Friends of Friends">Friends of friends</option>
+                </select>
+            </div>
+            
+        </div>
         <div ng-show="Meldingen">
-            <b>Meldingen</b>
+            <b>Meldingen</b><br /><br />
+            <div class="dividerLine"></div>
+            <div class="optionName">
+                Activity's involving me
+                <select class="optionValue">
+                    <option selected="selected" value="Aan">Aan</option>
+                    <option value="Uit">Uit</option>
+                </select>
+            </div>
+            <div class="optionName">
+                birthdays
+                <select class="optionValue">
+                    <option selected="selected" value="Aan">Aan</option>
+                    <option value="Uit">Uit</option>
+                </select>
+            </div>
+            <div class="optionName">
+                Tags
+                <select class="optionValue">
+                    <option selected="selected" value="Aan">Aan</option>
+                    <option value="Uit">Uit</option>
+                </select>
+            </div>
 
         </div>
 
