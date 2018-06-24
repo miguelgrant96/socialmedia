@@ -1,6 +1,6 @@
 body {
     margin: 0 0 0 0;
-    background-image: URL(/project2.4/images/background.png);
+    background-image: URL(/images/background.png);
     background-size: cover;
     z-index: -1;
 font-family: 'Roboto Condensed', sans-serif;
@@ -10,6 +10,21 @@ font-family: 'Roboto Condensed', sans-serif;
 
 .div {
     border-color: #999aa3;
+}
+
+
+#Header {
+    text-transform: uppercase;
+    background-color: #2d5aa2;
+    font-size: 25px;
+    color: white
+}
+
+#headerIcon {
+    position: absolute;
+    height: 60px;
+    left: 1%;
+    top: -6%;
 }
 
 #menu {

@@ -1,4 +1,4 @@
-﻿angular.module('Profile')
+angular.module('Profile')
     .controller('ProfileController', function ($scope, $route, $location, $timeout, UriBuilder, httpRequestService) {
         
         
