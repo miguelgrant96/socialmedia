@@ -1,5 +1,4 @@
 <body class="profile">
-    <!-- Menu -->
     <div id="menu">
         <div ng-click="themeChange()" class="menuitem"> <img src="Images\speech.png" class="menuLogo"></div>
         <div ng-click="redirectFeed()" class="menuitem"> <img src="Images\feedicon.png" class="menuIcon">Feed</div>
@@ -10,41 +9,9 @@
         <div ng-click="redirectOptions()" class="menuitem"><img src="Images\settingsicon.png" class="menuIcon" /> Options</div>
         <div ng-click="redirectLogin()" class="menuitem">Logout</div>
     </div>
+
     <div class="background"><img src="Images\customwallpaper.jpg" class="customWallpaper" /></div>
-    <!--InfoBoxes Left-->
-    <div class="infoBoxes-left">
-        <div id="infoContainer">
-            <div id="Header"><img src="Images\icons\aboutme.png" id="headerIcon"><center>ABOUT ME</center></div>
-            <div class="motto">You can get me out of the KFC. But you can't get KFC out of me.</div>
-            <ul id="userInfoItem">
-                <!--<div class="description"><img src="Images\icons\jobicon.png" class="profileInfoIcon"></img>Eigenaar van <b>!Speech</b> </div>
-                <div class="description"><img src="Images\icons\schoolicon.png" class="profileInfoIcon"></img>Heeft gestudeerd aan <b>de Hanzehogeschool</b> </div>
-                <div class="description"><img src="Images\icons\homeicon.png" class="profileInfoIcon"></img>Woont in <b>Hoogeveen</b> </div>
-                <div class="description"><img src="Images\icons\relationshipIcon.png" class="profileInfoIcon"></img>Vrijgezel</b> </div>
-                <div class="description"><img src="Images\icons\genderIcon.png" class="profileInfoIcon"></img>Man</b> </div>
-                <div class="description"><img src="Images\icons\memberIcon.png" class="profileInfoIcon"></img>Member since <b>02/05/2018</b> </div>-->
-                <li class="description"><img src="Images\icons\jobicon.png" class="profileInfoIcon">Werkt bij <b>{{ProfileInfo.Work}}</b> </li>
-                <li class="description"><img src="Images\icons\schoolicon.png" class="profileInfoIcon">Heeft gestudeerd aan <b>{{ProfileInfo.School}}</b> </li>
-                <li class="description"><img src="Images\icons\homeicon.png" class="profileInfoIcon">Woont in <b>{{ProfileInfo.Hometown}}</b> </li>
-                <li class="description"><img src="Images\icons\relationshipIcon.png" class="profileInfoIcon"><b>{{ProfileInfo.Relation}}</b> </li>
-                <li class="description"><img src="Images\icons\genderIcon.png" class="profileInfoIcon"><b>{{ProfileInfo.Gender}}</b> </li>
-                <li class="description"><img src="Images\icons\memberIcon.png" class="profileInfoIcon">Member since <b>{{ProfileInfo.MemberSince | date:'dd-M-yyyy'}}</b> </li>
-            </ul>
-        </div>
-        <div id="infoContainer">
-            <div id="Header"><img src="Images\icons\network.png" id="headerIcon"><center>NETWORK</center></div>
-            <div class="friendThumbnail">HOOFD</div>
-            <div class="friendThumbnail">HOOFD</div>
-            <div class="friendThumbnail">HOOFD</div>
-            <div class="friendThumbnail">HOOFD</div>
-            <div class="friendThumbnail">HOOFD</div>
-            <div class="friendThumbnail">HOOFD</div>
-            <div class="friendThumbnail">HOOFD</div>
-            <div class="friendThumbnail">HOOFD</div>
-        </div>
-    </div>
-    <!--Midden-->
-    <!-- Feed -->
+
     <div id="profileContentContainer">
         <div id="gotPosts-profile">
             <div class="profileWrapper">
@@ -59,9 +26,10 @@
                     <div class="profiletab">NOTES</div>
                     <div class="profiletab">ABOUT ME</div>
                 </div>
-                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                <!-- Posts -->
-                <div class="postcontainer-profile" ng-repeat="item in Feed track by $index">
+            </div>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            
+            <div class="postcontainer-profile" ng-repeat="item in Feed track by $index">
                     <img src="{{item.Creator.ProfilePictureUrl}}" class="user"><br /><p class="username">{{item.Creator.FirstName}} {{item.Creator.LastName}} </p>
                     <div class="post">
                         <p class="posttext">
@@ -71,7 +39,7 @@
                             <button class=" postFooterButton"><img src="Images\respect.png" class="postFooterImages"></button>
                             <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
                             <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
-                            <p class=" postFooterRespectCount">| 5 mensen gaven Respect!</p>
+                            <p class=" postFooterRespectCount">| {{item.Feed.Respect}} mensen gaven Respect!</p>
                         </div>
                     </div>
                     <div class="comment-Container" ng-repeat="comment in item.Comments">
@@ -87,28 +55,61 @@
                     </div>
                 </div>
             </div>
+
+        <!--Links-->
+        <div class="infoBoxes-left">
+            <div id="infoContainer">
+                <div id="Header"><img src="Images\icons\aboutme.png" id="headerIcon"><center>ABOUT ME</center></div>
+                <div class="motto">You can get me out of the KFC. But you can't get KFC out of me.</div>
+                <ul id="userInfoItem">
+                    <!--<div class="description"><img src="Images\icons\jobicon.png" class="profileInfoIcon"></img>Eigenaar van <b>!Speech</b> </div>
+            <div class="description"><img src="Images\icons\schoolicon.png" class="profileInfoIcon"></img>Heeft gestudeerd aan <b>de Hanzehogeschool</b> </div>
+            <div class="description"><img src="Images\icons\homeicon.png" class="profileInfoIcon"></img>Woont in <b>Hoogeveen</b> </div>
+            <div class="description"><img src="Images\icons\relationshipIcon.png" class="profileInfoIcon"></img>Vrijgezel</b> </div>
+            <div class="description"><img src="Images\icons\genderIcon.png" class="profileInfoIcon"></img>Man</b> </div>
+            <div class="description"><img src="Images\icons\memberIcon.png" class="profileInfoIcon"></img>Member since <b>02/05/2018</b> </div>-->
+                    <li class="description"><img src="Images\icons\jobicon.png" class="profileInfoIcon">Werkt bij <b>{{ProfileInfo.Work}}</b> </li>
+                    <li class="description"><img src="Images\icons\schoolicon.png" class="profileInfoIcon">Heeft gestudeerd aan <b>{{ProfileInfo.School}}</b> </li>
+                    <li class="description"><img src="Images\icons\homeicon.png" class="profileInfoIcon">Woont in <b>{{ProfileInfo.Hometown}}</b> </li>
+                    <li class="description"><img src="Images\icons\relationshipIcon.png" class="profileInfoIcon"><b>{{ProfileInfo.Relation}}</b> </li>
+                    <li class="description"><img src="Images\icons\genderIcon.png" class="profileInfoIcon"><b>{{ProfileInfo.Gender}}</b> </li>
+                    <li class="description"><img src="Images\icons\memberIcon.png" class="profileInfoIcon">Member since <b>{{ProfileInfo.MemberSince | date:'dd-M-yyyy'}}</b> </li>
+                </ul>
+            </div>
+            <div id="infoContainer">
+                <div id="Header"><img src="Images\icons\network.png" id="headerIcon"><center>NETWORK</center></div>
+                <div class="friendThumbnail">HOOFD</div>
+                <div class="friendThumbnail">HOOFD</div>
+                <div class="friendThumbnail">HOOFD</div>
+                <div class="friendThumbnail">HOOFD</div>
+                <div class="friendThumbnail">HOOFD</div>
+                <div class="friendThumbnail">HOOFD</div>
+                <div class="friendThumbnail">HOOFD</div>
+                <div class="friendThumbnail">HOOFD</div>
+            </div>
         </div>
-    </div>
-    <!--Rechts-->
-    <div class="infoBoxes-right">
-        <div id="infoContainer">
-            <div id="Header"><img src="Images\icons\blog.png" id="headerIcon"><center>BLOGS</center></div>
-            <div class="blogItem">Gedicht: Waarom heb je mij verlaten?</div>
-            <div class="blogItem">Mijn eerste (en hopelijk laatste!) dag op het Hanze</div>
-            <div class="blogItem">Hoe ik aan die enorme anuspijn van vanmiddag ben gekomen</div>
-            <div class="blogItem">Vandaag werd Ahmed boos in de klas!!</div>
-        </div>
-        <div id="infoContainer">
-            <div id="Header"><img src="Images\icons\photos.png" id="headerIcon"><center>RECENT PHOTO'S</center></div>
-            <div class="pictureThumbnail">Dit is een foto!</div>
-            <div class="pictureThumbnail">Dit is een foto!</div>
-            <div class="pictureThumbnail">Dit is een foto!</div>
-            <div class="pictureThumbnail">Dit is een foto!</div>
-            <div class="pictureThumbnail">Dit is een foto!</div>
-            <div class="pictureThumbnail">Dit is een foto!</div>
-            <div class="pictureThumbnail">Dit is een foto!</div>
-            <div class="pictureThumbnail">Dit is een foto!</div>
-            <div class="pictureThumbnail">Dit is een foto!</div>
+
+        <!--Rechts-->
+        <div class="infoBoxes-right">
+            <div id="infoContainer">
+                <div id="Header"><img src="Images\icons\blog.png" id="headerIcon"><center>BLOGS</center></div>
+                <div class="blogItem">Gedicht: Waarom heb je mij verlaten?</div>
+                <div class="blogItem">Mijn eerste (en hopelijk laatste!) dag op het Hanze</div>
+                <div class="blogItem">Hoe ik aan die enorme anuspijn van vanmiddag ben gekomen</div>
+                <div class="blogItem">Vandaag werd Ahmed boos in de klas!!</div>
+            </div>
+            <div id="infoContainer">
+                <div id="Header"><img src="Images\icons\photos.png" id="headerIcon"><center>RECENT PHOTO'S</center></div>
+                <div class="pictureThumbnail">Dit is een foto!</div>
+                <div class="pictureThumbnail">Dit is een foto!</div>
+                <div class="pictureThumbnail">Dit is een foto!</div>
+                <div class="pictureThumbnail">Dit is een foto!</div>
+                <div class="pictureThumbnail">Dit is een foto!</div>
+                <div class="pictureThumbnail">Dit is een foto!</div>
+                <div class="pictureThumbnail">Dit is een foto!</div>
+                <div class="pictureThumbnail">Dit is een foto!</div>
+                <div class="pictureThumbnail">Dit is een foto!</div>
+            </div>
         </div>
     </div>
 </body>
