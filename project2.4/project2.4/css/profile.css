@@ -115,7 +115,7 @@
     position: absolute;
     top: 20%;
     height: 100%;
-    width: calc(20% - 1vw);
+    width: calc(20% - 0.7vw);
     min-width: 310px;
 }
 
@@ -163,7 +163,7 @@
     border-color: #999aa3;
     border-width: 3px;
     border-radius: 5px;
-    width: calc(100% - 1vw);
+    width: calc(100%);
     height: auto;
 }
 
