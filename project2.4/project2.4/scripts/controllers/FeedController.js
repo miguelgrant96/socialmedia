@@ -1,5 +1,6 @@
 ﻿angular.module('Feed')
     .controller('FeedController', function ($scope, $route, $location, $timeout, UriBuilder, httpRequestService) {
+        $scope.NewComment = [];
 
         var url = UriBuilder.BuildUrl("Account", { 'id': null });
         httpRequestService.getRequest(url, function success(response) {
@@ -8,21 +9,23 @@
             console.log("Ging iets fout bij het ophalen van het account");
         });
 
-        $timeout(function () {
-            var url = UriBuilder.BuildUrl("Feed");
-            httpRequestService.getRequest(url,function success (response) {
-                $scope.Feed = response.data;
-            }, function fail (response) {
-                console.log("Ging iets fout bij het ophalen van de Feed");
-            });
-        }, 1000);
+        
+        var url = UriBuilder.BuildUrl("Feed", { 'id': null });
+        httpRequestService.getRequest(url,function success (response) {
+            $scope.Feed = response.data;
+        }, function fail (response) {
+            console.log("Ging iets fout bij het ophalen van de Feed");
+        });
+        
 
         $scope.PostFeed = function ()
         {
+            //TODO Upload image or video to webserver
+
             var feedtext = $scope.NewPostText;
             var url = UriBuilder.BuildUrl("Feed", { 'Text': feedtext, 'imageurl': "", 'videourl': "" });
             httpRequestService.PostRequest(url, null, function success(response) {
-                var url = UriBuilder.BuildUrl("Feed");
+                var url = UriBuilder.BuildUrl("Feed", { 'id': null });
                 httpRequestService.getRequest(url, function success(response) {
                     $scope.Feed = response.data;
                 }, function fail(response) {
@@ -31,6 +34,22 @@
             }, function fail(response)
             {
                 console.log("niet helemaal");
+            });
+        }
+
+        $scope.PostComment = function (FeedId, index)
+        {
+            var commentText = $scope.NewComment[index];
+            var url = UriBuilder.BuildUrl("FeedDiscussion", { 'FeedId': FeedId, 'CommentText': commentText });
+            httpRequestService.PostRequest(url, null, function success(response) {
+               var url = UriBuilder.BuildUrl("Feed", { 'id': null });
+            httpRequestService.getRequest(url,function success (response) {
+                $scope.Feed = response.data;
+            }, function fail (response) {
+                console.log("Ging iets fout bij het ophalen van de Feed");
+            });
+            }, function fail(response) {
+                console.log("Ging iets fout bij het opslaan van de comment");
             });
         }
 

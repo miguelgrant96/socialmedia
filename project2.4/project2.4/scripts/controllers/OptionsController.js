@@ -2,29 +2,42 @@
 angular.module('Options')
     .controller('OptionsController', function ($scope, $route, $location, UriBuilder, httpRequestService) {
 
-        
-
-        var url = UriBuilder.BuildUrl("Account", { 'id': null });
-        httpRequestService.getRequest(url, function success(response) {
-            $scope.Account = response.data;
-        }, function fail(response) {
-            console.log("Ging iets fout bij het ophalen van het options account");
-            });
-
-        var url = UriBuilder.BuildUrl("ProfileInfo");
+        var url = UriBuilder.BuildUrl("ProfileInfo", { 'id': null });
         httpRequestService.getRequest(url, function success(response) {
             $scope.ProfileInfo = response.data;
         }, function fail(response) {
             console.log("Ging iets fout bij het ophalen van het profiel account");
         });
 
+        $scope.UpdateProfile = function () {
+            var id = $scope.ProfileInfo.Id;
+            var firstName = $scope.firstName;
+            var lastName = $scope.lastName;
+            var gender = $scope.gender;
+            var birthdate = $scope.dateOfBirth;
+            var Work = $scope.Work;
+            var School = $scope.School;
+            var Hometown = $scope.Hometown;
+            var Relation = $scope.Relation;
+            var Hobby = $scope.Hobby;
+            var ProfilePicUrl = $scope.ProfileInfo.ProfilePictureUrl;
+            var url = UriBuilder.BuildUrl("ProfileInfo");
+            var data = { 'Id': id, 'FirstName': firstName, 'LastName': lastName, 'Gender': gender, 'Email': null, 'BirthDate': birthdate, 'Work': Work, 'School': School, 'Hometown': Hometown, 'Relation': Relation, 'Hobby': Hobby, 'ProfilePictureUrl': ProfilePicUrl };
+            httpRequestService.PostRequest(url, data, function success(response) {
+                
+            }, function fail(response) {
+                    console.log("niet helemaal");
+            });
 
+        };
+
+
+        // Redirects
         $scope.Persoonlijk = true;
         $scope.Beveiliging = false;
         $scope.Privacy = false;
         $scope.Meldingen = false;
         $scope.About = false;
-
 
         $scope.redirectFeed = function (e) {
             $location.path("/Feed");

@@ -39,13 +39,25 @@ namespace project2._4.API.Controllers
                 Gender = userViewModel.Gender,
                 BirthDate = userViewModel.BirthDate,
                 Email = userViewModel.Email,
+                ProfilePictureUrl = "Images/defaultProfilePic.jpg"
             };
             user.Password = PasswordHasher.HashPassword(userViewModel.Password);
             user.Id = Guid.NewGuid();
             user.CreatedDate = DateTime.Now;
 
             UserRepository db = new UserRepository();
+            UserInfoRepository infoRep = new UserInfoRepository();
             db.RegisterUser(user);
+            infoRep.AddProfileInfo(new ProfileInfo()
+            {
+                Id = Guid.NewGuid(),
+                UserId = user.Id,
+                Hobbies = "",
+                RelatieStatus = "",
+                School = "",
+                Werk = "",
+                Woonplaats = ""
+            });
 
             return Ok();
         }
