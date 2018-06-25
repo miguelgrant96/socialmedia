@@ -50,6 +50,7 @@
     <Compile Include="Models\SeedVersion.cs" />
     <Compile Include="Models\TextFeed.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserSettings.cs" />
     <Compile Include="Models\VideoFeed.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\FeedDiscussionViewModel.cs" />

@@ -62,7 +62,7 @@ namespace project2._4.API.Controllers
             UserRepository db = new UserRepository();
             UserInfoRepository db2 = new UserInfoRepository();
             User user = db.GetUser(viewModel.Id);
-            ProfileInfo profileinfo = db2.GetProfileInfo(viewModel.Id);
+            ProfileInfo profileinfo = db2.GetUserProfileInfo(viewModel.Id);
             user.FirstName = viewModel.FirstName;
             user.LastName = viewModel.LastName;
             user.BirthDate = viewModel.BirthDate;

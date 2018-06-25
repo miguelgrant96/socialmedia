@@ -1,10 +1,6 @@
 angular.module('Login')
     .controller('LoginController', function ($scope, $route, $location, UriBuilder, AuthorizationService, TokenService) {
 
-      
-            
-        
-
         $scope.loginUser = function (e) {
             var username = $scope.username;
             var password = $scope.password;

@@ -53,6 +53,7 @@
     <Compile Include="Repositories\FeedRepository.cs" />
     <Compile Include="Repositories\UserInfoRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Repositories\UserSettingsRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
