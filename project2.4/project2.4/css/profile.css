@@ -2,18 +2,26 @@
     position: absolute;
     width: 100%;
     left: 35%;
-    border-style: solid;
 }
 
 #profileContentContainer {
-    position: absolute;
     width: 100%;
-    top: 100px;
-
+    top: 170px;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .profileWrapper {
-    margin: auto;
+    position: absolute;
+    top: 15%;
+    z-index: 2;
+    width: 40%;
+    max-width: 960px;
+    min-width: 600px;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 auto;
     left: 0;
     right: 0;
 }
@@ -68,10 +76,10 @@
 .profiletab {
     text-align: center;
     float: Left;
-    margin-right: 20px;
+    margin-right: 1%;
     padding: 10px;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 18px;
     border-left: solid;
     border-color: #253691;
     color: white;
@@ -113,7 +121,7 @@
 
 .infoBoxes-left, .infoBoxes-right {
     position: absolute;
-    top: 20%;
+    top: 35%;
     height: 100%;
     width: calc(20% - 0.7vw);
     min-width: 310px;
@@ -131,14 +139,45 @@
     border-bottom-style: solid;
 }
 
+
 .infoBoxes-left {
-    left: 6%;
+    transition: 0.3s;
+    left: 8%;
 }
 
 .infoBoxes-right {
-    right: 6%;
+    transition: 0.3s;
+    right: 8%;
 }
 
+
+
+@media (max-width: 1430px) {
+    .infoBoxes-left {
+        transition: 0.3s;
+        left: -20px;
+    }
+
+    .infoBoxes-right {
+        transition: 0.3s;
+        right: -90px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .infoBoxes-left {
+        transition: 0.3s;
+        left: -300px;
+        opacity: 0.3
+    }
+
+    .infoBoxes-right {
+        transition: 0.3s;
+        right: -300px;
+        opacity: 0.3
+    }
+
+}
     .motto {
         font-size: 11px;
         margin: auto;
@@ -152,20 +191,20 @@
         padding-bottom: 5px;
     }
 
-#infoContainer {
-    z-index: 10;
-    position: relative;
-    float: left;
-    margin-bottom: 30px;
-    display: block;
-    background-color: white;
-    border-style: solid;
-    border-color: #999aa3;
-    border-width: 3px;
-    border-radius: 5px;
-    width: calc(100%);
-    height: auto;
-}
+    #infoContainer {
+        z-index: 10;
+        position: relative;
+        float: left;
+        margin-bottom: 30px;
+        display: block;
+        background-color: white;
+        border-style: solid;
+        border-color: #999aa3;
+        border-width: 3px;
+        border-radius: 5px;
+        width: calc(100%);
+        height: auto;
+    }
 
     #userInfo b {
         font-size: 30px;
@@ -198,13 +237,13 @@
         border-style: solid;
     }
 
-.friendThumbnail {
-    float: left;
-    margin: 10px;
-    text-align: center;
-    border-radius: 25px;
-    height: 100px;
-    width: 100px;
-    border-width: 1px;
-    border-style: solid;
-}
+    .friendThumbnail {
+        float: left;
+        margin: 10px;
+        text-align: center;
+        border-radius: 25px;
+        height: 100px;
+        width: 100px;
+        border-width: 1px;
+        border-style: solid;
+    }
