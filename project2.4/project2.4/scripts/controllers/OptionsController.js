@@ -11,24 +11,46 @@ angular.module('Options')
 
         $scope.UpdateProfile = function () {
             var id = $scope.ProfileInfo.Id;
-            var firstName = $scope.firstName;
-            var lastName = $scope.lastName;
-            var gender = $scope.gender;
-            var birthdate = $scope.dateOfBirth;
-            var Work = $scope.Work;
-            var School = $scope.School;
-            var Hometown = $scope.Hometown;
-            var Relation = $scope.Relation;
-            var Hobby = $scope.Hobby;
+            var firstName = $scope.ProfileInfo.FirstName;
+            var lastName = $scope.ProfileInfo.LastName;
+            var gender = $scope.ProfileInfo.Gender;
+            var birthdate = $scope.ProfileInfo.BirthDate;
+            var Work = $scope.ProfileInfo.Work;
+            var School = $scope.ProfileInfo.School;
+            var Hometown = $scope.ProfileInfo.Hometown;
+            var Relation = $scope.ProfileInfo.Relation;
+            var Hobby = $scope.ProfileInfo.Hobby;
             var ProfilePicUrl = $scope.ProfileInfo.ProfilePictureUrl;
             var url = UriBuilder.BuildUrl("ProfileInfo");
-            var data = { 'Id': id, 'FirstName': firstName, 'LastName': lastName, 'Gender': gender, 'Email': null, 'BirthDate': birthdate, 'Work': Work, 'School': School, 'Hometown': Hometown, 'Relation': Relation, 'Hobby': Hobby, 'ProfilePictureUrl': ProfilePicUrl };
-            httpRequestService.PostRequest(url, data, function success(response) {
+            var data = { 'Id': id, 'FirstName': firstName, 'LastName': lastName, 'Gender': gender, 'Email': null, 'BirthDate': birthdate, 'Work': Work, 'School': School, 'Hometown': Hometown, 'Relation': Relation, 'Hobby': Hobby, 'ProfilePictureUrl': ProfilePicUrl, 'MemberSince': birthdate };
+            httpRequestService.PutRequest(url, data, function success(response) {
                 
             }, function fail(response) {
                     console.log("niet helemaal");
             });
 
+        };
+
+        $scope.UpdatePassword = function ()
+        {
+            var id = $scope.ProfileInfo.Id;
+            var currentpass = $scope.CurrentPassword;
+            var newpass = $scope.NewPassword;
+            var newpassagain = $scope.NewPasswordAgain;
+
+            if (newpass === newpassagain) {
+                var url = UriBuilder.BuildUrl("Account", { 'Id': id, 'oldpassword': currentpass, 'newpassword': newpass });
+                httpRequestService.PutRequest(url, null, function success(response) {
+
+                }, function fail(response) {
+                    // iets doen met de melding
+                    console.log(response.data.ExceptionMessage);
+                });
+            }
+            else
+            {
+                // melding weergeven dat het nieuwe wachtwoord niet overeen komt.
+            }
         };
 
 

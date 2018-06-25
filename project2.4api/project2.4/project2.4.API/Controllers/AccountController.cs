@@ -33,6 +33,14 @@ namespace project2._4.API.Controllers
         [EnableCors(origins: "*", headers: "*", methods: "*")]
         public IHttpActionResult PostAccount([FromBody] UserViewModel userViewModel)
         {
+
+            UserRepository db = new UserRepository();
+            UserInfoRepository infoRep = new UserInfoRepository();
+            if (db.GetUserByEmail(userViewModel.Email) != null)
+            {
+                throw new Exception("Email already in use");
+            }
+
             User user = new Entities.Models.User() {
                 FirstName = userViewModel.FirstName,
                 LastName = userViewModel.LastName,
@@ -45,8 +53,7 @@ namespace project2._4.API.Controllers
             user.Id = Guid.NewGuid();
             user.CreatedDate = DateTime.Now;
 
-            UserRepository db = new UserRepository();
-            UserInfoRepository infoRep = new UserInfoRepository();
+            
             db.RegisterUser(user);
             infoRep.AddProfileInfo(new ProfileInfo()
             {
