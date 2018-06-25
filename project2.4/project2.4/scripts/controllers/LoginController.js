@@ -19,7 +19,7 @@ angular.module('Login')
                 $location.path("/Feed");
                 $location.replace();
             }).catch((Response) => {
-                $scope.loginErrors = ["Error logging in"];
+                $scope.loginErrors = ["Failed to log in, please check your username or password"];
                 console.log("Niet ingelogd");
             });
         };

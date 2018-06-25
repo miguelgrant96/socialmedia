@@ -28,7 +28,7 @@
 
     </p>
 
-    <div ng-repeat="loginError in loginErrors"> {{ loginError }} </div>
+    <div style="color:red;" ng-repeat="loginError in loginErrors"> {{ loginError }} </div>
 
     <input type="UserID" class="login-username" autofocus="true" required="true" placeholder="User ID" name="username" ng-model="username" />
     <input type="password" class="login-password" required="true" placeholder="Password" name="password" ng-model="password" />
