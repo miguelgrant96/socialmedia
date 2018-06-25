@@ -24,7 +24,7 @@ angular.module('Login')
         };
 
         $scope.redirectRegister = function (e) {
-            $location.path("/Register");
+            $location.path("/Feed");
             $location.replace();
         };
     });
