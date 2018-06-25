@@ -2,13 +2,50 @@
     <div ng-click="redirectFeed()" class="menuitem"> <img src="Images\speech.png" class="menuLogo"></div>
     <div ng-click="redirectFeed()" class="selectedItem">Feed</div>
     <div ng-click="redirectOptions()" class="menufiller"></div>
-    <textarea class="searchBar" placeholder="Wat zoek u"></textarea>
+    <textarea class="searchBar" placeholder="Search (Names, jobs, gender)"></textarea>
     <div ng-click="redirectOptions()" class="menufiller"></div>
     <div ng-click="redirectProfile()" class="menuitem"><img src="Images\profileicon.png" class="menuIcon" />Profile</div>
     <div ng-click="redirectOptions()" class="menuitem"><img src="Images\settingsicon.png" class="menuIcon" /> Options</div>
     <div ng-click="redirectLogin()" class="menuitem">Logout</div>
 </div>
-<div id="profilePic"> foto hier</div>
+<div class="UserPanelContainer">
+    <div id="Header"> <center>{{Account.FirstName}} {{Account.LastName}}</center></div>
+    <img src="{{Account.ProfilePictureUrl}}" id="panelNamePic">
+    <div id="friendCount">You have <br /><b>98 Friends</b></div>
+    <div id="onlineStatus">
+        Shown as:<img src="Images\dropdownArrow.png" id="dropdownIconOnline">  <br />
+        <img src="Images\userOnline.png" id="onlineStatusIcon"><b> Online</b>
+    </div>
+    <div id="panelInformation">
+        <div class="WeatherWidget">
+            <center>
+                <img src="Images\weatherSunny.png" id="weatherIcon">
+                <p>You are currently in <br> <b>Groningen</b></p>
+                <p id="Temperature"> 28ºC</p>
+            </center>
+        </div>
+        <div class="notificationsWidget">
+            <center>
+                <p><b>You have 5 new notifications</b></p>
+                <p>3 friends replied to your 'Holiday in Spain' album</p>
+                <p>Jan de Woert wants to be your friend</p>
+                <p>You have been invited to the event: ''Wedding Party''</p>
+            </center>
+        </div>
+        <div class="feedWidget">
+            <center>
+                <div class="feedHeader">FEED UPDATES</div>
+                <div class="feedupdate"><div class="timestamp">4 minutes ago </div> Arjen Bovee made a new post!<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
+                <div class="feedupdate"><div class="timestamp">8 minutes ago </div>Miguel Grant posted a picture of the White House<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
+                <div class="feedupdate"><div class="timestamp">15 minutes ago </div>Marnick Scholten posted an album called: ''2-weeks at Ibiza''<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
+                <div class="feedupdate"><div class="timestamp">23 minutes ago </div>Wesley de Waart made a new post!<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
+                <div class="feedupdate"><div class="timestamp">45 minutes ago </div>Jan de Woert added a video called: "I created a robot that scratches the dog for you!"<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
+                <div class="feedupdate"><div class="timestamp">51 minutes ago </div>Arjen Bovee added a picture called: "My favourite Hanze teacher"<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
+                <div class="feedupdate"><div class="timestamp">1 hour ago </div>Wesley just made a post!<img src="Images\seenIcon.png" class="seen"><img src="Images\removeIcon.png" class="remove"></div>
+            </center>
+        </div>
+    </div>
+</div>
 <!--Map-->
 <!--<div id="mapContainer">
     <div id="mapTitle"><b>Friends based on location</b></div>

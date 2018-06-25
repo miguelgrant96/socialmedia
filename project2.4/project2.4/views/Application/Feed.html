@@ -10,7 +10,6 @@
 </div>
 
 <div class="UserPanelContainer">
-
     <div id="Header"> <center>{{Account.FirstName}} {{Account.LastName}}</center></div>
     <img src="{{Account.ProfilePictureUrl}}" id="panelNamePic">
     <div id="friendCount">You have <br /><b>98 Friends</b></div>
@@ -67,7 +66,7 @@
 
     </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-    <div class="postcontainer" ng-repeat="item in Feed track by $index">
+    <div class="postcontainer-feed" ng-repeat="item in Feed track by $index">
         <img src="{{item.Creator.ProfilePictureUrl}}" class="user"><br /><p class="username">{{item.Creator.FirstName}} {{item.Creator.LastName}} </p>
         <div class="post">
             <p class="posttext">

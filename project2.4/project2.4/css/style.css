@@ -8,6 +8,10 @@ font-family: 'Roboto Condensed', sans-serif;
     animation: fadein 2s;
 }
 
+textarea {
+    resize: none;
+}
+
 .div {
     border-color: #999aa3;
 }
@@ -101,7 +105,7 @@ font-family: 'Roboto Condensed', sans-serif;
     background-color: #edeff2;
     color: black;
     padding: 5px;
-    font-size: 25px;
+    font-size: 22px
 }
 
 .menufiller {
@@ -158,6 +162,7 @@ font-family: 'Roboto Condensed', sans-serif;
 
 #userInfoItem {
     list-style: none;
+    text-transform:capitalize;
 }
 
 #postBar {
