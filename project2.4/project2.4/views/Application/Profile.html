@@ -38,7 +38,6 @@
                         <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
                         <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
                         <p class=" postFooterRespectCount">| {{item.Feed.Respect}} mensen gaven Respect!</p>
-
                     </div>
                 </div>
                 <div class="comment-Container" ng-repeat="comment in item.Comments">
@@ -53,7 +52,7 @@
                     <button ng-click="PostComment(item.Feed.Id, $index)"><img src="Images\sendicon.png" class="postIcon">&nbsp; Post comment</button>
                 </div>
             </div>
-    </div>
+      </div>
         <!--Links-->
         <div class="infoBoxes-left">
             <div id="infoContainer">
