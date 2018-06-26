@@ -1,12 +1,65 @@
 ﻿
 angular.module('Options')
-    .controller('OptionsController', function ($scope, $route, $location) {
+    .controller('OptionsController', function ($scope, $route, $location, UriBuilder, httpRequestService) {
+
+        var url = UriBuilder.BuildUrl("ProfileInfo", { 'id': null });
+        httpRequestService.getRequest(url, function success(response) {
+            $scope.ProfileInfo = response.data;
+        }, function fail(response) {
+            console.log("Ging iets fout bij het ophalen van het profiel account");
+        });
+
+        $scope.UpdateProfile = function () {
+            var id = $scope.ProfileInfo.Id;
+            var firstName = $scope.ProfileInfo.FirstName;
+            var lastName = $scope.ProfileInfo.LastName;
+            var gender = $scope.ProfileInfo.Gender;
+            var birthdate = $scope.ProfileInfo.BirthDate;
+            var Work = $scope.ProfileInfo.Work;
+            var School = $scope.ProfileInfo.School;
+            var Hometown = $scope.ProfileInfo.Hometown;
+            var Relation = $scope.ProfileInfo.Relation;
+            var Hobby = $scope.ProfileInfo.Hobby;
+            var ProfilePicUrl = $scope.ProfileInfo.ProfilePictureUrl;
+            var url = UriBuilder.BuildUrl("ProfileInfo");
+            var data = { 'Id': id, 'FirstName': firstName, 'LastName': lastName, 'Gender': gender, 'Email': null, 'BirthDate': birthdate, 'Work': Work, 'School': School, 'Hometown': Hometown, 'Relation': Relation, 'Hobby': Hobby, 'ProfilePictureUrl': ProfilePicUrl, 'MemberSince': birthdate };
+            httpRequestService.PutRequest(url, data, function success(response) {
+                
+            }, function fail(response) {
+                    console.log("niet helemaal");
+            });
+
+        };
+
+        $scope.UpdatePassword = function ()
+        {
+            var id = $scope.ProfileInfo.Id;
+            var currentpass = $scope.CurrentPassword;
+            var newpass = $scope.NewPassword;
+            var newpassagain = $scope.NewPasswordAgain;
+
+            if (newpass === newpassagain) {
+                var url = UriBuilder.BuildUrl("Account", { 'Id': id, 'oldpassword': currentpass, 'newpassword': newpass });
+                httpRequestService.PutRequest(url, null, function success(response) {
+
+                }, function fail(response) {
+                    // iets doen met de melding
+                    console.log(response.data.ExceptionMessage);
+                });
+            }
+            else
+            {
+                // melding weergeven dat het nieuwe wachtwoord niet overeen komt.
+            }
+        };
+
+
+        // Redirects
         $scope.Persoonlijk = true;
         $scope.Beveiliging = false;
         $scope.Privacy = false;
         $scope.Meldingen = false;
         $scope.About = false;
-
 
         $scope.redirectFeed = function (e) {
             $location.path("/Feed");

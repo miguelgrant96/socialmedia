@@ -1,5 +1,22 @@
 ﻿angular.module('Friends')
-    .controller('FriendsController', function ($scope, $route, $location) {
+    .controller('FriendsController', function ($scope, $route, $location, $timeout, UriBuilder, httpRequestService) {
+
+
+        //Getting ProfileInfo and Feed 
+        var url = UriBuilder.BuildUrl("ProfileInfo", { 'id': !null });
+        httpRequestService.getRequest(url, function success(response) {
+            $scope.ProfileInfo = response.data;
+            $scope.places = [response.data.Hometown];
+            var url = UriBuilder.BuildUrl("Feed", { 'id': null });
+            httpRequestService.getRequest(url, function success(response) {
+                $scope.Feed = response.data;
+            }, function fail(response) {
+                console.log("Ging iets fout bij het ophalen van de Feed");
+            });
+        }, function fail(response) {
+            console.log("Ging iets fout bij het ophalen van het Profile");
+        });
+
 
         $scope.redirectFeed = function (e) {
             $location.path("/Feed");

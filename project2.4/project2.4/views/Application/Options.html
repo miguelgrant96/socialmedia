@@ -1,7 +1,8 @@
-﻿<div class="UserPanelContainer">
+﻿
+<div class="UserPanelContainer">
 
-    <div id="Header"> <center>UPDATES </center></div>
-    <img src="Images\wesley.jpg" id="panelNamePic">
+    <div id="Header"> <center>{{ProfileInfo.FirstName}} {{ProfileInfo.LastName}}</center></div>
+    <img src="{{ProfileInfo.ProfilePictureUrl}}" id="panelNamePic">
     <div id="friendCount">You have <br /><b>98 Friends</b></div>
     <div id="onlineStatus">
         Shown as:<img src="Images\dropdownArrow.png" id="dropdownIconOnline">  <br />
@@ -41,7 +42,7 @@
     <div ng-click="redirectFeed()" class="menuitem"> <img src="Images\speech.png" class="menuLogo"></div>
     <div ng-click="redirectFeed()" class="menuitem"> <img src="Images\feedicon.png" class="menuIcon">Feed</div>
     <div ng-click="redirectOptions()" class="menufiller"></div>
-    <textarea class="searchBar" placeholder="Wat zoek u"></textarea>
+    <textarea class="searchBar" placeholder="Search (Names, jobs, gender)"></textarea>
     <div ng-click="redirectOptions()" class="menufiller"></div>
     <div ng-click="redirectProfile()" class="menuitem"><img src="Images\profileicon.png" class="menuIcon" />Profile</div>
     <div ng-click="redirectOptions()" class="selectedItem"><img src="Images\settingsicon.png" class="menuIcon" /> Options</div>
@@ -51,31 +52,19 @@
 
 
 <div id="settings">
-    <div id="Header"><center>SETTINGS</center></div>
+    <div id="Header"><center>OPTIONS</center></div>
     <div id="settingsLeft">
         <center>
             <div class="menuItem" id="persoonlijk" ng-click="showPersoonlijk()"><img src="Images\personal.png" class="settingIcon"> Personal</div>
-            <ul class="menuItem" ng-click="showBeveiliging()"><img src="Images\security.png" id="beveiliging" class="settingIcon"> <center> Security</ul>
-            <ul class="menuItem" ng-click="showPrivacy()"><img src="Images\privacy.png" id="privacy" class="settingIcon"> Privacy</ul>
-            <ul class="menuItem" ng-click="showMeldingen()"><img src="Images\notifications.png" id="Meldingen" class="settingIcon"> Notifications</ul>
-            <ul class="menuItem" ng-click="showAbout()"><img src="Images\aboutIcon.png" id="About" class="settingIcon"> About us</ul>
+            <div class="menuItem" ng-click="showBeveiliging()"><img src="Images\security.png" id="beveiliging" class="settingIcon"> Security</div>
+            <div class="menuItem" ng-click="showPrivacy()"><img src="Images\privacy.png" id="privacy" class="settingIcon"> Privacy</div>
+            <div class="menuItem" ng-click="showMeldingen()"><img src="Images\notifications.png" id="Meldingen" class="settingIcon"> Notifications</div>
+            <div class="menuItem" ng-click="showAbout()"><img src="Images\aboutIcon.png" id="About" class="settingIcon"> About us</div>
         </center>
     </div>
     <div id="settingsRight">
-        <div class="applybutton">
-            <table class="buttonWrapper" id="table1">
-                <tr class="none">
-                    <td class="none">
-                        <div class="optionApplyButton"><button>Apply</button></div>
-                    </td>
-                    <td class="none">
-                        <div class="optionApplyButton"><button>Revert</button></div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <ul ng-show="Persoonlijk">
-            <b>PERSONAL SETTINGS:</b>
+        <div ng-show="Persoonlijk">
+            <br /><b>PERSONAL SETTINGS:</b>
             <br />
             <br />
             <div class="optionName">
@@ -83,84 +72,153 @@
                 <input type="file" name="newProfilePic" id="newProfilePic" accept="image/*" />
                 <label class="profileOption" for="newProfilePic">Select new Profile picture</label>
             </div>
-            <div class="optionName"><img src="Images\icons\name.png" class="settingRightIcon"> First name <textarea class="optionValue" placeholder="Wesley"></textarea></div>
-            <div class="optionName"><img src="Images\icons\name.png" class="settingRightIcon"> Last name <textarea class="optionValue" placeholder="de Waart"></textarea></div>
-            <div class="optionName"><img src="Images\icons\download.png" class="settingRightIcon">  Nickname <textarea class="optionValue" placeholder="Schoonheid"></textarea></div>
-            <br />
-            <div class="optionInfo">Warning: You can only change your name once a month. After your name has been succesfully changed, your friends will be notified about this.</div>
+
+
+            <div class="optionName">First name <input class="optionValue" name="firstName" ng-model="ProfileInfo.FirstName"></div>
+            <div class="optionName">Last name <input class="optionValue" ng-model="ProfileInfo.LastName" ></div>
+            <div class="optionName">Date of birth <input type="date" id="optionDate" value="{{ProfileInfo.BirthDate | date:'yyyy-MM-dd'}}" ng-model="ProfileInfo.BirthDate" /></div><br />
+            <div class="optionInfo">Warning: You can only change your name once a month. Upon changing your name, your friends will be notified about the namechange.</div>
             <br />
             <div class="dividerLine"></div>
             <br />
             <b> ABOUT ME:</b>
             <br />
             <br />
-            <div class="optionName"> <img src="Images\icons\jobicon.png" class="settingRightIcon"> Work <textarea class="optionValue" placeholder="Teringlijer"></textarea></div>
-            <div class="optionName"><img src="Images\icons\schoolicon.png" class="settingRightIcon"> Study <textarea class="optionValue" placeholder="Klaploper"></textarea></div>
-            <div class="optionName"><img src="Images\icons\homeicon.png" class="settingRightIcon"> Place <textarea class="optionValue" placeholder="Tattjeland"></textarea></div>
-            <div class="optionName"><img src="Images\icons\relationshipicon.png" class="settingRightIcon"> Relation <textarea class="optionValue" placeholder="Complicated"></textarea></div>
-            <div class="optionName"><img src="Images\icons\gendericon.png" class="settingRightIcon"> Gender <textarea class="optionValue" placeholder="Complicated"></textarea></div>
-            <div class="dividerLine"></div>
-            <br />
-            <b> OTHER:</b>
-            <br />
-            <br />
-            <div class="optionName"><img src="Images\icons\motto.png" class="settingRightIcon"> Life Motto <textarea class="optionValueLong" placeholder="A goal without a plan is just a wish"></textarea></div>
-            <div class="optionName">
-                <img src="Images\icons\metricicon.png" class="settingRightIcon"> Temperature <select class="optionValue">
-                    <option value="Celcius">Celsius</option>
-                    <option value="Fahrenheit">Fahrenheit</option>
-                </select>
-            </div>
-        </ul>
+            <div class="optionName"><img src="Images\icons\jobicon.png" class="settingRightIcon"> Work <input class="optionValue" ng-model="ProfileInfo.Work"></div>
+            <div class="optionName"><img src="Images\icons\schoolicon.png" class="settingRightIcon"> Study <input class="optionValue" ng-model="ProfileInfo.School"></div>
+            <div class="optionName"><img src="Images\icons\homeicon.png" class="settingRightIcon"> Place <input class="optionValue" ng-model="ProfileInfo.Hometown"></div>
+            <div class="optionName"><img src="Images\icons\relationshipicon.png" class="settingRightIcon"> 
 
-        <ul ng-show="Beveiliging">
-            <div class="optionName">Change Password <input type="password" class="optionValue" placeholder="Current password"></input></div>
-            <div class="optionName"><input typ="password" class="optionValue" placeholder="New password"></input></div>
+                Relation <select class="optionValue" ng-model="ProfileInfo.Relation">
+                    <option>bachelor</option>
+                    <option>In a relationship</option>
+                    <option>Engaged</option>
+                    <option>Married</option>
+                    <option>It's Complicated</option>
+                    <option>Widow</option>
+                </select>
+            </div>
+            <div class="optionName"><img src="Images\icons\gendericon.png" class="settingRightIcon"> Gender <input class="optionValue" ng-model="ProfileInfo.Gender"></div>
+            <div class="optionName"><img src="Images\icons\hobbies.png" class="settingRightIcon" />  Hobbies <input class="optionValue" ng-model="ProfileInfo.Hobby"></div>
+            <div class="optionName"><img src="Images\icons\motto.png" class="settingRightIcon" />  Motto <input class="optionValueLong" ng-model="ProfileInfo.Motto"></div>
+
+            <div class="applybutton">
+                <table class="buttonWrapper" id="table1">
+                    <tr class="none">
+                        <td class="none">
+                            <div class="optionApplyButton" ng-click="UpdateProfile()"><button>Apply</button></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div ng-show="Beveiliging">
+
+            <br /><b>CHANGE PASSWORD</b>            <br />
             <br />
-            <br />
-            <div class="optionName"><input type="password" class="optionValue" inputmode="password" placeholder="New password again"></input></div>
-            <br />
-            <br />
-            <br />
+            <div class="optionName"><img src="Images\icons\passwordcurr.png" class="settingRightIcon"> Current password <input type="password" class="optionValue" placeholder="Current password" ng-model="CurrentPassword"></div>
+            <div class="optionName"><img src="Images\icons\passwordNew1.png" class="settingRightIcon"> New password<input type="password" class="optionValue" placeholder="New password" ng-model="NewPassword"></div>
+            <div class="optionName"><img src="Images\icons\passwordNew2.png" class="settingRightIcon"> New password again<input type="password" class="optionValue" placeholder="New password again" ng-model="NewPasswordAgain"></div>
+            <div class="applybutton">
+                <table class="buttonWrapper" id="table1">
+                    <tr class="none">
+                        <td class="none">
+                            <div class="optionApplyButton" ng-click="UpdatePassword()"><button>Apply</button></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+
+
+        <div ng-show="Privacy">
+            <b>Privacy</b><br /><br />
+            <div class="dividerLine"></div>
+            <b>My Activity</b><br />
             <div class="optionName">
-                Secret Question
-                <select class="optionValueLong">
-                    <option value="Celcius">What was the name of my teacher in kindergarden</option>
-                    <option value="Celcius">What was the name of my first pet?</option>
-                    <option value="Celcius">What was my place of residence after I was my born?</option>
+                Who can see my messages?
+                <select class="optionValue">
+                    <option selected="selected" value="Everyone">Everyone</option>
+                    <option value="Friends">Only friends</option>
+                </select>
+            </div>
+            <div class="dividerLine"></div>
+            <b>Who can find me?</b><br />
+            <div class="optionName">
+                Who can send me friend requests?
+                <select class="optionValue">
+                    <option selected="selected" value="Everyone">Everyone</option>
+                    <option value="Friends of Friends">Only friends of friends</option>
                 </select>
             </div>
             <div class="optionName">
-                <textarea class="optionValueLong" placeholder="Juff Mafkees"></textarea>
-                <br /><br />
-                <div class="optionName">
-                    Receive email after logins
-                    <select class="optionValue">
-                        <option value="Celcius">Yes</option>
-                        <option value="Fahrenheit">No</option>
-                    </select>
-                </div>
-        </ul>
-        <ul ng-show="Privacy">
-            <b>Privacy</b>
-            <li>Wie kan het zien</li>
-            <li>Wat kunnen ze zien</li>
-            <li>etc</li>
-        </ul>
-        <ul ng-show="Meldingen">
-            <b>Meldingen</b>
-            <li>Wil ik meldingen ontvangen</li>
-            <li>Waarvan wil ik meldingen ontvangen?</li>
-            <li>etc</li>
-        </ul>
-        <ul ng-show="About">
+                Who can see my friend list?
+                <select class="optionValue">
+                    <option selected="selected" value="Everyone">Everyone</option>
+                    <option value="Friends">Only friends</option>
+                    <option value="Friends of Friends">Friends of Friends</option>
+                </select>
+            </div>
+            <div class="optionName">
+                Who can tag me?
+                <select class="optionValue">
+                    <option selected="selected" value="Everyone">Everyone</option>
+                    <option value="Only Friends">Only Friends</option>
+                    <option value="Friends of Friends">Friends of friends</option>
+                </select>
+            </div>
+            <div class="applybutton">
+                <table class="buttonWrapper" id="table1">
+                    <tr class="none">
+                        <td class="none">
+                            <div class="optionApplyButton" ng-click="UpdatePassword()"><button>Apply</button></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <div ng-show="Meldingen">
+            <b>Meldingen</b><br /><br />
+            <div class="dividerLine"></div>
+            <div class="optionName">
+                Activity's involving me
+                <select class="optionValue">
+                    <option selected="selected" value="Aan">Aan</option>
+                    <option value="Uit">Uit</option>
+                </select>
+            </div>
+            <div class="optionName">
+                birthdays
+                <select class="optionValue">
+                    <option selected="selected" value="Aan">Aan</option>
+                    <option value="Uit">Uit</option>
+                </select>
+            </div>
+            <div class="optionName">
+                Tags
+                <select class="optionValue">
+                    <option selected="selected" value="Aan">Aan</option>
+                    <option value="Uit">Uit</option>
+                </select>
+            </div>
+
+        </div>
+
+        <div class"="about" ng-show="About">
+            <img src="Images\hanze.jpg" class="hanze">
             <img src="Images\speech.png" class="aboutLogo">
             <div class="versionNumberAbout">
                 VERSION 0.1
-                <div class="descriptionAbout">Developed by Wij Deugen<br />
-                2018</div>
-            </div>
+                <div class="descriptionAbout">
+                    Developed by Wij Deugen<br />
+                    2018
 
-        </ul>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 

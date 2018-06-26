@@ -16,23 +16,49 @@ namespace project2._4.API.Controllers
         [HttpGet]
         [EnableCors(origins: "*", headers: "*", methods: "*")]
         [Authorize]
-        public IHttpActionResult GetFeed()
+        public IHttpActionResult GetFeed(Guid? Id)
         {
             List<Feed> Feed = new List<Feed>();
             FeedRepository db = new FeedRepository();
-            Feed.AddRange(db.GetTextFeed());
-            Feed.AddRange(db.GetImageFeed());
-            Feed.AddRange(db.GetVideoFeed());
-            Feed.OrderBy(x => x.CreatedAt);
-            List<FeedViewModel> viewmodels = new List<FeedViewModel>();
             UserRepository userRep = new UserRepository();
+            FeedDiscussionRepository FeedDisRep = new FeedDiscussionRepository();
+            if (Id.HasValue)
+            {
+                Feed = db.GetUserFeed(Id.Value);
+            }
+            else
+            {
+                Feed.AddRange(db.GetTextFeed());
+                Feed.AddRange(db.GetImageFeed());
+                Feed.AddRange(db.GetVideoFeed());
+            }
+            
+            Feed.OrderBy(x=>x.CreatedAt);
+
+            List<FeedViewModel> viewmodels = new List<FeedViewModel>();
+            
             foreach (Feed feed in Feed)
             {
+                List<FeedDiscussion> comments = FeedDisRep.GetFeedDiscussions(feed.Id);
+                List<FeedDiscussionViewModel> commentsViewModel = new List<FeedDiscussionViewModel>();
+                foreach (var comment in comments)
+                {
+                    User CommentUser = userRep.GetUser(comment.User_Id);
+                    commentsViewModel.Add(new FeedDiscussionViewModel()
+                    {
+                        Id = comment.Id,
+                        CommentText = comment.Text,
+                        CreatedDate = comment.CreatedAt,
+                        FirstName = CommentUser.FirstName,
+                        LastName = CommentUser.LastName,
+                        ProfilePicUrl =CommentUser.ProfilePictureUrl
+                    });
+                }
                 viewmodels.Add(new FeedViewModel()
                 {
                     Feed = feed,
-                    Creator = userRep.GetUser(feed.CreatorId)
-
+                    Creator = userRep.GetUser(feed.CreatorId),
+                    Comments = commentsViewModel
                 });
             }
 

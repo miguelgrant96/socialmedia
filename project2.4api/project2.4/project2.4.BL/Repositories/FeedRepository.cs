@@ -33,6 +33,15 @@ namespace project2._4.BL.Repositories
 
         }
 
+        public List<Feed> GetUserFeed(Guid userId)
+        {
+            List<Feed> userFeed = new List<Feed>();
+            userFeed.AddRange(db.FeedTexts.Where(x => x.CreatorId.Equals(userId)));
+            userFeed.AddRange(db.VideoFeeds.Where(x => x.CreatorId.Equals(userId)));
+            userFeed.AddRange(db.ImageFeeds.Where(x => x.CreatorId.Equals(userId)));
+            return userFeed;
+        }
+
         public List<TextFeed> GetTextFeed()
         {
             return db.FeedTexts.ToList();

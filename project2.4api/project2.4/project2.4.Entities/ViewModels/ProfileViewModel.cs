@@ -20,5 +20,18 @@ namespace project2._4.Entities.ViewModels
 
         public DateTime BirthDate { get; set; }
 
+        public string Work { get; set; }
+
+        public string School { get; set; }
+
+        public string Hometown { get; set; }
+
+        public string Relation { get; set; }
+
+        public string Hobby { get; set;}
+
+        public string ProfilePictureUrl { get; set; }
+
+        public DateTime MemberSince { get; set; }
     }
 }

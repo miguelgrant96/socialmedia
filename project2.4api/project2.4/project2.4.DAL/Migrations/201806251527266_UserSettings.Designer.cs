@@ -7,13 +7,13 @@ namespace project2._4.DAL.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Feed : IMigrationMetadata
+    public sealed partial class UserSettings : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Feed));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UserSettings));
         
         string IMigrationMetadata.Id
         {
-            get { return "201805311538127_Feed"; }
+            get { return "201806251527266_UserSettings"; }
         }
         
         string IMigrationMetadata.Source

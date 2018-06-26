@@ -11,6 +11,7 @@ namespace project2._4.Entities.ViewModels
     {
         public Feed Feed { get; set; }
         public User Creator { get; set; }
+        public List<FeedDiscussionViewModel> Comments { get; set; }
 
     }
 }

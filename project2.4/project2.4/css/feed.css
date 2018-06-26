@@ -17,7 +17,9 @@
 
 #createPost {
     position: relative;
-    width: 80%;
+    left: 20%;
+    right: 0;
+    margin: auto;
     padding-top: 20px;
     height: 120px;
     float: left;
@@ -27,9 +29,10 @@
     border-left: solid;
     border-left-width: 10px;
     border-left-color: #354fd7;
-    border-style:solid;
+    border-style: solid;
     background-color: #d7dde5;
-    margin-left: 0%;
+    width: calc(60% + 9vw);
+    min-width: 600px;
     border-radius: 3px;
 }
 
@@ -41,11 +44,49 @@
 }
 
 #CreatePublishButton {
+    position: absolute;
     border-radius: 25px;
     background-color: #edeff2;
-    border-color:#edeff2;
-    margin-left:645px;
+    right: 30px;
+    margin-left: 64%;
+    font-size: 0.80vw;
 }
+
+.addMedia {
+    transition: 0.1s;
+    border-radius: 25px;
+    background-color: #edeff2;
+    border-color: #edeff2;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    border-style: 1px solid;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 0.80vw;
+    margin-left:1%;
+
+}
+
+
+    .addMedia:hover {
+        cursor: pointer;
+        transition: 0.1s;
+        border: 1px solid #3851d7;
+    }
+
+#addImage, #addVideo {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+    #addImage:hover, #addImage:hover {
+        cursor: pointer;
+    }
 
 .postIcon {
     position: relative;
@@ -88,27 +129,32 @@
     color: black;
 }
 
-#Header {
-    text-transform: uppercase;
-    background-color: #3851d7;
-    font-size: 25px;
-    color: white
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-#gotPosts {
-    position: absolute;
-    width: 65%;
-    height: 70%;
-    overflow-y: scroll;
+#gotPosts-feed, #gotPosts-profile {
+    position: relative;
+    min-width: 300px;
+    overflow-y: no-display;
     overflow-x: hidden;
-    top: 110px;
-    left: 600px;
     padding-bottom: 300px;
 }
+
+#gotPosts-feed {
+    width: 80%;
+    height: 70%;
+    top: 50px;
+    left: 100px;
+    right: 0;
+    margin: auto;
+}
+
+#gotPosts-profile {
+    width: 100%;
+    height: 70%;
+    top: 310px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
 
 
 .postedphoto {
@@ -119,7 +165,8 @@
     border: 1px solid black;
 }
 
-.postcontainer {
+.postcontainer, .postcontainer-feed, .postcontainer-profile {
+    animation: fadeinPost 1s;
     transition: 0.2s;
     position: relative;
     margin-bottom: 1%;
@@ -132,8 +179,25 @@
     border-left-width: 10px;
     border-left-color: #354fd7;
     border-style: solid;
-    width: 80%;
-    left: 0px;
+}
+
+.postcontainer-feed {
+    left: 6%;
+    right: 0;
+    margin: auto;
+    margin-bottom: 30px;
+    width: calc(60% + 9vw);
+    min-width: 600px;
+}
+
+.postcontainer-profile {
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 30px;
+    width: 40%;
+    min-width: 600px;
+    margin-bottom: 30px;
 }
 
 .placecomment-containter {
@@ -157,21 +221,23 @@
     transition: 0.2s;
     z-index: 1;
     position: relative;
-    font-size: 22px;
+    font-size: 1vw;
     width: 50%;
+    min-width: 200px;
     border: 1px solid black;
     background-color: #e5e7ea;
     padding-right: 20px;
     border: 1px solid black;
     background-color: #f9f9f9;
     border-radius: 6px;
+    left: 50px;
+    margin-top: 5px;
     border-color: #999aa3;
     border-left-style: solid;
     border-left-color: #a8b9c1;
     border-left-width: 10px;
     min-height: 65px;
-    margin-left: 6%;
-    margin-top: 0.6%;
+    overflow-y: scroll;
 }
 
     .comment-Container:hover {
@@ -185,16 +251,19 @@
     z-index: 3;
     position: relative;
     padding-bottom: 4%;
+    background-color: white;
     border: 1px solid black;
-    background-color: #edeff2;
     border-radius: 10px;
     border-color: #999aa3;
+    font-size: 15PX;
     color: black;
-    min-height: 10%;
     left: 50px;
+    width: calc(90% - 5vw);
+    min-width: 500px;
     margin-top: 50px;
-    min-height: 50px;
-    width: 90%;
+    min-height: 60px;
+    height: calc(400px - 38vw);
+    height: auto;
 }
 
 .postphoto {
@@ -204,14 +273,15 @@
     border: 1px solid black;
     background-color: #edeff2;
     border-radius: 10px;
-    border-color: #999aa3;;
+    border-color: #999aa3;
     color: black;
-    min-height: 10%;
+    min-height: 200px;
     left: 50px;
     margin-top: 50px;
     min-height: 350px;
     width: 70%;
 }
+
 
 .user {
     text-transform: uppercase;
@@ -223,7 +293,7 @@
     width: 100px;
     height: 100px;
     left: 0px;
-    top: 1%;
+    top: 5px;
     float: left;
     margin-left: 2%;
     border: 3px solid white;
@@ -299,13 +369,14 @@
 .username {
     position: absolute;
     width: auto;
-    margin-top: 4px;
+    min-width: 200px;
+    margin-top: 10px;
     border-radius: 10px;
     padding: 1%;
     padding-left: 3%;
     left: 100px;
     color: white;
-    font-size: 22px;
+    font-size: calc(10px + 0.7vw);
     background-color: #3851d7;
 }
 
@@ -355,7 +426,7 @@ post.hover ~.postFooter {
 }
 
 .underlay-photo {
-    background-image: url("../images/bg-loginf.jpg");
+    /*background-image: url("../images/bg-login.jpg");*/
     background-size: cover;
 }
 
@@ -366,9 +437,10 @@ post.hover ~.postFooter {
     text-align: right;
     float: left;
     left: 19%;
-    top: 80px;
-    height: 40px;
-    font-size: 0.7vw;
+    top: 15%;
+    height: 8%;
+    width:auto;
+    font-size: 0.8vw;
     text-align: right;
     padding-left: 20px;
     padding-right: 50px;
@@ -382,8 +454,9 @@ post.hover ~.postFooter {
     text-align: right;
     float: left;
     left: 56%;
-    top: 80px;
-    height: 40px;
+    top: 15%;
+    height: 8%;
+    width:auto;
     font-size: 0.7vw;
     text-align: right;
     padding-left: 40px;
@@ -405,7 +478,7 @@ post.hover ~.postFooter {
     height: 40%;
     width: 10%;
 }
-
+/*hierzo*/
 .UserPanelContainer {
     position: absolute;
     background-color: #d7dde5;
@@ -413,7 +486,7 @@ post.hover ~.postFooter {
     border-style: solid;
     border-color: #999aa3;
     left: 2%;
-    top: 130px;
+    top: 11%;
     width: 25%;
     min-height: 450px;
     height: 55%;
@@ -437,20 +510,23 @@ post.hover ~.postFooter {
     background-color: #3851d7;
 }
 
+
+
 #panelNamePic {
     z-index: 2;
+    position: absolute;
+    float: left;
+    left: 42%;
+    top: 8%;
+    max-height: 20%;
+    max-width: 20%;
+    border-radius: 50%;
+    background-color: white;
     display: block;
     margin: 0px auto;
-    left: 0;
-    right: 0;
-    position: absolute;
-    border-radius: 50%;
-    height: 20%;
-    top: 35px;
-    float: left;
+    
     border: 2px solid white;
     border-color: #a8b9c1;
-    background-color: white;
 }
 
 .reporterTool {
@@ -470,3 +546,13 @@ post.hover ~.postFooter {
         text-align: center;
         position: absolute;
     }
+
+@keyframes fadeinPost {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

@@ -1,3 +1,30 @@
+#profileContent {
+    position: absolute;
+    width: 100%;
+    left: 35%;
+}
+
+#profileContentContainer {
+    width: 100%;
+    top: 170px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.profileWrapper {
+    position: absolute;
+    top: 15%;
+    z-index: 2;
+    width: 40%;
+    max-width: 960px;
+    min-width: 600px;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
 
 
 .profileTabs {
@@ -9,26 +36,55 @@
     left: 140px;
     border: 1px solid black;
     float: left;
-    margin-top: 8%;
+    margin-top: 100px;
     border-color: #999aa3;
     border-width: 2px;
     background-color: white;
-    margin-left: 0%;
+    min-width: 550px;
     border-radius: 10px;
+}
 
+.background {
+    top: 50PX;
+    margin: auto;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border-width: 1px;
+    width: 85%;
+    border-style: solid;
+    overflow: hidden;
+    background-size: cover;
+    height: 35%;
+}
+
+.customWallpaper {
+    background-size: cover;
+    overflow: hidden;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: -50%;
+    width: 100%;
+    height: 600px;
+    -moz-box-shadow: inset 0 0 10em #666;
+    -webkit-box-shadow: inset 0 0 10em #666;
+    box-shadow: inset 0 0 10em #666;
 }
 
 .profiletab {
     text-align: center;
     float: Left;
-    margin-right: 20px;
+    margin-right: 1%;
     padding: 10px;
     border-radius: 10px;
-    font-size: 20px;
+    font-size: 18px;
     border-left: solid;
     border-color: #253691;
     color: white;
     background-color: #253691;
+
 }
 
     .profiletab:hover {
@@ -48,75 +104,146 @@
     border-color: #354fd7;
 }
 
-#userInfo {
-    z-index: 10;
-    position: absolute;
-    background-color: white;
-    border-style: solid;
-    border-color: #999aa3;
-    border-width: 3px;
-    border-radius: 5px;
-    top: 190px;
-    width: 350px;
-    height: auto;
-    left: 1px;
-}
 
 .userNameProfile {
     text-transform: uppercase;
     position: absolute;
     width: auto;
-    margin-top: 4.5%;
+    top: 60px;
     border-radius: 10px;
-    padding: 1%;
-    padding-left: 3%;
+    padding: 10px;
+    padding-left: 30px;
     left: 128px;
     color: white;
-    font-size: 22px;
+    font-size: 20px;
     background-color: #3851d7;
 }
 
-#albumInfo {
+.infoBoxes-left, .infoBoxes-right {
     position: absolute;
-    background-color: white;
-    border-color: #999aa3;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 5px;
-    top: 540px;
-    width: 350px;
-    height: auto;
-    left: 10%;
+    top: 35%;
+    height: 100%;
+    width: calc(20% - 0.7vw);
+    min-width: 310px;
 }
 
-
-#userInfo b {
-    font-size: 30px;
-}
-
-#userInfoItem {
-    line-height: 2.1;
-}
-
-#userInfoItem b {
+.blogItem {
+    font-size: 14px;
+    width: 60%;
     padding-bottom: 10px;
-    margin-right: 20px;
-    font-size: 15px;
-    color: #354fd7;
-}
-
-.profileInfoIcon {
-    position: absolute;
-    height: 25px;
-    left: 3px;
-}
-
-.pictureThumbnail {
-    float: left;
-    margin: 10px;
-    text-align:center;
-    height: 70px;
-    width: 70px;
+    margin-bottom: 5px;
+    padding: 10px;
+    margin: auto;
+    left: 0;
     border-width: 1px;
-    border-style: solid;
+    border-bottom-style: solid;
 }
+
+
+.infoBoxes-left {
+    transition: 0.3s;
+    left: 8%;
+}
+
+.infoBoxes-right {
+    transition: 0.3s;
+    right: 8%;
+}
+
+
+
+@media (max-width: 1430px) {
+    .infoBoxes-left {
+        transition: 0.3s;
+        left: -20px;
+    }
+
+    .infoBoxes-right {
+        transition: 0.3s;
+        right: -90px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .infoBoxes-left {
+        transition: 0.3s;
+        left: -300px;
+        opacity: 0.3
+    }
+
+    .infoBoxes-right {
+        transition: 0.3s;
+        right: -300px;
+        opacity: 0.3
+    }
+
+}
+    .motto {
+        font-size: 11px;
+        margin: auto;
+        border-bottom-style: solid;
+        border-width: 1px;
+        text-align: center;
+        border-color: #e8e5e5;
+        width: 70%;
+        color: #565656;
+        padding-top: 10px;
+        padding-bottom: 5px;
+    }
+
+    #infoContainer {
+        z-index: 10;
+        position: relative;
+        float: left;
+        margin-bottom: 30px;
+        display: block;
+        background-color: white;
+        border-style: solid;
+        border-color: #999aa3;
+        border-width: 3px;
+        border-radius: 5px;
+        width: calc(100%);
+        height: auto;
+    }
+
+    #userInfo b {
+        font-size: 30px;
+    }
+
+    #userInfoItem {
+        line-height: 2.1;
+    }
+
+        #userInfoItem b {
+            padding-bottom: 10px;
+            margin-right: 20px;
+            font-size: 15px;
+            color: #354fd7;
+        }
+
+    .profileInfoIcon {
+        position: absolute;
+        height: 25px;
+        left: 3px;
+    }
+
+    .pictureThumbnail {
+        float: left;
+        margin: 10px;
+        text-align: center;
+        height: 70px;
+        width: 70px;
+        border-width: 1px;
+        border-style: solid;
+    }
+
+    .friendThumbnail {
+        float: left;
+        margin: 10px;
+        text-align: center;
+        border-radius: 25px;
+        height: 100px;
+        width: 100px;
+        border-width: 1px;
+        border-style: solid;
+    }

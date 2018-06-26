@@ -3,21 +3,20 @@ namespace project2._4.DAL.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class ProfileInfo : DbMigration
+    public partial class UserSettings : DbMigration
     {
         public override void Up()
         {
             CreateTable(
-                "dbo.ProfileInfoes",
+                "dbo.UserSettings",
                 c => new
                     {
                         Id = c.Guid(nullable: false),
                         UserId = c.Guid(nullable: false),
-                        Werk = c.String(),
-                        School = c.String(),
-                        Woonplaats = c.String(),
-                        RelatieStatus = c.String(),
-                        Hobbies = c.String(),
+                        SeeMyMessages = c.String(),
+                        SentFriendRequests = c.String(),
+                        SeeFriendList = c.String(),
+                        TagMe = c.String(),
                     })
                 .PrimaryKey(t => t.Id);
             
@@ -25,7 +24,7 @@ namespace project2._4.DAL.Migrations
         
         public override void Down()
         {
-            DropTable("dbo.ProfileInfoes");
+            DropTable("dbo.UserSettings");
         }
     }
 }

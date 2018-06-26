@@ -24,6 +24,7 @@ namespace project2._4.DAL
         public DbSet<ImageFeed> ImageFeeds { get; set; }
         public DbSet<VideoFeed> VideoFeeds { get; set; }
         public DbSet<FeedDiscussion> FeedDiscussions { get; set; }
+        public DbSet<UserSettings> UserSettings { get; set; }
 
     }
 }

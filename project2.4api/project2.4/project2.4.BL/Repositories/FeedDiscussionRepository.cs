@@ -11,17 +11,15 @@ namespace project2._4.BL.Repositories
     public class FeedDiscussionRepository
     {
         private DatabaseContext db;
-        private FeedRepository FeedRep;
 
         public FeedDiscussionRepository()
         {
             this.db = new DatabaseContext();
-            this.FeedRep = new FeedRepository();
         }
 
         public List<FeedDiscussion> GetFeedDiscussions(Guid FeedId)
         {
-            return db.FeedDiscussions.Where(x => x.Feed.Equals(FeedRep.GetFeed(FeedId))).ToList();
+            return db.FeedDiscussions.Where(x => x.Feed_Id.Equals(FeedId)).ToList();
         }
 
         public FeedDiscussion GetFeedDiscussion(Guid id)

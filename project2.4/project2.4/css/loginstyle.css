@@ -92,7 +92,6 @@ input {
     margin: auto;
     margin-top: 15%;
 }
-
 .welcomeScreen {
     float: left;
     background: #222;
@@ -116,18 +115,63 @@ img.speechLogo {
 }
 
 
-.login-form {
-    float:left;
+.welcomeScreen, .welcomeScreen-small, .welcomeScreen-extended {
+    float: left;
     background: #222;
     box-shadow: 0 0 1rem rgba(10,0,0,0.3);
-    background-color: #d7dde5;
-    height: 350px;
-    border-right-style: solid;
-    border-right-color: #3851d7;
+    background-image: url("../images/welcome-bg.jpg");
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-color: #efefef;
+    border-left-style: solid;
+    border-left-color: #3851d7;
     border-width: 5px;
     text-align: center;
     color: #646464;
+    width: 400px;
+}
+
+
+.welcomeScreen-small {
+    -webkit-animation: fadeinSmall 1s;
+    height: 350px;
+}
+
+.welcomeScreen-extended {
+    -webkit-animation: fadeinLarge 1s;
+    height: 450px;
+}
+
+img.speechLogo {
+    position: absolute;
+    height: 150px;
+    right: 28%;
+    top: 17%;
+}
+
+
+.login-form, .login-form-small, .login-form-extended {
+    float: left;
+    background: #222;
+    box-shadow: 0 0 1rem rgba(10,0,0,0.3);
+    background-color: #d7dde5;
+    border-right-style: solid;
+    border-right-color: #3851d7;
+    border-width: 5px;
+    transition: 0.3s;
+    text-align: center;
+    color: #646464;
     width: 250px;
+}
+
+.login-form-small {
+    -webkit-animation: fadeinSmall 1s;
+    height: 350px;
+}
+
+.login-form-extended {
+    -webkit-animation: fadeinLarge 1s;
+    height: 450px;
 }
 
 
@@ -217,7 +261,7 @@ img.speechLogo {
 
 }
 
-.login-username, .login-password {
+.login-username, .login-password, .login-gender {
     background: transparent;
     border: 0 solid;
     background-color: #edeff2;
@@ -228,15 +272,17 @@ img.speechLogo {
     padding: .5rem;
     transition: 250ms background ease-in;
     width: calc(100% - 3.3rem);
-    &:focus
 
 {
     background-color: #343434;
     color: black;
     transition: 150ms background ease-in;
 }
-
 }
+
+    .login-gender {
+        width: calc(100% - 2.2rem);
+    }
 
 .login-forgot-pass {
     font-weight: 10;
@@ -278,4 +324,28 @@ img.speechLogo {
     transition: 250ms background ease-in;
 }
 
+}
+
+@keyframes fadeinSmall {
+    from {
+        height: 0px;
+        opacity: 1;
+    }
+
+    to {
+        height: 350px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeinLarge {
+    from {
+        height: 350px;
+        opacity: 1;
+    }
+
+    to {
+        height: 450px;
+        opacity: 1;
+    }
 }
