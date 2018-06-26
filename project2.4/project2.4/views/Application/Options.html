@@ -72,9 +72,11 @@
                 <input type="file" name="newProfilePic" id="newProfilePic" accept="image/*" />
                 <label class="profileOption" for="newProfilePic">Select new Profile picture</label>
             </div>
-            <div class="optionName"><img src="Images\icons\name.png" class="settingRightIcon"> First name <input class="optionValue" name="firstName" ng-model="ProfileInfo.FirstName"></div>
-            <div class="optionName"><img src="Images\icons\name.png" class="settingRightIcon"> Last name <input class="optionValue" ng-model="ProfileInfo.LastName"></div>
-            <div class="optionName"><img src="Images\icons\birthday.png" class="settingRightIcon"> Date of birth <input type="date" id="optionDate" value="{{ProfileInfo.BirthDate | date:'yyyy-MM-dd'}}" ng-model="ProfileInfo.BirthDate" /></div><br />
+
+
+            <div class="optionName">First name <input class="optionValue" name="firstName" ng-model="ProfileInfo.FirstName"></div>
+            <div class="optionName">Last name <input class="optionValue" ng-model="ProfileInfo.LastName" ></div>
+            <div class="optionName">Date of birth <input type="date" id="optionDate" value="{{ProfileInfo.BirthDate | date:'yyyy-MM-dd'}}" ng-model="ProfileInfo.BirthDate" /></div><br />
             <div class="optionInfo">Warning: You can only change your name once a month. Upon changing your name, your friends will be notified about the namechange.</div>
             <br />
             <div class="dividerLine"></div>
@@ -85,8 +87,8 @@
             <div class="optionName"><img src="Images\icons\jobicon.png" class="settingRightIcon"> Work <input class="optionValue" ng-model="ProfileInfo.Work"></div>
             <div class="optionName"><img src="Images\icons\schoolicon.png" class="settingRightIcon"> Study <input class="optionValue" ng-model="ProfileInfo.School"></div>
             <div class="optionName"><img src="Images\icons\homeicon.png" class="settingRightIcon"> Place <input class="optionValue" ng-model="ProfileInfo.Hometown"></div>
-            <div class="optionName">
-                <img src="Images\icons\relationshipicon.png" class="settingRightIcon">
+            <div class="optionName"><img src="Images\icons\relationshipicon.png" class="settingRightIcon"> 
+
                 Relation <select class="optionValue" ng-model="ProfileInfo.Relation">
                     <option>bachelor</option>
                     <option>In a relationship</option>
@@ -99,6 +101,7 @@
             <div class="optionName"><img src="Images\icons\gendericon.png" class="settingRightIcon"> Gender <input class="optionValue" ng-model="ProfileInfo.Gender"></div>
             <div class="optionName"><img src="Images\icons\hobbies.png" class="settingRightIcon" />  Hobbies <input class="optionValue" ng-model="ProfileInfo.Hobby"></div>
             <div class="optionName"><img src="Images\icons\motto.png" class="settingRightIcon" />  Motto <input class="optionValueLong" ng-model="ProfileInfo.Motto"></div>
+
             <div class="applybutton">
                 <table class="buttonWrapper" id="table1">
                     <tr class="none">
@@ -111,6 +114,7 @@
         </div>
 
         <div ng-show="Beveiliging">
+
             <br /><b>CHANGE PASSWORD</b>            <br />
             <br />
             <div class="optionName"><img src="Images\icons\passwordcurr.png" class="settingRightIcon"> Current password <input type="password" class="optionValue" placeholder="Current password" ng-model="CurrentPassword"></div>

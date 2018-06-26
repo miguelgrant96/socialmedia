@@ -52,8 +52,8 @@
                     <button ng-click="PostComment(item.Feed.Id, $index)"><img src="Images\sendicon.png" class="postIcon">&nbsp; Post comment</button>
                 </div>
             </div>
-            <div class="postcontainer-profile">
-                <img src="" class="user"><br /><p class="username">Wesley </p>
+            <div class="postcontainer-profile" ng-repeat="item in Feed track by $index">
+                <img src="{{item.Creator.ProfilePictureUrl}}" class="user"><br /><p class="username">{{item.Creator.FirstName}} {{item.Creator.LastName}} </p>
                 <div class="post">
                     <p class="posttext">
                         {{item.Feed.Text}}
@@ -63,6 +63,7 @@
                         <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
                         <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
                         <p class=" postFooterRespectCount">| {{item.Feed.Respect}} mensen gaven Respect!</p>
+
                     </div>
                 </div>
                 <div class="comment-Container" ng-repeat="comment in item.Comments">
@@ -127,7 +128,6 @@
                     <button ng-click="PostComment(item.Feed.Id, $index)"><img src="Images\sendicon.png" class="postIcon">&nbsp; Post comment</button>
                 </div>
             </div>
-        </div>
     </div>
         <!--Links-->
         <div class="infoBoxes-left">
@@ -157,6 +157,7 @@
                 <div ng-click="redirectFriends()" class="friendThumbnail">Show more friends</div>
             </div>
         </div>
+
 
         <!--Rechts-->
         <div class="infoBoxes-right">
