@@ -16,7 +16,7 @@
         }, function fail (response) {
             console.log("Ging iets fout bij het ophalen van de Feed");
         });
-        
+
 
         $scope.PostFeed = function ()
         {
