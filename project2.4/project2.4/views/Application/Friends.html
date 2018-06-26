@@ -19,8 +19,9 @@
     <div id="panelInformation">
         <div class="WeatherWidget">
             <center>
-                <img src="Images\weatherSunny.png" id="weatherIcon">
                 <p>You are currently in <br> <b>Groningen</b></p>
+                <img src="Images\weatherSunny.png" id="weatherIcon">
+
                 <p id="Temperature"> 28ºC</p>
             </center>
         </div>
@@ -148,3 +149,5 @@ Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
     </div>
     <a href="">All Friends</a>
 </div>
+
+<div ng-repeat="place in places"> {{ place }} </div>

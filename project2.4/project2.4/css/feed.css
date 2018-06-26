@@ -437,9 +437,10 @@ post.hover ~.postFooter {
     text-align: right;
     float: left;
     left: 19%;
-    top: 80px;
-    height: 40px;
-    font-size: 0.7vw;
+    top: 15%;
+    height: 8%;
+    width:auto;
+    font-size: 0.8vw;
     text-align: right;
     padding-left: 20px;
     padding-right: 50px;
@@ -453,8 +454,9 @@ post.hover ~.postFooter {
     text-align: right;
     float: left;
     left: 56%;
-    top: 80px;
-    height: 40px;
+    top: 15%;
+    height: 8%;
+    width:auto;
     font-size: 0.7vw;
     text-align: right;
     padding-left: 40px;
@@ -476,7 +478,7 @@ post.hover ~.postFooter {
     height: 40%;
     width: 10%;
 }
-
+/*hierzo*/
 .UserPanelContainer {
     position: absolute;
     background-color: #d7dde5;
@@ -484,7 +486,7 @@ post.hover ~.postFooter {
     border-style: solid;
     border-color: #999aa3;
     left: 2%;
-    top: 130px;
+    top: 11%;
     width: 25%;
     min-height: 450px;
     height: 55%;
@@ -508,20 +510,23 @@ post.hover ~.postFooter {
     background-color: #3851d7;
 }
 
+
+
 #panelNamePic {
     z-index: 2;
+    position: absolute;
+    float: left;
+    left: 42%;
+    top: 8%;
+    max-height: 20%;
+    max-width: 20%;
+    border-radius: 50%;
+    background-color: white;
     display: block;
     margin: 0px auto;
-    left: 0;
-    right: 0;
-    position: absolute;
-    border-radius: 50%;
-    height: 20%;
-    top: 35px;
-    float: left;
+    
     border: 2px solid white;
     border-color: #a8b9c1;
-    background-color: white;
 }
 
 .reporterTool {

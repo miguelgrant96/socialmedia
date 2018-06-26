@@ -1,6 +1,7 @@
 var app = angular.module('doeIets', ['ngRoute','Token','httpRequests', 'Login', 'Register', 'Feed', 'Profile', 'Options', 'Privacy', 'Friends', 'mapApp']);
 
 
+
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/', {
