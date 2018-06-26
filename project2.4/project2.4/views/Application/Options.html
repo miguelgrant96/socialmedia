@@ -64,7 +64,7 @@
     </div>
     <div id="settingsRight">
         <div ng-show="Persoonlijk">
-            <b>PERSONAL SETTINGS:</b>
+            <br /><b>PERSONAL SETTINGS:</b>
             <br />
             <br />
             <div class="optionName">
@@ -73,11 +73,11 @@
                 <label class="profileOption" for="newProfilePic">Select new Profile picture</label>
             </div>
 
+
             <div class="optionName">First name <input class="optionValue" name="firstName" ng-model="ProfileInfo.FirstName"></div>
             <div class="optionName">Last name <input class="optionValue" ng-model="ProfileInfo.LastName" ></div>
             <div class="optionName">Date of birth <input type="date" id="optionDate" value="{{ProfileInfo.BirthDate | date:'yyyy-MM-dd'}}" ng-model="ProfileInfo.BirthDate" /></div><br />
             <div class="optionInfo">Warning: You can only change your name once a month. Upon changing your name, your friends will be notified about the namechange.</div>
-
             <br />
             <div class="dividerLine"></div>
             <br />
@@ -88,6 +88,7 @@
             <div class="optionName"><img src="Images\icons\schoolicon.png" class="settingRightIcon"> Study <input class="optionValue" ng-model="ProfileInfo.School"></div>
             <div class="optionName"><img src="Images\icons\homeicon.png" class="settingRightIcon"> Place <input class="optionValue" ng-model="ProfileInfo.Hometown"></div>
             <div class="optionName"><img src="Images\icons\relationshipicon.png" class="settingRightIcon"> 
+
                 Relation <select class="optionValue" ng-model="ProfileInfo.Relation">
                     <option>bachelor</option>
                     <option>In a relationship</option>
@@ -99,6 +100,8 @@
             </div>
             <div class="optionName"><img src="Images\icons\gendericon.png" class="settingRightIcon"> Gender <input class="optionValue" ng-model="ProfileInfo.Gender"></div>
             <div class="optionName"><img src="Images\icons\hobbies.png" class="settingRightIcon" />  Hobbies <input class="optionValue" ng-model="ProfileInfo.Hobby"></div>
+            <div class="optionName"><img src="Images\icons\motto.png" class="settingRightIcon" />  Motto <input class="optionValueLong" ng-model="ProfileInfo.Motto"></div>
+
             <div class="applybutton">
                 <table class="buttonWrapper" id="table1">
                     <tr class="none">
@@ -111,10 +114,12 @@
         </div>
 
         <div ng-show="Beveiliging">
-            <b>Change password</b>
-            <div class="optionName">Current password <input type="password" class="optionValue" placeholder="Current password" ng-model="CurrentPassword"></div>
-            <div class="optionName">New password<input type="password" class="optionValue" placeholder="New password" ng-model="NewPassword"></div>
-            <div class="optionName">New password again<input type="password" class="optionValue" placeholder="New password again" ng-model="NewPasswordAgain"></div>
+
+            <br /><b>CHANGE PASSWORD</b>            <br />
+            <br />
+            <div class="optionName"><img src="Images\icons\passwordcurr.png" class="settingRightIcon"> Current password <input type="password" class="optionValue" placeholder="Current password" ng-model="CurrentPassword"></div>
+            <div class="optionName"><img src="Images\icons\passwordNew1.png" class="settingRightIcon"> New password<input type="password" class="optionValue" placeholder="New password" ng-model="NewPassword"></div>
+            <div class="optionName"><img src="Images\icons\passwordNew2.png" class="settingRightIcon"> New password again<input type="password" class="optionValue" placeholder="New password again" ng-model="NewPasswordAgain"></div>
             <div class="applybutton">
                 <table class="buttonWrapper" id="table1">
                     <tr class="none">
@@ -202,16 +207,17 @@
 
         </div>
 
-        <div ng-show="About">
+        <div class"="about" ng-show="About">
+            <img src="Images\hanze.jpg" class="hanze">
             <img src="Images\speech.png" class="aboutLogo">
             <div class="versionNumberAbout">
                 VERSION 0.1
                 <div class="descriptionAbout">
                     Developed by Wij Deugen<br />
                     2018
+
                 </div>
             </div>
-
         </div>
     </div>
 </div>
