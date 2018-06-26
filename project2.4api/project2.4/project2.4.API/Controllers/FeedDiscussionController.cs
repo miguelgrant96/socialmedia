@@ -40,7 +40,7 @@ namespace project2._4.API.Controllers
                 CreatedAt = DateTime.Now,
                 Text = CommentText,
                 User_Id = UserRep.GetUserByEmail(User.Identity.Name).Id,
-                Feed_Id = FeedRep.GetFeed(FeedId).Id
+                Feed_Id = FeedId
             };
 
             FeedDisRep.CreateFeedDiscussion(Comment);

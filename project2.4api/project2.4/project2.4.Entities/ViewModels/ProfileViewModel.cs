@@ -32,6 +32,8 @@ namespace project2._4.Entities.ViewModels
 
         public string ProfilePictureUrl { get; set; }
 
+        public string Motto { get; set; }
+
         public DateTime MemberSince { get; set; }
     }
 }

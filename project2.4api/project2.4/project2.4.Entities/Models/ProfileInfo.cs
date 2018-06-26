@@ -21,5 +21,7 @@ namespace project2._4.Entities.Models
         public string RelatieStatus { get; set; }
 
         public string Hobbies { get; set; }
+
+        public string Motto { get; set; }
     }
 }

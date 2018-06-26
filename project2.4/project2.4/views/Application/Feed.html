@@ -74,7 +74,7 @@
                 {{item.Feed.Text}}
             </p>
             <div class="postFooter">
-                <button class=" postFooterButton"><img src="Images\respect.png" class="postFooterImages"></button>
+                <button class=" postFooterButton" ng-click="GiveRespect(item.Feed.Id, $index)"><img src="Images\respect.png" class="postFooterImages"></button>
                 <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
                 <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
                 <p class=" postFooterRespectCount">| {{item.Feed.Respect}} mensen gaven Respect!</p>
