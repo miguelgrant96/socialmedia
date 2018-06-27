@@ -39,7 +39,7 @@
     </div>
 </div>
 <div id="menu">
-    <div ng-click="redirectFeed()" class="menuitem"> <img src="Images\speech.png" class="menuLogo"></div>
+    <div ng-click="themeChange()" class="menuitem"> <img id="logoBig" src="Images\logo-minimal.png" class="menuLogo"> <img id="logoSmall" src="../../images/Speech-simple.png" class="menuLogo" /></div>
     <div ng-click="redirectFeed()" class="menuitem"> <img src="Images\feedicon.png" class="menuIcon">Feed</div>
     <div ng-click="redirectOptions()" class="menufiller"></div>
     <textarea class="searchBar" placeholder="Search (Names, jobs, gender)"></textarea>
@@ -59,12 +59,20 @@
             <div class="menuItem" ng-click="showBeveiliging()"><img src="Images\security.png" id="beveiliging" class="settingIcon"> Security</div>
             <div class="menuItem" ng-click="showPrivacy()"><img src="Images\privacy.png" id="privacy" class="settingIcon"> Privacy</div>
             <div class="menuItem" ng-click="showMeldingen()"><img src="Images\notifications.png" id="Meldingen" class="settingIcon"> Notifications</div>
-            <div class="menuItem" ng-click="showAbout()"><img src="Images\aboutIcon.png" id="About" class="settingIcon"> About us</div>
+            <div class="menuItem" ng-click="showAbout()"><img src="Images\aboutIcon.png" id="Meldingen" class="settingIcon"> About us</div>
         </center>
     </div>
+
+    <div id="settingsTop">
+        <div class="respImageContainer" ng-click="showPersoonlijk()"><img src="Images\personal.png" class="respImage"></div>
+            <div class="respImageContainer" ng-click="showBeveiliging()"><img src="Images\security.png" id="beveiliging" class="respImage" /></div>
+            <div class="respImageContainer" ng-click="showPrivacy()"><img src="Images\privacy.png" id="privacy" class="respImage"></div>
+            <div class="respImageContainer" ng-click="showMeldingen()"><img src="Images\notifications.png" id="Meldingen" class="respImage"></div>
+            <div class="respImageContainer" ng-click="showAbout()"><img src="Images\aboutIcon.png" id="Meldingen" class="respImage"></div>
+    </div>
     <div id="settingsRight">
-            <div class="errorMsgs" style="color:red;" ng-repeat="wrongChange in wrongChanges"> {{ wrongChange }} </div>
-            <div class="errorMsgs" style="color:green;" ng-repeat="goodChange in goodChanges"> {{ goodChange }} </div>
+        <div class="errorMsgs" style="color:red;" ng-repeat="wrongChange in wrongChanges"> {{ wrongChange }} </div>
+        <div class="errorMsgs" style="color:green;" ng-repeat="goodChange in goodChanges"> {{ goodChange }} </div>
         <div ng-show="Persoonlijk">
             <br /><b>PERSONAL SETTINGS:</b>
             <br />
@@ -109,7 +117,7 @@
                 </select>
             </div>
             <div class="optionName"><img src="Images\icons\hobbies.png" class="settingRightIcon" />  Hobbies <input class="optionValue" ng-model="ProfileInfo.Hobby"></div>
-            <div class="optionName"><img src="Images\icons\motto.png" class="settingRightIcon" />  Motto <input class="optionValueLong" ng-model="ProfileInfo.Motto"></div>
+            <div class="optionName"><img src="Images\icons\motto.png" class="settingRightIcon" />  Motto <input class="optionValueLong" size="25" ng-model="ProfileInfo.Motto"></div>
 
             <div class="applybutton">
                 <table class="buttonWrapper" id="table1">
