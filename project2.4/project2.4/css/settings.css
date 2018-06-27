@@ -401,8 +401,6 @@
         display:none;
     }
 
-
-
     #settingsRight {
         display: block;
         height: 87%;
@@ -414,10 +412,21 @@
     }
 
     .applybutton {
-        
         position:relative;
         width:100%;
-
     }
 
+    .optionValue {
+        height:30px;
+        font-size:2.5vw;
+    }
+
+    .optionValueLong {
+        height:30px;
+        font-size:2.5vw;
+    }
+
+    #newProfilePic, .optionDate{
+        font-size:2.5vw;
+    }
 }
