@@ -74,6 +74,7 @@
                 <input type="file" name="newProfilePic" id="newProfilePic" ngf-select="uploadFiles($file, $invalidFiles)" ng-model="ProfileInfo.NewPic" accept="image/*">
                 <label class="profileOption" for="newProfilePic">Select new Profile picture</label>
             </div>
+
             <div class="optionName"><img src="Images\icons\name.png" class="settingRightIcon"> First name <input class="optionValue" name="firstName" ng-model="ProfileInfo.FirstName"></div>
             <div class="optionName"><img src="Images\icons\name.png" class="settingRightIcon"> Last name <input class="optionValue" ng-model="ProfileInfo.LastName"></div>
             <div class="optionName"><img src="Images\icons\birthday.png" class="settingRightIcon"> Date of birth <input type="date" id="optionDate" value="{{ProfileInfo.BirthDate | date:'yyyy-MM-dd'}}" ng-model="ProfileInfo.BirthDate" /></div><br />
@@ -87,6 +88,7 @@
             <div class="optionName"><img src="Images\icons\jobicon.png" class="settingRightIcon"> Work <input class="optionValue" ng-model="ProfileInfo.Work"></div>
             <div class="optionName"><img src="Images\icons\schoolicon.png" class="settingRightIcon"> Study <input class="optionValue" ng-model="ProfileInfo.School"></div>
             <div class="optionName"><img src="Images\icons\homeicon.png" class="settingRightIcon"> Place <input class="optionValue" ng-model="ProfileInfo.Hometown"></div>
+
             <div class="optionName">
                 <img src="Images\icons\relationshipicon.png" class="settingRightIcon">
                 Relation <select class="optionValue" ng-model="ProfileInfo.Relation">
