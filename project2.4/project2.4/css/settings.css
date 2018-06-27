@@ -41,6 +41,14 @@
     width: 25px;
 }
 
+.errorMsgs {
+    width: 100%;
+    height: auto;
+    text-align:center;
+    background-color:khaki;
+    font-size:1.2vw;
+}
+
 #settingsLeft {
     z-index: -1;
     height: 10%;
