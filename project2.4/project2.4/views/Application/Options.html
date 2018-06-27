@@ -59,12 +59,20 @@
             <div class="menuItem" ng-click="showBeveiliging()"><img src="Images\security.png" id="beveiliging" class="settingIcon"> Security</div>
             <div class="menuItem" ng-click="showPrivacy()"><img src="Images\privacy.png" id="privacy" class="settingIcon"> Privacy</div>
             <div class="menuItem" ng-click="showMeldingen()"><img src="Images\notifications.png" id="Meldingen" class="settingIcon"> Notifications</div>
-            <div class="menuItem" ng-click="showAbout()"><img src="Images\aboutIcon.png" id="About" class="settingIcon"> About us</div>
+            <div class="menuItem" ng-click="showAbout()"><img src="Images\aboutIcon.png" id="Meldingen" class="settingIcon"> About us</div>
         </center>
     </div>
+
+    <div id="settingsTop">
+        <div class="respImageContainer" ng-click="showPersoonlijk()"><img src="Images\personal.png" class="respImage"></div>
+            <div class="respImageContainer" ng-click="showBeveiliging()"><img src="Images\security.png" id="beveiliging" class="respImage" /></div>
+            <div class="respImageContainer" ng-click="showPrivacy()"><img src="Images\privacy.png" id="privacy" class="respImage"></div>
+            <div class="respImageContainer" ng-click="showMeldingen()"><img src="Images\notifications.png" id="Meldingen" class="respImage"></div>
+            <div class="respImageContainer" ng-click="showAbout()"><img src="Images\aboutIcon.png" id="Meldingen" class="respImage"></div>
+    </div>
     <div id="settingsRight">
-            <div class="errorMsgs" style="color:red;" ng-repeat="wrongChange in wrongChanges"> {{ wrongChange }} </div>
-            <div class="errorMsgs" style="color:green;" ng-repeat="goodChange in goodChanges"> {{ goodChange }} </div>
+        <div class="errorMsgs" style="color:red;" ng-repeat="wrongChange in wrongChanges"> {{ wrongChange }} </div>
+        <div class="errorMsgs" style="color:green;" ng-repeat="goodChange in goodChanges"> {{ goodChange }} </div>
         <div ng-show="Persoonlijk">
             <br /><b>PERSONAL SETTINGS:</b>
             <br />
