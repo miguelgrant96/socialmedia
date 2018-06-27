@@ -1,5 +1,5 @@
 <div id="menu">
-    <div ng-click="redirectFeed()" class="menuitem"> <img src="Images\speech.png" class="menuLogo"></div>
+    <div ng-click="themeChange()" class="menuitem"> <img id="logoBig" src="Images\logo-minimal.png" class="menuLogo"> <img id="logoSmall" src="../../images/Speech-simple.png" class="menuLogo" /></div>
     <div ng-click="redirectFeed()" class="selectedItem"> <img src="Images\feedicon.png" class="menuIcon">Feed</div>
     <div ng-click="redirectOptions()" class="menufiller"></div>
     <textarea class="searchBar" placeholder="Search (Names, jobs, gender)"></textarea>
@@ -66,8 +66,7 @@
         </div>
 
     </div><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-
-    <div class="postcontainer-feed" ng-repeat="item in Feed track by $index">
+        <div class="postcontainer-feed" ng-repeat="item in Feed track by $index">
         <img src="{{item.Creator.ProfilePictureUrl}}" class="user"><br /><p class="username">{{item.Creator.FirstName}} {{item.Creator.LastName}} </p>
         <div class="post">
             <p class="posttext">
@@ -77,7 +76,7 @@
                 <button class=" postFooterButton" ng-click="GiveRespect(item.Feed.Id, $index)"><img src="Images\respect.png" class="postFooterImages"></button>
                 <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
                 <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
-                <p class=" postFooterRespectCount">| {{item.Feed.Respect}} mensen gaven Respect!</p>
+                <p class=" postFooterRespectCount">| {{item.Feed.Respect}} Respect!</p>
 
             </div>
         </div>
@@ -87,12 +86,12 @@
             <div class="commentText"> {{comment.CommentText}} </div>
             <img src="{{comment.ProfilePicUrl}}" class="commentuser">
         </div>
-        
+
         <div class="placecomment-containter ">
             <textarea class="commentArea" placeholder="Enter your comment here" ng-model="NewComment[$index]"></textarea>
             <br />
-            <button  ng-click="PostComment(item.Feed.Id, $index)"><img src="Images\sendicon.png" class="postIcon">&nbsp; Post comment</button>
-            
+            <button ng-click="PostComment(item.Feed.Id, $index)"><img src="Images\sendicon.png" class="postIcon">&nbsp; Post comment</button>
+
         </div>
     </div>
 </div>

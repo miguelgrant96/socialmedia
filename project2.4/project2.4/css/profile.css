@@ -247,3 +247,57 @@
         border-width: 1px;
         border-style: solid;
     }
+
+
+@media (max-width: 700px) {
+    .infoBoxes-left{
+        display:none;
+    }
+
+    .infoBoxes-right{
+        display:none;
+    }
+
+    .profileWrapper {
+        min-height:50%;
+    }
+    .profileSpot {
+        position:absolute;
+        margin: auto;
+        left:18%;
+    }
+    .userNameProfile {
+        top: 50%;
+        border-radius: 10px;
+        padding: 10px;
+        left: 12%;
+        font-size: 20px;
+    }
+
+    .profileTabs {
+        top:30%;
+        position: absolute;
+        width: 50%;
+        height: 30px;
+        left: 3.25%;
+        min-width:20%;
+    }
+
+    .profiletab {
+        text-align: center;
+        margin-right: 3%;
+        padding: 5px;
+        font-size: calc(10px + 0.7vw);
+    }
+
+    #gotPosts-profile {
+        left:0;
+    }
+
+    .postcontainer-profile {
+        left: 0;
+        border-left-width: 5px;
+        min-width: 90%;
+    }
+    
+}

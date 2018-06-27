@@ -4,7 +4,6 @@
 }
 
 .underlay-photo {
-    background-image: url("../images/bg-login.jpg");
     background-size: cover;
     -webkit-filter: grayscale(20%);
     z-index: -1;
@@ -556,3 +555,72 @@ post.hover ~.postFooter {
         opacity: 1;
     }
 }
+
+@media (max-width: 700px) {
+    .UserPanelContainer {
+        display: none;
+    }
+
+    #gotPosts-feed {
+        left: 0;
+    }
+
+    #createPost {
+        left: 0;
+        border-left-width: 5px;
+        min-width:95%;
+    }
+
+        .createposttext{
+            font-size: 18px;
+        }
+        
+        .addMedia {
+            font-size:10px;
+        }
+
+        #CreatePublishButton {
+            font-size:10px;
+        }
+
+    .postcontainer-feed {
+        left:0;
+        border-left-width:5px;
+        min-width:95%;
+    }
+    .user {
+        width: 75px;
+        height: 75px;
+    }
+    .username {
+        min-width: 150px;
+        padding-left: 4%;
+        left: 75px;
+    }
+
+    .post {
+        font-size: calc(10px + 0.7vw);
+        left: 20px;
+        min-width: 90%;
+        margin-top: 45px;
+    }
+    .postFooter {
+        bottom: 5px;
+    }
+
+    .comment-Container {
+        width: 60%;
+        min-width: 80%;
+        left: 18px;
+        margin-top: 2px;
+        font-size: calc(10px + 0.7vw);
+    }
+
+    .placecomment-containter {
+        width: 100%;
+        margin-left: 10%;
+        border-radius:6px;
+    }
+}
+
+

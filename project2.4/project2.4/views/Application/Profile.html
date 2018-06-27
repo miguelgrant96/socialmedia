@@ -1,6 +1,6 @@
 <body class="profile">
     <div id="menu">
-        <div ng-click="themeChange()" class="menuitem"> <img src="Images\logo-minimal.png" class="menuLogo"></div>
+        <div ng-click="themeChange()" class="menuitem"> <img id="logoBig" src="Images\logo-minimal.png" class="menuLogo"> <img id="logoSmall" src="../../images/Speech-simple.png" class="menuLogo" /></div>
         <div ng-click="redirectFeed()" class="menuitem"> <img src="Images\feedicon.png" class="menuIcon">Feed</div>
         <div ng-click="redirectOptions()" class="menufiller"></div>
         <textarea class="searchBar" placeholder="Search (Names, jobs, gender)"></textarea>
@@ -37,7 +37,7 @@
                         <button class=" postFooterButton"><img src="Images\respect.png" class="postFooterImages"></button>
                         <button class=" postFooterButton"><img src="Images\comment.png" class="postFooterImages"></button>
                         <button class=" postFooterButton"><img src="Images\share.png" class="postFooterImages"></button>
-                        <p class=" postFooterRespectCount">| {{item.Feed.Respect}} mensen gaven Respect!</p>
+                        <p class=" postFooterRespectCount">| {{item.Feed.Respect}} Respect!</p>
 
                     </div>
                 </div>

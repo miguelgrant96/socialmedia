@@ -73,23 +73,10 @@
                 <img src="Images\icons\profilepic.png" class="settingRightIcon"> Profile picture
                 <input type="file" name="newProfilePic" id="newProfilePic" ngf-select="uploadFiles($file, $invalidFiles)" ng-model="ProfileInfo.NewPic" accept="image/*">
                 <label class="profileOption" for="newProfilePic">Select new Profile picture</label>
-                File:
-                <div style="font:smaller">
-                    {{f.name}} {{errFile.name}} {{errFile.$error}} {{errFile.$errorParam}}
-                    <span class="progress" ng-show="f.progress >= 0">
-                        <div style="width:{{f.progress}}%" ng-bind="f.progress + '%'"></div>
-                    </span>
-                </div>
-                {{errorMsg}}
             </div>
-
-
-
             <div class="optionName"><img src="Images\icons\name.png" class="settingRightIcon"> First name <input class="optionValue" name="firstName" ng-model="ProfileInfo.FirstName"></div>
             <div class="optionName"><img src="Images\icons\name.png" class="settingRightIcon"> Last name <input class="optionValue" ng-model="ProfileInfo.LastName"></div>
             <div class="optionName"><img src="Images\icons\birthday.png" class="settingRightIcon"> Date of birth <input type="date" id="optionDate" value="{{ProfileInfo.BirthDate | date:'yyyy-MM-dd'}}" ng-model="ProfileInfo.BirthDate" /></div><br />
-
-
 
             <br />
             <div class="dividerLine"></div>
@@ -102,7 +89,6 @@
             <div class="optionName"><img src="Images\icons\homeicon.png" class="settingRightIcon"> Place <input class="optionValue" ng-model="ProfileInfo.Hometown"></div>
             <div class="optionName">
                 <img src="Images\icons\relationshipicon.png" class="settingRightIcon">
-
                 Relation <select class="optionValue" ng-model="ProfileInfo.Relation">
                     <option>bachelor</option>
                     <option>In a relationship</option>
@@ -112,7 +98,14 @@
                     <option>Widow</option>
                 </select>
             </div>
-            <div class="optionName"><img src="Images\icons\gendericon.png" class="settingRightIcon"> Gender <input class="optionValue" ng-model="ProfileInfo.Gender"></div>
+            <div class="optionName">
+                <img src="Images\icons\gendericon.png" class="settingRightIcon">
+                Gender <select class="optionValue" ng-model="ProfileInfo.Gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
             <div class="optionName"><img src="Images\icons\hobbies.png" class="settingRightIcon" />  Hobbies <input class="optionValue" ng-model="ProfileInfo.Hobby"></div>
             <div class="optionName"><img src="Images\icons\motto.png" class="settingRightIcon" />  Motto <input class="optionValueLong" ng-model="ProfileInfo.Motto"></div>
 
