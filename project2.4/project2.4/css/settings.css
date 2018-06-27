@@ -35,11 +35,12 @@
 
 .settingRightIcon {
     position: relative;
-    height: 25%;
+    height:25%;
     left: 0;
     top: 0px;
     width: 25px;
 }
+
 
 .errorMsgs {
     width: 100%;
@@ -303,7 +304,7 @@
         height: 40px;
         right: 2%;
         opacity: 0.9;
-        width: 30%;
+        width: auto;
         background-color: #fcfcfc;
         padding-left: 50px;
         display: inline-block;
@@ -423,10 +424,11 @@
 
     .optionValueLong {
         height:30px;
-        font-size:2.5vw;
+        font-size:2.5vw
     }
 
-    #newProfilePic, .optionDate{
+
+    #newProfilePic, .optionDate, .profileOption{
         font-size:2.5vw;
     }
 }
