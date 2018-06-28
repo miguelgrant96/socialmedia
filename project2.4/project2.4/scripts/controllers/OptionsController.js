@@ -63,8 +63,9 @@ angular.module('Options')
             var Hobby = $scope.ProfileInfo.Hobby;
             
             var Motto = $scope.ProfileInfo.Motto;
+            var AboutMe = $scope.ProfileInfo.AboutMe;
             var url = UriBuilder.BuildUrl("ProfileInfo");
-            var data = { 'Id': id, 'FirstName': firstName, 'LastName': lastName, 'Gender': gender, 'Email': null, 'BirthDate': birthdate, 'Work': Work, 'School': School, 'Hometown': Hometown, 'Relation': Relation, 'Hobby': Hobby, 'ProfilePictureUrl': ProfilePicUrl, 'MemberSince': birthdate, 'Motto': Motto };
+            var data = { 'Id': id, 'FirstName': firstName, 'LastName': lastName, 'Gender': gender, 'Email': null, 'BirthDate': birthdate, 'Work': Work, 'School': School, 'Hometown': Hometown, 'Relation': Relation, 'Hobby': Hobby, 'ProfilePictureUrl': ProfilePicUrl, 'MemberSince': birthdate, 'Motto': Motto, 'AboutMe': AboutMe };
             httpRequestService.PutRequest(url, data, function success(response) {
                 console.log("Succes");
                 $scope.wrongChange = [];

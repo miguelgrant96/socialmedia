@@ -48,7 +48,8 @@ namespace project2._4.API.Controllers
                 Hobby = profileinfo.Hobbies,
                 MemberSince = user.CreatedDate,
                 ProfilePictureUrl = user.ProfilePictureUrl,
-                Motto = profileinfo.Motto
+                Motto = profileinfo.Motto,
+                AboutMe = profileinfo.AboutMe
             };
 
             return Ok(viewmodel);
@@ -75,6 +76,7 @@ namespace project2._4.API.Controllers
             profileinfo.RelatieStatus = viewModel.Relation;
             profileinfo.Hobbies = viewModel.Hobby;
             profileinfo.Motto = viewModel.Motto;
+            profileinfo.AboutMe = viewModel.AboutMe;
 
             db.UpdateUser(user);
             db2.UpdateProfileInfo(profileinfo);

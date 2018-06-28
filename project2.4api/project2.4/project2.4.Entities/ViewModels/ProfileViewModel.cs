@@ -34,6 +34,8 @@ namespace project2._4.Entities.ViewModels
 
         public string Motto { get; set; }
 
+        public string AboutMe { get; set; }
+
         public DateTime MemberSince { get; set; }
     }
 }
