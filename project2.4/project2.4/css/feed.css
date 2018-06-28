@@ -189,7 +189,7 @@
     min-width: 600px;
 }
 
-.postcontainer-profile {
+.postcontainer-profile, .postcontainer-friendsProfile {
     left: 0;
     right: 0;
     margin: auto;
@@ -198,6 +198,8 @@
     min-width: 600px;
     margin-bottom: 30px;
 }
+
+
 
 .placecomment-containter {
     z-index: 1;
@@ -620,6 +622,11 @@ post.hover ~.postFooter {
         width: 100%;
         margin-left: 10%;
         border-radius:6px;
+    }
+
+    .postcontainer-friendsProfile {
+        min-width:90%;
+        margin-top:15%;
     }
 }
 
