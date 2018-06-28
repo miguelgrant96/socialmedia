@@ -23,5 +23,7 @@ namespace project2._4.Entities.Models
         public string Hobbies { get; set; }
 
         public string Motto { get; set; }
+
+        public string AboutMe { get; set; }
     }
 }
