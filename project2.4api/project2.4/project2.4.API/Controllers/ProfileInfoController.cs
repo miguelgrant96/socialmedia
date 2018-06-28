@@ -47,7 +47,9 @@ namespace project2._4.API.Controllers
                 Relation = profileinfo.RelatieStatus,
                 Hobby = profileinfo.Hobbies,
                 MemberSince = user.CreatedDate,
-                ProfilePictureUrl = user.ProfilePictureUrl
+                ProfilePictureUrl = user.ProfilePictureUrl,
+                Motto = profileinfo.Motto,
+                AboutMe = profileinfo.AboutMe
             };
 
             return Ok(viewmodel);
@@ -65,7 +67,7 @@ namespace project2._4.API.Controllers
             ProfileInfo profileinfo = db2.GetUserProfileInfo(viewModel.Id);
             user.FirstName = viewModel.FirstName;
             user.LastName = viewModel.LastName;
-            user.BirthDate = viewModel.BirthDate;
+            user.BirthDate = viewModel.BirthDate.AddHours(1);
             user.Gender = viewModel.Gender;
             user.ProfilePictureUrl = viewModel.ProfilePictureUrl;
             profileinfo.Werk = viewModel.Work;
@@ -73,6 +75,8 @@ namespace project2._4.API.Controllers
             profileinfo.Woonplaats = viewModel.Hometown;
             profileinfo.RelatieStatus = viewModel.Relation;
             profileinfo.Hobbies = viewModel.Hobby;
+            profileinfo.Motto = viewModel.Motto;
+            profileinfo.AboutMe = viewModel.AboutMe;
 
             db.UpdateUser(user);
             db2.UpdateProfileInfo(profileinfo);

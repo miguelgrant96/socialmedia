@@ -17,20 +17,17 @@ namespace project2._4.BL.Repositories
             this.db = new DatabaseContext();
         }
 
-        public Feed GetFeed(Guid Id)
+        public TextFeed GetTextFeed(Guid Id)
         {
-            Feed feed = db.FeedTexts.Find(Id);
-            if (feed == null)
-            {
-                feed = db.ImageFeeds.Find(Id);
-            }
-            if (feed == null)
-            {
-                feed = db.VideoFeeds.Find(Id);
-            }
-
-            return feed;
-
+            return db.FeedTexts.Find(Id);
+        }
+        public ImageFeed GetImageFeed(Guid Id)
+        {
+            return db.ImageFeeds.Find(Id);
+        }
+        public VideoFeed GetVideoFeed(Guid Id)
+        {
+            return db.VideoFeeds.Find(Id);
         }
 
         public List<Feed> GetUserFeed(Guid userId)
@@ -72,6 +69,27 @@ namespace project2._4.BL.Repositories
         public void CreateVideoFeed(VideoFeed feed)
         {
             db.VideoFeeds.Add(feed);
+            db.SaveChanges();
+        }
+
+        public void UpdateTextFeed(TextFeed feed)
+        {
+            db.FeedTexts.Attach(feed);
+            db.Entry(feed).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+        }
+
+        public void UpdateImageFeed(ImageFeed feed)
+        {
+            db.ImageFeeds.Attach(feed);
+            db.Entry(feed).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+        }
+
+        public void UpdateVideoFeed(VideoFeed feed)
+        {
+            db.VideoFeeds.Attach(feed);
+            db.Entry(feed).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
         }
     }
