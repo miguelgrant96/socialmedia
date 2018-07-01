@@ -42,6 +42,7 @@ namespace project2._4.API.Controllers
             }
 
             User user = new Entities.Models.User() {
+                UserId = userViewModel.Id,
                 FirstName = userViewModel.FirstName,
                 LastName = userViewModel.LastName,
                 Gender = userViewModel.Gender,

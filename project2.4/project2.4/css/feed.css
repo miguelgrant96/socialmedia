@@ -189,7 +189,7 @@
     min-width: 600px;
 }
 
-.postcontainer-profile {
+.postcontainer-profile, .postcontainer-friendsProfile {
     left: 0;
     right: 0;
     margin: auto;
@@ -198,6 +198,8 @@
     min-width: 600px;
     margin-bottom: 30px;
 }
+
+
 
 .placecomment-containter {
     z-index: 1;
@@ -345,6 +347,11 @@
     border-color: #a8b9c1;
     background-color: #a8b9c1;
 }
+    .commentuser:hover {
+        cursor:pointer;
+        transition:2s;
+        background-image:url(../images/visit-profile.jpg);
+    }
 
 .commentText {
     position: absolute;
@@ -621,6 +628,9 @@ post.hover ~.postFooter {
         margin-left: 10%;
         border-radius:6px;
     }
+
+    .postcontainer-friendsProfile {
+        min-width:90%;
+        margin-top:15%;
+    }
 }
-
-

@@ -47,6 +47,7 @@ namespace project2._4.API.Controllers
                     commentsViewModel.Add(new FeedDiscussionViewModel()
                     {
                         Id = comment.Id,
+                        UserId = comment.User_Id,
                         CommentText = comment.Text,
                         CreatedDate = comment.CreatedAt,
                         FirstName = CommentUser.FirstName,
