@@ -31,5 +31,7 @@ namespace project2._4.Entities.Models
         public DateTime CreatedDate { get; set; }
 
         public DateTime LastLogin { get; set; }
+
+        public Guid UserId { get; set; }
     }
 }
